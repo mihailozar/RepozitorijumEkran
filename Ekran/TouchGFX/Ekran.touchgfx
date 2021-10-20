@@ -46,6 +46,39 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "TextProgress",
+            "NumberOfDecimals": 0,
+            "TextId": "SingleUseId2",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Style": "Style3",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_text_progress_bg_square.png",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 84,
+            "IndicatorPositionHeight": 34,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 60,
+            "Name": "textProgress1",
+            "X": 308,
+            "Y": 274,
+            "Width": 84,
+            "Height": 34,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [],
@@ -58,6 +91,10 @@
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
         "IsResource": false
       }
     ],

@@ -37,6 +37,7 @@
 "./Application/User/generated/Texts.o"
 "./Application/User/generated/TypedTextDatabase.o"
 "./Application/User/generated/UnmappedDataFont.o"
+"./Application/User/generated/image_Blue_ProgressIndicators_bg_medium_text_progress_bg_square.o"
 "./Application/User/gui/FrontendApplication.o"
 "./Application/User/gui/Model.o"
 "./Application/User/gui/Screen1Presenter.o"

@@ -18,12 +18,12 @@ Screen.hpp:153:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	stati
 Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	0	static
-Screen1ViewBase.hpp:17:13:Screen1ViewBase::~Screen1ViewBase()	0	static
-Screen1ViewBase.cpp:27:6:virtual void Screen1ViewBase::setupScreen()	0	static
+Screen1ViewBase.hpp:18:13:Screen1ViewBase::~Screen1ViewBase()	0	static
+Screen1ViewBase.cpp:38:6:virtual void Screen1ViewBase::setupScreen()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	8	static
-Screen1ViewBase.hpp:17:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+Screen1ViewBase.hpp:18:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:365:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	0	static
-Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	48	static
+Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	64	static
