@@ -1,5 +1,5 @@
 Application/User/generated/Font_verdana_40_4bpp_0.o: \
- C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.cpp \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
 

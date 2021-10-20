@@ -1,5 +1,5 @@
 Application/User/generated/CachedFont.o: \
- C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/CachedFont.cpp \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/CachedFont.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/CachedFont.hpp \
  ../../TouchGFX/generated/fonts/include/fonts/FontCache.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

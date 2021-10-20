@@ -1,6 +1,6 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.o: \
- C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c \
- C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.h \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -21,6 +21,7 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
@@ -39,9 +40,9 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
- c:\users\mira\desktop\repoekran\repozitorijumekran\ekran\drivers\bsp\components\n25q128a\n25q128a.h
+ c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\n25q128a\n25q128a.h
 
-C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.h:
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
@@ -83,6 +84,8 @@ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-D
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
 
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h:
+
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h:
@@ -119,4 +122,4 @@ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-D
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
 
-c:\users\mira\desktop\repoekran\repozitorijumekran\ekran\drivers\bsp\components\n25q128a\n25q128a.h:
+c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\n25q128a\n25q128a.h:
