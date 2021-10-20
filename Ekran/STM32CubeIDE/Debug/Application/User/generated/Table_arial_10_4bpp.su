@@ -1,0 +1,2 @@
+Table_arial_10_4bpp.cpp:164:178:void __tcf_0()	0	static
+Table_arial_10_4bpp.cpp:162:26:touchgfx::GeneratedFont& getFont_arial_10_4bpp()	64	static

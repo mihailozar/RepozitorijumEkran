@@ -8,10 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/containers/progress_indicators/TextProgress.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -30,18 +29,23 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::Container Levi;
+    touchgfx::Box box2;
+    touchgfx::TextAreaWithOneWildcard speed;
     touchgfx::TextArea textArea1;
-    touchgfx::TextProgress textProgress1;
-    touchgfx::Circle circle1;
-    touchgfx::PainterRGB565 circle1Painter;
+    touchgfx::Container desni;
+    touchgfx::Box box3;
+    touchgfx::TextArea textArea2;
+    touchgfx::Box box4;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SPEED_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar speedBuffer[SPEED_SIZE];
 
 private:
 
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint16_t CANVAS_BUFFER_SIZE = 12000;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 };
 
 #endif // SCREEN1VIEWBASE_HPP

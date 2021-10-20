@@ -4,46 +4,56 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include "BitmapDatabase.hpp"
 
 Screen1ViewBase::Screen1ViewBase()
 {
-
-    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 800, 480);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
 
-    textArea1.setXY(308, 183);
+    Levi.setPosition(0, 0, 450, 480);
+
+    box2.setPosition(13, 20, 437, 441);
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Levi.add(box2);
+
+    speed.setPosition(70, 31, 310, 353);
+    speed.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    speed.setLinespacing(0);
+    Unicode::snprintf(speedBuffer, SPEED_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
+    speed.setWildcard(speedBuffer);
+    speed.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
+    Levi.add(speed);
+
+    textArea1.setXY(176, 337);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
 
-    textProgress1.setXY(308, 274);
-    textProgress1.setProgressIndicatorPosition(0, 0, 84, 34);
-    textProgress1.setRange(0, 100);
-    textProgress1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textProgress1.setNumberOfDecimals(0);
-    textProgress1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
-    textProgress1.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_TEXT_PROGRESS_BG_SQUARE_ID));
-    textProgress1.setValue(60);
+    desni.setPosition(400, 0, 400, 480);
 
-    circle1.setPosition(567, 45, 80, 107);
-    circle1.setCenter(40, 40);
-    circle1.setRadius(40);
-    circle1.setLineWidth(0);
-    circle1.setArc(0, 360);
-    circle1Painter.setColor(touchgfx::Color::getColorFromRGB(212, 19, 19));
-    circle1.setPainter(circle1Painter);
+    box3.setPosition(64, 75, 273, 64);
+    box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    desni.add(box3);
+
+    textArea2.setXY(172, 82);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID4));
+    desni.add(textArea2);
+
+    box4.setPosition(464, 198, 312, 249);
+    box4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     add(__background);
     add(box1);
+    add(Levi);
     add(textArea1);
-    add(textProgress1);
-    add(circle1);
+    add(desni);
+    add(box4);
 }
 
 void Screen1ViewBase::setupScreen()
