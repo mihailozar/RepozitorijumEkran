@@ -9,6 +9,8 @@
 Screen1ViewBase::Screen1ViewBase()
 {
 
+    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
+
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
@@ -29,10 +31,19 @@ Screen1ViewBase::Screen1ViewBase()
     textProgress1.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_TEXT_PROGRESS_BG_SQUARE_ID));
     textProgress1.setValue(60);
 
+    circle1.setPosition(567, 45, 80, 107);
+    circle1.setCenter(40, 40);
+    circle1.setRadius(40);
+    circle1.setLineWidth(0);
+    circle1.setArc(0, 360);
+    circle1Painter.setColor(touchgfx::Color::getColorFromRGB(212, 19, 19));
+    circle1.setPainter(circle1Painter);
+
     add(__background);
     add(box1);
     add(textArea1);
     add(textProgress1);
+    add(circle1);
 }
 
 void Screen1ViewBase::setupScreen()

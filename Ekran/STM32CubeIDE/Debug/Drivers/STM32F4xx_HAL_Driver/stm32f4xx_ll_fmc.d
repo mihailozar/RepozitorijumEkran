@@ -1,5 +1,5 @@
 Drivers/STM32F4xx_HAL_Driver/stm32f4xx_ll_fmc.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c \
+ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \

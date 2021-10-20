@@ -1,5 +1,5 @@
 Application/User/generated/Kerning_verdana_40_4bpp.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.cpp \
+ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

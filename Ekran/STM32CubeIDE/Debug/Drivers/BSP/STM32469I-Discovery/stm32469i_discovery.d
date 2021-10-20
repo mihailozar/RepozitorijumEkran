@@ -1,6 +1,6 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.c \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
+ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.c \
+ C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -40,7 +40,7 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h
 
-C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
+C:/Users/mira/Desktop/RepoEkran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
