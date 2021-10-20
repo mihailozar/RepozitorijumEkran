@@ -6749,21 +6749,21 @@ public:
  800268e:	f7ff ff50 	bl	8002532 <_ZN8touchgfx8Drawable11setPositionEssss>
  8002692:	4b6e      	ldr	r3, [pc, #440]	; (800284c <_ZN15Screen1ViewBaseC1Ev+0x294>)
  8002694:	f8c4 3094 	str.w	r3, [r4, #148]	; 0x94
-    Levi.setPosition(0, 0, 400, 480);
+    Levi.setPosition(0, 0, 450, 480);
  8002698:	f44f 73f0 	mov.w	r3, #480	; 0x1e0
  800269c:	9300      	str	r3, [sp, #0]
  800269e:	462a      	mov	r2, r5
- 80026a0:	f44f 73c8 	mov.w	r3, #400	; 0x190
+ 80026a0:	f44f 73e1 	mov.w	r3, #450	; 0x1c2
  80026a4:	4629      	mov	r1, r5
  80026a6:	4638      	mov	r0, r7
  80026a8:	f7ff ff43 	bl	8002532 <_ZN8touchgfx8Drawable11setPositionEssss>
-    box2.setPosition(13, 20, 374, 441);
+    box2.setPosition(13, 20, 437, 441);
  80026ac:	f240 13b9 	movw	r3, #441	; 0x1b9
  80026b0:	2214      	movs	r2, #20
  80026b2:	4658      	mov	r0, fp
  80026b4:	9300      	str	r3, [sp, #0]
  80026b6:	210d      	movs	r1, #13
- 80026b8:	f44f 73bb 	mov.w	r3, #374	; 0x176
+ 80026b8:	f240 13b5 	movw	r3, #437	; 0x1b5
  80026bc:	f7ff ff39 	bl	8002532 <_ZN8touchgfx8Drawable11setPositionEssss>
  80026c0:	f04f 33ff 	mov.w	r3, #4294967295
     Levi.add(box2);
@@ -6771,12 +6771,12 @@ public:
  80026c6:	f8c4 30ec 	str.w	r3, [r4, #236]	; 0xec
  80026ca:	4638      	mov	r0, r7
  80026cc:	f006 ff38 	bl	8009540 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    speed.setPosition(50, 31, 310, 353);
+    speed.setPosition(70, 31, 310, 353);
  80026d0:	f240 1361 	movw	r3, #353	; 0x161
  80026d4:	9300      	str	r3, [sp, #0]
  80026d6:	221f      	movs	r2, #31
  80026d8:	f44f 739b 	mov.w	r3, #310	; 0x136
- 80026dc:	2132      	movs	r1, #50	; 0x32
+ 80026dc:	2146      	movs	r1, #70	; 0x46
  80026de:	4650      	mov	r0, sl
  80026e0:	f7ff ff27 	bl	8002532 <_ZN8touchgfx8Drawable11setPositionEssss>
      *
@@ -6848,10 +6848,10 @@ private:
  8002744:	4651      	mov	r1, sl
  8002746:	4638      	mov	r0, r7
  8002748:	f006 fefa 	bl	8009540 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    textArea1.setXY(156, 337);
+    textArea1.setXY(176, 337);
  800274c:	ee18 0a10 	vmov	r0, s16
  8002750:	f240 1251 	movw	r2, #337	; 0x151
- 8002754:	219c      	movs	r1, #156	; 0x9c
+ 8002754:	21b0      	movs	r1, #176	; 0xb0
  8002756:	f7ff fedf 	bl	8002518 <_ZN8touchgfx8Drawable5setXYEss>
         this->color = color;
  800275a:	f04f 437f 	mov.w	r3, #4278190080	; 0xff000000
@@ -6907,12 +6907,12 @@ private:
  80027da:	4649      	mov	r1, r9
  80027dc:	4630      	mov	r0, r6
  80027de:	f006 feaf 	bl	8009540 <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    box4.setPosition(445, 198, 312, 249);
+    box4.setPosition(464, 198, 312, 249);
  80027e2:	23f9      	movs	r3, #249	; 0xf9
  80027e4:	22c6      	movs	r2, #198	; 0xc6
  80027e6:	ee19 0a90 	vmov	r0, s19
  80027ea:	9300      	str	r3, [sp, #0]
- 80027ec:	f240 11bd 	movw	r1, #445	; 0x1bd
+ 80027ec:	f44f 71e8 	mov.w	r1, #464	; 0x1d0
  80027f0:	f44f 739c 	mov.w	r3, #312	; 0x138
  80027f4:	f7ff fe9d 	bl	8002532 <_ZN8touchgfx8Drawable11setPositionEssss>
  80027f8:	f04f 33ff 	mov.w	r3, #4294967295
