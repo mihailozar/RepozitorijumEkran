@@ -141,6 +141,9 @@ int main(void)
   MX_CAN2_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+//  canInit();
+//  workInit();
+//  HAL_TIM_Base_Start_IT(&htim3);
 
   /* USER CODE END 2 */
 
