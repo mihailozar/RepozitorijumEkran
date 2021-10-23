@@ -24,6 +24,18 @@ public:
     // Screen3
     void gotoScreen3ScreenNoTransition();
 
+    // Screen4
+    void gotoScreen4ScreenNoTransition();
+
+    // Screen5
+    void gotoScreen5ScreenNoTransition();
+
+    // Screen6
+    void gotoScreen6ScreenNoTransition();
+
+    // Screen7
+    void gotoScreen7ScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -37,6 +49,18 @@ protected:
 
     // Screen3
     void gotoScreen3ScreenNoTransitionImpl();
+
+    // Screen4
+    void gotoScreen4ScreenNoTransitionImpl();
+
+    // Screen5
+    void gotoScreen5ScreenNoTransitionImpl();
+
+    // Screen6
+    void gotoScreen6ScreenNoTransitionImpl();
+
+    // Screen7
+    void gotoScreen7ScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

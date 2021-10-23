@@ -77,6 +77,18 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
+ ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f469xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \
@@ -270,6 +282,30 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
+
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:
+
+../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp:
+
+../../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:
+
+../../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
 
 ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 
