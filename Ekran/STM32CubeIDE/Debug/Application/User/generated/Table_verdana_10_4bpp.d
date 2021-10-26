@@ -1,5 +1,5 @@
 Application/User/generated/Table_verdana_10_4bpp.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
+ C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

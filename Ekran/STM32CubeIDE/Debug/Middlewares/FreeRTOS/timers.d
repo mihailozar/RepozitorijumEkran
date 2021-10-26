@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/timers.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Middlewares/Third_Party/FreeRTOS/Source/timers.c \
+ C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Middlewares/Third_Party/FreeRTOS/Source/timers.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

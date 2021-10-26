@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+ C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
  ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

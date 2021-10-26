@@ -46,14 +46,14 @@ static void workTask(void *parameters) {
 
 static void canTask(void *parameters) {
 		while (1) {
-			if (uxQueueMessagesWaiting(CAN_Rx_Queue) > 0) {
+			/*if (HAL_CAN_GetRxFifoFillLevel(&hcan2, 0) > 0) {
 				//xSemaphoreTake(CANMutex, portMAX_DELAY);
 				getCANMessage();
 				//xSemaphoreGive(CANMutex);
-			}
+			}*/
 			uint8_t data1[8];
 			data1[0]=3;
-			sendStartMessage(data1);
+			//sendStartMessage(data1);
 		}
 }
 

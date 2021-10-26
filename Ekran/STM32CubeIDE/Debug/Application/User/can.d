@@ -39,7 +39,7 @@ Application/User/can.o: ../Application/User/can.c ../../Core/Inc/can.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
- ../../Core/Inc/can_id.h \
+ ../../Core/Inc/work.h ../../Core/Inc/can_id.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -50,8 +50,7 @@ Application/User/can.o: ../Application/User/can.c ../../Core/Inc/can.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../../Core/Inc/work.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 
 ../../Core/Inc/can.h:
 
@@ -135,6 +134,8 @@ Application/User/can.o: ../Application/User/can.c ../../Core/Inc/can.h \
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
 
+../../Core/Inc/work.h:
+
 ../../Core/Inc/can_id.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
@@ -158,5 +159,3 @@ Application/User/can.o: ../Application/User/can.c ../../Core/Inc/can.h \
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-../../Core/Inc/work.h:

@@ -1,5 +1,5 @@
 Application/User/gui/Screen5Presenter.o: \
- C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen5_screen/Screen5Presenter.cpp \
+ C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen5_screen/Screen5Presenter.cpp \
  ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
