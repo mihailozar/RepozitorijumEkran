@@ -1,4 +1,4 @@
 can.c:16:9:getSlave	0	static
 can.c:82:6:canInit	48	static
 can.c:102:6:getCANMessage	40	static
-can.c:219:6:sendStartMessage	32	static
+can.c:219:6:sendStartMessage	40	static

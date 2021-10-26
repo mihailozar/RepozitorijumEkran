@@ -222,7 +222,7 @@ void sendStartMessage(uint8_t data[]) {
 	pHeader.DLC = 1;
 	pHeader.RTR = CAN_RTR_DATA;
 	pHeader.IDE = CAN_ID_STD;
-	pHeader.StdId = VEHICLE_START_ID;
+	pHeader.StdId = 0x300;
 	HAL_CAN_AddTxMessage(&hcan2, &pHeader, data, &TxMailbox);
-	//while (HAL_CAN_IsTxMessagePending(&hcan2, TxMailbox));
+	while (HAL_CAN_IsTxMessagePending(&hcan2, TxMailbox));
 }

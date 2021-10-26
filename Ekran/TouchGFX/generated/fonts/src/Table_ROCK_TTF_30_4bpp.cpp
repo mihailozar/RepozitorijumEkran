@@ -40,8 +40,11 @@ KEEP extern const touchgfx::GlyphNode glyphs_ROCK_TTF_30_4bpp[] FONT_TABLE_LOCAT
     {  5957, 0x0058,  20,  21,  21,   0,  20,  44,   1, 0x00 },
     {  6167, 0x0059,  21,  21,  21,  -1,  19,  45,   6, 0x00 },
     {  6398, 0x005A,  16,  21,  21,   0,  17,   0,   0, 0x00 },
-    {  6566, 0x0065,  15,  15,  15,   1,  17,  51,   9, 0x00 },
-    {  6686, 0x0067,  18,  21,  15,   1,  19,   0,   0, 0x00 }
+    {  6566, 0x0065,  15,  15,  15,   1,  17,  51,  11, 0x00 },
+    {  6686, 0x0067,  18,  21,  15,   1,  19,   0,   0, 0x00 },
+    {  6875, 0x0074,   9,  20,  20,   0,   9,   0,   0, 0x00 },
+    {  6975, 0x0077,  25,  15,  15,  -1,  23,  62,   1, 0x00 },
+    {  7170, 0x0078,  17,  15,  15,   0,  17,   0,   0, 0x00 }
 };
 
 // ROCK_TTF_30_4bpp
@@ -56,6 +59,6 @@ touchgfx::GeneratedFont& getFont_ROCK_TTF_30_4bpp();
 
 touchgfx::GeneratedFont& getFont_ROCK_TTF_30_4bpp()
 {
-    static touchgfx::GeneratedFont ROCK_TTF_30_4bpp(glyphs_ROCK_TTF_30_4bpp, 38, 30, 6, 4, 1, 2, 1, unicodes_ROCK_TTF_30_4bpp, kerning_ROCK_TTF_30_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ROCK_TTF_30_4bpp(glyphs_ROCK_TTF_30_4bpp, 41, 30, 6, 4, 1, 2, 1, unicodes_ROCK_TTF_30_4bpp, kerning_ROCK_TTF_30_4bpp, 63, 0, 0, 0);
     return ROCK_TTF_30_4bpp;
 }

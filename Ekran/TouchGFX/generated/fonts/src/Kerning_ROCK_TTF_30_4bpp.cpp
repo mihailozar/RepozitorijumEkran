@@ -62,4 +62,7 @@ KEEP extern const touchgfx::KerningNode kerning_ROCK_TTF_30_4bpp[] FONT_KERNING_
     { 0x0057, -3 },  // (First char = [0x0057, W], Second char = [0x0065, e], Kerning dist = -3)
     { 0x0059, -3 },  // (First char = [0x0059, Y], Second char = [0x0065, e], Kerning dist = -3)
     { 0x0067, -1 },  // (First char = [0x0067, g], Second char = [0x0065, e], Kerning dist = -1)
+    { 0x0077, -1 },  // (First char = [0x0077, w], Second char = [0x0065, e], Kerning dist = -1)
+    { 0x0078, -1 },  // (First char = [0x0078, x], Second char = [0x0065, e], Kerning dist = -1)
+    { 0x0065, -1 },  // (First char = [0x0065, e], Second char = [0x0077, w], Kerning dist = -1)
 };

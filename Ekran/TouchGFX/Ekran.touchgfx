@@ -23687,6 +23687,853 @@
         "Name": "Screen7",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 12000
+      },
+      {
+        "Components": [
+          {
+            "Type": "Box",
+            "Color": {
+              "Red": 7,
+              "Green": 17,
+              "Blue": 35
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Color": {
+              "Red": 7,
+              "Green": 17,
+              "Blue": 35
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 5,
+            "Alpha": 255,
+            "Name": "boxWithBorder1",
+            "X": 0,
+            "Y": 1,
+            "Width": 272,
+            "Height": 74,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId785",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 67,
+            "Y": 14,
+            "Width": 138,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Color": {
+              "Red": 7,
+              "Green": 17,
+              "Blue": 35
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 5,
+            "Alpha": 255,
+            "Name": "boxWithBorder2",
+            "X": 301,
+            "Y": 0,
+            "Width": 499,
+            "Height": 74,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId786",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2",
+            "X": 312,
+            "Y": 14,
+            "Width": 156,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId787",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId788",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "lv_voltage",
+            "X": 468,
+            "Y": 14,
+            "Width": 55,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId789",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea4",
+            "X": 523,
+            "Y": 14,
+            "Width": 28,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId790",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea5",
+            "X": 585,
+            "Y": 14,
+            "Width": 117,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId791",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId792",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "lv_temp",
+            "X": 702,
+            "Y": 14,
+            "Width": 44,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId793",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea7",
+            "X": 746,
+            "Y": 14,
+            "Width": 30,
+            "Height": 47,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Components": [
+                  {
+                    "Type": "BoxWithBorder",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "BorderColor": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "BorderSize": 5,
+                    "Alpha": 255,
+                    "Name": "boxWithBorder3",
+                    "X": 0,
+                    "Y": 37,
+                    "Width": 136,
+                    "Height": 166,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "TextArea",
+                    "TextId": "SingleUseId794",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea8",
+                    "X": 0,
+                    "Y": 1,
+                    "Width": 96,
+                    "Height": 36,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "Circle",
+                    "FileNameImage": "",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 12,
+                    "CenterY": 12,
+                    "Radius": 12,
+                    "LineWidth": 0,
+                    "StartAngle": 0,
+                    "EndAngle": 360,
+                    "CapPrecision": "Butt",
+                    "Alpha": 255,
+                    "Name": "circle_cell1",
+                    "X": 104,
+                    "Y": 7,
+                    "Width": 32,
+                    "Height": 29,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Type": "Container",
+                "IsCacheableContainer": false,
+                "Name": "cell1",
+                "X": 0,
+                "Y": 0,
+                "Width": 136,
+                "Height": 203,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [
+                  {
+                    "Type": "BoxWithBorder",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "BorderColor": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "BorderSize": 5,
+                    "Alpha": 255,
+                    "Name": "boxWithBorder3_1",
+                    "X": 0,
+                    "Y": 37,
+                    "Width": 136,
+                    "Height": 166,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "TextArea",
+                    "TextId": "SingleUseId795",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea8_1",
+                    "X": 0,
+                    "Y": 0,
+                    "Width": 96,
+                    "Height": 36,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "Circle",
+                    "FileNameImage": "",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 12,
+                    "CenterY": 12,
+                    "Radius": 12,
+                    "LineWidth": 0,
+                    "StartAngle": 0,
+                    "EndAngle": 360,
+                    "CapPrecision": "Butt",
+                    "Alpha": 255,
+                    "Name": "circle_cell2",
+                    "X": 103,
+                    "Y": 7,
+                    "Width": 42,
+                    "Height": 34,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Type": "Container",
+                "IsCacheableContainer": false,
+                "Name": "cell2",
+                "X": 136,
+                "Y": 0,
+                "Width": 136,
+                "Height": 203,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [
+                  {
+                    "Type": "BoxWithBorder",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "BorderColor": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "BorderSize": 5,
+                    "Alpha": 255,
+                    "Name": "boxWithBorder3_2",
+                    "X": 0,
+                    "Y": 37,
+                    "Width": 136,
+                    "Height": 166,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "TextArea",
+                    "TextId": "SingleUseId796",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea8_2",
+                    "X": 0,
+                    "Y": 1,
+                    "Width": 96,
+                    "Height": 36,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "Circle",
+                    "FileNameImage": "",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 12,
+                    "CenterY": 12,
+                    "Radius": 12,
+                    "LineWidth": 0,
+                    "StartAngle": 0,
+                    "EndAngle": 360,
+                    "CapPrecision": "Butt",
+                    "Alpha": 255,
+                    "Name": "circle_cell2_1",
+                    "X": 104,
+                    "Y": 9,
+                    "Width": 42,
+                    "Height": 34,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Type": "Container",
+                "IsCacheableContainer": false,
+                "Name": "cell3",
+                "X": 0,
+                "Y": 203,
+                "Width": 136,
+                "Height": 203,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Components": [
+                  {
+                    "Type": "BoxWithBorder",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "BorderColor": {
+                      "Red": 0,
+                      "Green": 0,
+                      "Blue": 0
+                    },
+                    "BorderSize": 5,
+                    "Alpha": 255,
+                    "Name": "boxWithBorder3_3",
+                    "X": 0,
+                    "Y": 37,
+                    "Width": 136,
+                    "Height": 166,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "TextArea",
+                    "TextId": "SingleUseId797",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 255,
+                    "AutoSize": true,
+                    "LineSpacing": 0,
+                    "Name": "textArea8_3",
+                    "X": 0,
+                    "Y": 1,
+                    "Width": 96,
+                    "Height": 36,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  },
+                  {
+                    "Type": "Circle",
+                    "FileNameImage": "",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 12,
+                    "CenterY": 12,
+                    "Radius": 12,
+                    "LineWidth": 0,
+                    "StartAngle": 0,
+                    "EndAngle": 360,
+                    "CapPrecision": "Butt",
+                    "Alpha": 255,
+                    "Name": "circle_cell2_2",
+                    "X": 103,
+                    "Y": 9,
+                    "Width": 42,
+                    "Height": 34,
+                    "Visible": true,
+                    "LockPosition": false,
+                    "Draggable": false,
+                    "Clickable": false,
+                    "Fadeable": false,
+                    "Moveable": false
+                  }
+                ],
+                "Type": "Container",
+                "IsCacheableContainer": false,
+                "Name": "cell4",
+                "X": 136,
+                "Y": 203,
+                "Width": 136,
+                "Height": 203,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "Container",
+            "IsCacheableContainer": false,
+            "Name": "container1",
+            "X": 0,
+            "Y": 74,
+            "Width": 272,
+            "Height": 406,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId798",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea9",
+            "X": 9,
+            "Y": 139,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId799",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea10",
+            "X": 0,
+            "Y": 194,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId800",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea11",
+            "X": 140,
+            "Y": 139,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId801",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea12",
+            "X": 140,
+            "Y": 194,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId802",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea13",
+            "X": 6,
+            "Y": 342,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId803",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea14",
+            "X": 139,
+            "Y": 342,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId804",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea15",
+            "X": 3,
+            "Y": 404,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId805",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea16",
+            "X": 140,
+            "Y": 404,
+            "Width": 130,
+            "Height": 36,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "Screen8",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 12000
       }
     ],
     "CustomContainerDefinitions": [],
@@ -26577,6 +27424,90 @@
       },
       {
         "TextEntryId": "SingleUseId784",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId785",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId786",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId787",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId788",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId789",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId790",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId791",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId792",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId793",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId794",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId795",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId796",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId797",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId798",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId799",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId800",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId801",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId802",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId803",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId804",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId805",
         "IsResource": false
       }
     ],

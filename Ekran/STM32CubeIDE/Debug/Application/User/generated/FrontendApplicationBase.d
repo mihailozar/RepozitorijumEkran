@@ -87,6 +87,9 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
@@ -265,6 +268,12 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
+
+../../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:
 
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 

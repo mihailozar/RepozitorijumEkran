@@ -89,6 +89,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f469xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \
@@ -306,6 +309,12 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
+
+../../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:
 
 ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 

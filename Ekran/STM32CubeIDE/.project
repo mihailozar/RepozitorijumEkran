@@ -415,6 +415,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen7_screen/Screen7View.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/Screen8Presenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/Screen8View.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen8_screen/Screen8View.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -583,6 +593,11 @@
 			<name>Application/User/generated/Screen7ViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Screen8ViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
