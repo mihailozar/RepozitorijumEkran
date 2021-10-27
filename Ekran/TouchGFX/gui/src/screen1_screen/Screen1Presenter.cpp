@@ -16,3 +16,14 @@ void Screen1Presenter::deactivate()
 {
 
 }
+
+void Screen1Presenter::notifyHV(){
+	view.updateHV();
+}
+void Screen1Presenter::notifyLV(){
+	view.updateLV();
+}
+void Screen1Presenter::notifyState(){
+	view.updateState();
+}
+

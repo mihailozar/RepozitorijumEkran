@@ -47,29 +47,51 @@ protected:
     touchgfx::TextArea textArea8;
     touchgfx::Circle circle_cell1;
     touchgfx::PainterRGB565 circle_cell1Painter;
+    touchgfx::TextAreaWithOneWildcard cell1_voltage;
+    touchgfx::TextAreaWithOneWildcard cell1_temp;
     touchgfx::Container cell2;
     touchgfx::BoxWithBorder boxWithBorder3_1;
     touchgfx::TextArea textArea8_1;
     touchgfx::Circle circle_cell2;
     touchgfx::PainterRGB565 circle_cell2Painter;
+    touchgfx::TextAreaWithOneWildcard cell2_voltage;
+    touchgfx::TextArea cell2_temp;
     touchgfx::Container cell3;
     touchgfx::BoxWithBorder boxWithBorder3_2;
     touchgfx::TextArea textArea8_2;
     touchgfx::Circle circle_cell2_1;
     touchgfx::PainterRGB565 circle_cell2_1Painter;
+    touchgfx::TextAreaWithOneWildcard textArea13;
+    touchgfx::TextAreaWithOneWildcard cell3_temp;
     touchgfx::Container cell4;
     touchgfx::BoxWithBorder boxWithBorder3_3;
     touchgfx::TextArea textArea8_3;
     touchgfx::Circle circle_cell2_2;
     touchgfx::PainterRGB565 circle_cell2_2Painter;
-    touchgfx::TextArea textArea9;
-    touchgfx::TextArea textArea10;
-    touchgfx::TextArea textArea11;
-    touchgfx::TextArea textArea12;
-    touchgfx::TextArea textArea13;
+    touchgfx::TextAreaWithOneWildcard cell4_voltage;
+    touchgfx::TextAreaWithOneWildcard cell4_temp;
     touchgfx::TextArea textArea14;
+    touchgfx::TextArea textArea14_1;
     touchgfx::TextArea textArea15;
+    touchgfx::TextArea textArea15_1;
+    touchgfx::Circle fan1;
+    touchgfx::PainterRGB565 fan1Painter;
+    touchgfx::Circle fan2;
+    touchgfx::PainterRGB565 fan2Painter;
+    touchgfx::Circle pump1;
+    touchgfx::PainterRGB565 pump1Painter;
+    touchgfx::Circle pump2;
+    touchgfx::PainterRGB565 pump2Painter;
+    touchgfx::BoxWithBorder boxWithBorder4;
     touchgfx::TextArea textArea16;
+    touchgfx::TextArea textArea17;
+    touchgfx::TextArea textArea17_1;
+    touchgfx::TextArea textArea17_2;
+    touchgfx::TextArea textArea17_3;
+    touchgfx::TextArea textArea18;
+    touchgfx::TextArea textArea18_1;
+    touchgfx::TextArea textArea18_2;
+    touchgfx::TextArea textArea18_3;
 
     /*
      * Wildcard Buffers
@@ -78,6 +100,20 @@ protected:
     touchgfx::Unicode::UnicodeChar lv_voltageBuffer[LV_VOLTAGE_SIZE];
     static const uint16_t LV_TEMP_SIZE = 10;
     touchgfx::Unicode::UnicodeChar lv_tempBuffer[LV_TEMP_SIZE];
+    static const uint16_t CELL1_VOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell1_voltageBuffer[CELL1_VOLTAGE_SIZE];
+    static const uint16_t CELL1_TEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell1_tempBuffer[CELL1_TEMP_SIZE];
+    static const uint16_t CELL2_VOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell2_voltageBuffer[CELL2_VOLTAGE_SIZE];
+    static const uint16_t TEXTAREA13_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea13Buffer[TEXTAREA13_SIZE];
+    static const uint16_t CELL3_TEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell3_tempBuffer[CELL3_TEMP_SIZE];
+    static const uint16_t CELL4_VOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell4_voltageBuffer[CELL4_VOLTAGE_SIZE];
+    static const uint16_t CELL4_TEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar cell4_tempBuffer[CELL4_TEMP_SIZE];
 
 private:
 
