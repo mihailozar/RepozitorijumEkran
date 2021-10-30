@@ -12,6 +12,9 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void updateHV();
+    virtual void updateLV();
+    virtual void updateState();
 protected:
 };
 

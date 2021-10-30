@@ -62,7 +62,7 @@
                   "UseBuffer": true,
                   "BufferSize": 10
                 },
-                "Name": "speed",
+                "Name": "speed_txt",
                 "X": 20,
                 "Y": 31,
                 "Width": 418,

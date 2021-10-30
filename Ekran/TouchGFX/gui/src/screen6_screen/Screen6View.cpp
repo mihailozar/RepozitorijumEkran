@@ -14,3 +14,4 @@ void Screen6View::tearDownScreen()
 {
     Screen6ViewBase::tearDownScreen();
 }
+

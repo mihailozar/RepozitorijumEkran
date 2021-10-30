@@ -16,3 +16,4 @@ void Screen2Presenter::deactivate()
 {
 
 }
+

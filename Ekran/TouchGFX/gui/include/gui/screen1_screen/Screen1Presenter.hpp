@@ -26,6 +26,9 @@ public:
     virtual void deactivate();
 
     virtual ~Screen1Presenter() {};
+    virtual void notifyHV();
+    virtual void notifyLV();
+    virtual void notifyState();
 
 private:
     Screen1Presenter();

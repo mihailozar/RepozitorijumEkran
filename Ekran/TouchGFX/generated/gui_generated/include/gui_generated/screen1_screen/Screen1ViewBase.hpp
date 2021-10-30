@@ -34,7 +34,7 @@ protected:
     touchgfx::Box box1;
     touchgfx::Container Levi;
     touchgfx::Box box2;
-    touchgfx::TextAreaWithOneWildcard speed;
+    touchgfx::TextAreaWithOneWildcard speed_txt;
     touchgfx::TextArea textArea1;
     touchgfx::Container desni;
     touchgfx::Container CAN_STATUS;
@@ -68,8 +68,8 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t SPEED_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar speedBuffer[SPEED_SIZE];
+    static const uint16_t SPEED_TXT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar speed_txtBuffer[SPEED_TXT_SIZE];
     static const uint16_t VEHICLE_STATE_SIZE = 10;
     touchgfx::Unicode::UnicodeChar vehicle_stateBuffer[VEHICLE_STATE_SIZE];
     static const uint16_t VOLTAGE_SIZE = 10;

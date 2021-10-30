@@ -22,6 +22,9 @@ enum State {
 	READY_TO_DRIVE
 };
 
+int lv_comm_fault, hv_comm_fault, ecu_comm_fault;
+
+
 typedef enum State state_type;
 
 volatile enum State stateEcu;

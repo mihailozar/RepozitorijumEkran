@@ -1,3 +1,8 @@
+ModelListener.hpp:18:18:virtual void ModelListener::notifyState()	0	static
+ModelListener.hpp:19:18:virtual void ModelListener::notifyHV()	0	static
+ModelListener.hpp:20:18:virtual void ModelListener::notifyLV()	0	static
+ModelListener.hpp:21:18:virtual void ModelListener::notifyHVFaults()	0	static
+ModelListener.hpp:22:18:virtual void ModelListener::notifyLVFaults()	0	static
 Screen6Presenter.hpp:28:13:Screen6Presenter::~Screen6Presenter()	0	static
 Screen6Presenter.cpp:10:6:virtual void Screen6Presenter::activate()	0	static
 Screen6Presenter.hpp:28:13:virtual Screen6Presenter::~Screen6Presenter()	8	static

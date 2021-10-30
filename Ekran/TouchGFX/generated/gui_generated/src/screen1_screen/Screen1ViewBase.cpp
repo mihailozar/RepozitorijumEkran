@@ -22,13 +22,13 @@ Screen1ViewBase::Screen1ViewBase()
     box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Levi.add(box2);
 
-    speed.setPosition(20, 31, 418, 353);
-    speed.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    speed.setLinespacing(0);
-    Unicode::snprintf(speedBuffer, SPEED_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
-    speed.setWildcard(speedBuffer);
-    speed.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
-    Levi.add(speed);
+    speed_txt.setPosition(20, 31, 418, 353);
+    speed_txt.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    speed_txt.setLinespacing(0);
+    Unicode::snprintf(speed_txtBuffer, SPEED_TXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
+    speed_txt.setWildcard(speed_txtBuffer);
+    speed_txt.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
+    Levi.add(speed_txt);
 
     textArea1.setXY(176, 337);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));

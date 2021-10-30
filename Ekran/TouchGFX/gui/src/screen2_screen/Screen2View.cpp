@@ -14,3 +14,4 @@ void Screen2View::tearDownScreen()
 {
     Screen2ViewBase::tearDownScreen();
 }
+

@@ -14,3 +14,4 @@ void Screen8View::tearDownScreen()
 {
     Screen8ViewBase::tearDownScreen();
 }
+
