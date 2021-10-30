@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Core/Src/freertos.c \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

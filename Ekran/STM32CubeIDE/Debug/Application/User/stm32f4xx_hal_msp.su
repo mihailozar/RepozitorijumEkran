@@ -13,5 +13,7 @@ stm32f4xx_hal_msp.c:399:6:HAL_LTDC_MspInit	72	static
 stm32f4xx_hal_msp.c:436:6:HAL_LTDC_MspDeInit	0	static
 stm32f4xx_hal_msp.c:461:6:HAL_QSPI_MspInit	56	static
 stm32f4xx_hal_msp.c:516:6:HAL_QSPI_MspDeInit	8	static
-stm32f4xx_hal_msp.c:682:6:HAL_SDRAM_MspInit	48	static
-stm32f4xx_hal_msp.c:791:6:HAL_SDRAM_MspDeInit	8	static
+stm32f4xx_hal_msp.c:552:6:HAL_TIM_Base_MspInit	16	static
+stm32f4xx_hal_msp.c:577:6:HAL_TIM_Base_MspDeInit	0	static
+stm32f4xx_hal_msp.c:732:6:HAL_SDRAM_MspInit	48	static
+stm32f4xx_hal_msp.c:841:6:HAL_SDRAM_MspDeInit	8	static

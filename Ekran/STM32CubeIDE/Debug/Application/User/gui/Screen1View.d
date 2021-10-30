@@ -1,5 +1,5 @@
 Application/User/gui/Screen1View.o: \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen1_screen/Screen1View.cpp \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen1_screen/Screen1View.cpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

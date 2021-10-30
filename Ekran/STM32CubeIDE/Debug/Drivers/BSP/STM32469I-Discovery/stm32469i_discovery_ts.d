@@ -1,7 +1,7 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -41,12 +41,12 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
- c:\users\rm170154d\desktop\ekran\repozitorijumekran\ekran\drivers\bsp\components\ft6x06\ft6x06.h \
- c:\users\rm170154d\desktop\ekran\repozitorijumekran\ekran\drivers\bsp\components\common\ts.h
+ c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\ft6x06\ft6x06.h \
+ c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\common\ts.h
 
-C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
 
-C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
@@ -126,6 +126,6 @@ C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/Drivers/BSP/STM32469I-
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
 
-c:\users\rm170154d\desktop\ekran\repozitorijumekran\ekran\drivers\bsp\components\ft6x06\ft6x06.h:
+c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\ft6x06\ft6x06.h:
 
-c:\users\rm170154d\desktop\ekran\repozitorijumekran\ekran\drivers\bsp\components\common\ts.h:
+c:\users\mihailozar\desktop\repozitorijumekran\ekran\drivers\bsp\components\common\ts.h:

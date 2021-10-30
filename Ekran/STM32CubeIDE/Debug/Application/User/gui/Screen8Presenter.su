@@ -1,0 +1,5 @@
+Screen8Presenter.hpp:28:13:Screen8Presenter::~Screen8Presenter()	0	static
+Screen8Presenter.cpp:10:6:virtual void Screen8Presenter::activate()	0	static
+Screen8Presenter.hpp:28:13:virtual Screen8Presenter::~Screen8Presenter()	8	static
+Screen8Presenter.hpp:28:13:virtual void* Screen8Presenter::_ZThn4_N16Screen8PresenterD1Ev()	0	static
+Screen8Presenter.cpp:4:1:Screen8Presenter::Screen8Presenter(Screen8View&)	8	static

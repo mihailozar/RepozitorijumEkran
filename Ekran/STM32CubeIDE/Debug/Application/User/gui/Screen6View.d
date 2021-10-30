@@ -1,5 +1,5 @@
 Application/User/gui/Screen6View.o: \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen6_screen/Screen6View.cpp \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen6_screen/Screen6View.cpp \
  ../../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

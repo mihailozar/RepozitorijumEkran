@@ -1,5 +1,5 @@
 Application/User/gui/Screen7View.o: \
- C:/Users/rm170154d/Desktop/ekran/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen7_screen/Screen7View.cpp \
+ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen7_screen/Screen7View.cpp \
  ../../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
