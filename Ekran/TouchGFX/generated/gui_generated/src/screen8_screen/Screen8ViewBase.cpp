@@ -230,3 +230,15 @@ void Screen8ViewBase::setupScreen()
 {
 
 }
+
+//Handles when a key is pressed
+void Screen8ViewBase::handleKeyEvent(uint8_t key)
+{
+    if(1 == key)
+    {
+        //Interaction1
+        //When hardware button 1 clicked change screen to Screen1
+        //Go to Screen1 with no screen transition
+        application().gotoScreen1ScreenNoTransition();
+    }
+}

@@ -15,6 +15,6 @@ void Model::tick()
 			modelListener->notifyLV();
 		}
 
-//		modelListener->notifyHVFaults();
-//		modelListener->notifyLVFaults();
+		modelListener->notifyHVFaults();
+		modelListener->notifyLVFaults();
 }

@@ -23,6 +23,7 @@ Screen8ViewBase.cpp:229:6:virtual void Screen8ViewBase::setupScreen()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen8Presenter>::~View()	8	static
 Screen8ViewBase.hpp:22:13:virtual Screen8ViewBase::~Screen8ViewBase()	8	static
+Screen8ViewBase.cpp:235:6:virtual void Screen8ViewBase::handleKeyEvent(uint8_t)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static

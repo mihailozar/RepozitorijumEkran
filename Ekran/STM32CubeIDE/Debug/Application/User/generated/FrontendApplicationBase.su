@@ -24,6 +24,7 @@ FrontendApplicationBase.cpp:87:6:void FrontendApplicationBase::gotoScreen4Screen
 FrontendApplicationBase.cpp:100:6:void FrontendApplicationBase::gotoScreen5ScreenNoTransition()	0	static
 FrontendApplicationBase.cpp:113:6:void FrontendApplicationBase::gotoScreen6ScreenNoTransition()	0	static
 FrontendApplicationBase.cpp:126:6:void FrontendApplicationBase::gotoScreen7ScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:139:6:void FrontendApplicationBase::gotoScreen8ScreenNoTransition()	0	static
 AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	0	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = Screen1View; PresenterType = Screen1Presenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 FrontendApplicationBase.cpp:54:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()	16	static
@@ -39,3 +40,5 @@ MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Scre
 FrontendApplicationBase.cpp:119:6:void FrontendApplicationBase::gotoScreen6ScreenNoTransitionImpl()	16	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = Screen7View; PresenterType = Screen7Presenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 FrontendApplicationBase.cpp:132:6:void FrontendApplicationBase::gotoScreen7ScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = Screen8View; PresenterType = Screen8Presenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
+FrontendApplicationBase.cpp:145:6:void FrontendApplicationBase::gotoScreen8ScreenNoTransitionImpl()	16	static

@@ -16,3 +16,10 @@ void Screen3Presenter::deactivate()
 {
 
 }
+void Screen3Presenter::notifyHV()
+{
+	view.updateHV();
+}
+void Screen3Presenter::notifyHVFaults() {
+	view.updateHVFaults();
+}

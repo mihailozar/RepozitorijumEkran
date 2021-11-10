@@ -30,3 +30,4 @@ void Screen1Presenter::notifyState()
 {
 	view.updateState();
 }
+
