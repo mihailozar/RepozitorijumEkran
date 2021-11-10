@@ -25,6 +25,9 @@ public:
      */
     virtual void deactivate();
 
+    virtual void notifyHV();
+    virtual void notifyHVFaults();
+
     virtual ~Screen5Presenter() {};
 
 private:

@@ -11,6 +11,9 @@ public:
     virtual ~Screen5View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    virtual void updateHV();
+    virtual void updateHVFaults();
 protected:
 };
 

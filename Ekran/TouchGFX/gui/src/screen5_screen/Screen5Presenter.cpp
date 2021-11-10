@@ -16,3 +16,9 @@ void Screen5Presenter::deactivate()
 {
 
 }
+void Screen5Presenter::notifyHV() {
+	view.updateHV();
+}
+void Screen5Presenter::notifyHVFaults() {
+	view.updateHVFaults();
+}
