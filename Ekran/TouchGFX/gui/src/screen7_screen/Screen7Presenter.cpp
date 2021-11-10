@@ -17,3 +17,7 @@ void Screen7Presenter::deactivate()
 
 }
 
+void Screen7Presenter::notifyHVFaults()
+{
+	view.updateHVFaults();
+}

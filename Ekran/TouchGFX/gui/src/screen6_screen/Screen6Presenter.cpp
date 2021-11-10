@@ -16,3 +16,11 @@ void Screen6Presenter::deactivate()
 {
 
 }
+
+void Screen6Presenter::notifyHV() {
+	view.updateHV();
+}
+
+void Screen6Presenter::notifyHVFaults() {
+	view.updateHVFaults();
+}

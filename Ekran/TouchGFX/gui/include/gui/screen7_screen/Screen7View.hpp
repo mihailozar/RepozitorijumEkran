@@ -11,6 +11,7 @@ public:
     virtual ~Screen7View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void updateHVFaults();
 protected:
 };
 

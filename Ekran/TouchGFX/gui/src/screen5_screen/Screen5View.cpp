@@ -22,7 +22,7 @@ void Screen5View::tearDownScreen()
 
 void Screen5View::updateHV(){
 
-	// SEGMENT1
+	// SEGMENT5
 	Unicode::snprintfFloat(bms5_cell1Buffer, BMS5_CELL1_SIZE, "%.1f",bms_hv_voltage[4][0]);
 	bms5_cell1.invalidate();
 
@@ -66,7 +66,7 @@ void Screen5View::updateHV(){
 	bms5_cell14.invalidate();
 
 
-	// SEGMENT2
+	// SEGMENT6
 	Unicode::snprintfFloat(bms6_cell1Buffer, BMS5_CELL1_SIZE, "%.1f",bms_hv_voltage[5][0]);
 	bms6_cell1.invalidate();
 
@@ -110,7 +110,7 @@ void Screen5View::updateHV(){
 	bms6_cell14.invalidate();
 
 
-	// SEGMENT3
+	// SEGMENT7
 	Unicode::snprintfFloat(bms7_cell1Buffer, BMS5_CELL1_SIZE, "%.1f",bms_hv_voltage[6][0]);
 	bms7_cell1.invalidate();
 
@@ -153,7 +153,7 @@ void Screen5View::updateHV(){
 	Unicode::snprintfFloat(bms7_cell14Buffer, BMS5_CELL1_SIZE, "%.1f",bms_hv_voltage[6][13]);
 	bms7_cell14.invalidate();
 
-	// SEGMENT4
+	// SEGMENT8
 	Unicode::snprintfFloat(bms8_cell1Buffer, BMS5_CELL1_SIZE, "%.1f",bms_hv_voltage[7][0]);
 	bms8_cell1.invalidate();
 
