@@ -16,3 +16,6 @@ void Screen8Presenter::deactivate()
 {
 
 }
+void Screen8Presenter::notifyLV(){
+	view.updateLV();
+}

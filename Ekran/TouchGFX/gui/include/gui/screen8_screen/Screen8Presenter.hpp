@@ -25,6 +25,8 @@ public:
      */
     virtual void deactivate();
 
+    virtual void notifyLV();
+
     virtual ~Screen8Presenter() {};
 
 private:

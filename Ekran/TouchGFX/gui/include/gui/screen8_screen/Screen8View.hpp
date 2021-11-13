@@ -11,6 +11,7 @@ public:
     virtual ~Screen8View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void updateLV();
 protected:
 };
 

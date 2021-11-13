@@ -16,7 +16,7 @@ Screen8ViewBase::Screen8ViewBase()
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
 
-    boxWithBorder1.setPosition(0, 1, 272, 74);
+    boxWithBorder1.setPosition(0, 0, 272, 74);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
     boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     boxWithBorder1.setBorderSize(5);
@@ -90,6 +90,23 @@ Screen8ViewBase::Screen8ViewBase()
     circle_cell1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_cell1.setPainter(circle_cell1Painter);
     cell1.add(circle_cell1);
+
+    voltage_1.setXY(23, 65);
+    voltage_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    voltage_1.setLinespacing(0);
+    Unicode::snprintf(voltage_1Buffer, VOLTAGE_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID810).getText());
+    voltage_1.setWildcard(voltage_1Buffer);
+    voltage_1.resizeToCurrentText();
+    voltage_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID798));
+    cell1.add(voltage_1);
+
+    temp_1.setPosition(32, 119, 33, 32);
+    temp_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    temp_1.setLinespacing(0);
+    Unicode::snprintf(temp_1Buffer, TEMP_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID833).getText());
+    temp_1.setWildcard(temp_1Buffer);
+    temp_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID799));
+    cell1.add(temp_1);
     container1.add(cell1);
 
     cell2.setPosition(136, 0, 136, 203);
@@ -130,14 +147,14 @@ Screen8ViewBase::Screen8ViewBase()
     textArea8_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID796));
     cell3.add(textArea8_2);
 
-    circle_cell2_1.setPosition(104, 9, 42, 34);
-    circle_cell2_1.setCenter(12, 12);
-    circle_cell2_1.setRadius(12);
-    circle_cell2_1.setLineWidth(0);
-    circle_cell2_1.setArc(0, 360);
-    circle_cell2_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    circle_cell2_1.setPainter(circle_cell2_1Painter);
-    cell3.add(circle_cell2_1);
+    circle_cell3.setPosition(104, 9, 42, 34);
+    circle_cell3.setCenter(12, 12);
+    circle_cell3.setRadius(12);
+    circle_cell3.setLineWidth(0);
+    circle_cell3.setArc(0, 360);
+    circle_cell3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell3.setPainter(circle_cell3Painter);
+    cell3.add(circle_cell3);
     container1.add(cell3);
 
     cell4.setPosition(136, 203, 136, 203);
@@ -154,55 +171,186 @@ Screen8ViewBase::Screen8ViewBase()
     textArea8_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID797));
     cell4.add(textArea8_3);
 
-    circle_cell2_2.setPosition(103, 9, 42, 34);
-    circle_cell2_2.setCenter(12, 12);
-    circle_cell2_2.setRadius(12);
-    circle_cell2_2.setLineWidth(0);
-    circle_cell2_2.setArc(0, 360);
-    circle_cell2_2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    circle_cell2_2.setPainter(circle_cell2_2Painter);
-    cell4.add(circle_cell2_2);
+    circle_cell4.setPosition(103, 9, 42, 34);
+    circle_cell4.setCenter(12, 12);
+    circle_cell4.setRadius(12);
+    circle_cell4.setLineWidth(0);
+    circle_cell4.setArc(0, 360);
+    circle_cell4Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell4.setPainter(circle_cell4Painter);
+    cell4.add(circle_cell4);
     container1.add(cell4);
 
-    textArea9.setXY(9, 139);
+    circle_cell1_1.setPosition(358, 162, 26, 29);
+    circle_cell1_1.setCenter(12, 12);
+    circle_cell1_1.setRadius(12);
+    circle_cell1_1.setLineWidth(0);
+    circle_cell1_1.setArc(0, 360);
+    circle_cell1_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell1_1.setPainter(circle_cell1_1Painter);
+
+    voltage_2.setXY(162, 139);
+    voltage_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    voltage_2.setLinespacing(0);
+    Unicode::snprintf(voltage_2Buffer, VOLTAGE_2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID811).getText());
+    voltage_2.setWildcard(voltage_2Buffer);
+    voltage_2.resizeToCurrentText();
+    voltage_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID800));
+
+    temp2.setPosition(171, 191, 33, 36);
+    temp2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    temp2.setLinespacing(0);
+    Unicode::snprintf(temp2Buffer, TEMP2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID812).getText());
+    temp2.setWildcard(temp2Buffer);
+    temp2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID801));
+
+    voltage_3.setXY(23, 342);
+    voltage_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    voltage_3.setLinespacing(0);
+    Unicode::snprintf(voltage_3Buffer, VOLTAGE_3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID813).getText());
+    voltage_3.setWildcard(voltage_3Buffer);
+    voltage_3.resizeToCurrentText();
+    voltage_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID802));
+
+    voltage_4.setXY(162, 342);
+    voltage_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    voltage_4.setLinespacing(0);
+    Unicode::snprintf(voltage_4Buffer, VOLTAGE_4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID815).getText());
+    voltage_4.setWildcard(voltage_4Buffer);
+    voltage_4.resizeToCurrentText();
+    voltage_4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID803));
+
+    temp_3.setPosition(32, 404, 33, 36);
+    temp_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    temp_3.setLinespacing(0);
+    Unicode::snprintf(temp_3Buffer, TEMP_3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID814).getText());
+    temp_3.setWildcard(temp_3Buffer);
+    temp_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID804));
+
+    temp_4.setPosition(171, 404, 33, 36);
+    temp_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    temp_4.setLinespacing(0);
+    Unicode::snprintf(temp_4Buffer, TEMP_4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID816).getText());
+    temp_4.setWildcard(temp_4Buffer);
+    temp_4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID805));
+
+    circle_cell1_1_1.setPosition(358, 211, 26, 29);
+    circle_cell1_1_1.setCenter(12, 12);
+    circle_cell1_1_1.setRadius(12);
+    circle_cell1_1_1.setLineWidth(0);
+    circle_cell1_1_1.setArc(0, 360);
+    circle_cell1_1_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell1_1_1.setPainter(circle_cell1_1_1Painter);
+
+    circle_cell1_1_2.setPosition(358, 263, 26, 29);
+    circle_cell1_1_2.setCenter(12, 12);
+    circle_cell1_1_2.setRadius(12);
+    circle_cell1_1_2.setLineWidth(0);
+    circle_cell1_1_2.setArc(0, 360);
+    circle_cell1_1_2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell1_1_2.setPainter(circle_cell1_1_2Painter);
+
+    circle_cell1_1_3.setPosition(358, 313, 26, 29);
+    circle_cell1_1_3.setCenter(12, 12);
+    circle_cell1_1_3.setRadius(12);
+    circle_cell1_1_3.setLineWidth(0);
+    circle_cell1_1_3.setArc(0, 360);
+    circle_cell1_1_3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_cell1_1_3.setPainter(circle_cell1_1_3Painter);
+
+    fan1.setXY(409, 158);
+    fan1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    fan1.setLinespacing(0);
+    fan1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID806));
+
+    fan2.setXY(409, 204);
+    fan2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    fan2.setLinespacing(0);
+    fan2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID807));
+
+    pump1.setXY(410, 256);
+    pump1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    pump1.setLinespacing(0);
+    pump1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID808));
+
+    pump2.setXY(410, 306);
+    pump2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    pump2.setLinespacing(0);
+    pump2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID809));
+
+    textArea9.setXY(68, 139);
     textArea9.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea9.setLinespacing(0);
-    textArea9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID798));
+    textArea9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID817));
 
-    textArea10.setXY(0, 194);
-    textArea10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_1.setXY(68, 342);
+    textArea9_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_1.setLinespacing(0);
+    textArea9_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID818));
+
+    textArea9_2.setXY(211, 139);
+    textArea9_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_2.setLinespacing(0);
+    textArea9_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID819));
+
+    textArea9_3.setXY(211, 342);
+    textArea9_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_3.setLinespacing(0);
+    textArea9_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID820));
+
+    textArea9_4.setXY(68, 191);
+    textArea9_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_4.setLinespacing(0);
+    textArea9_4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID821));
+
+    textArea9_5.setXY(70, 404);
+    textArea9_5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_5.setLinespacing(0);
+    textArea9_5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID822));
+
+    textArea9_6.setXY(211, 191);
+    textArea9_6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_6.setLinespacing(0);
+    textArea9_6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID823));
+
+    textArea9_7.setXY(211, 404);
+    textArea9_7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9_7.setLinespacing(0);
+    textArea9_7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID824));
+
+    textArea10.setXY(505, 158);
+    textArea10.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea10.setLinespacing(0);
-    textArea10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID799));
+    textArea10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID825));
 
-    textArea11.setXY(140, 139);
-    textArea11.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea11.setLinespacing(0);
-    textArea11.setTypedText(touchgfx::TypedText(T_SINGLEUSEID800));
+    percent_1.setPosition(523, 158, 44, 36);
+    percent_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    percent_1.setLinespacing(0);
+    Unicode::snprintf(percent_1Buffer, PERCENT_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID828).getText());
+    percent_1.setWildcard(percent_1Buffer);
+    percent_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID826));
 
-    textArea12.setXY(140, 194);
-    textArea12.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea12.setXY(567, 158);
+    textArea12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea12.setLinespacing(0);
-    textArea12.setTypedText(touchgfx::TypedText(T_SINGLEUSEID801));
+    textArea12.setTypedText(touchgfx::TypedText(T_SINGLEUSEID827));
 
-    textArea13.setXY(6, 342);
-    textArea13.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea13.setXY(505, 204);
+    textArea13.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea13.setLinespacing(0);
-    textArea13.setTypedText(touchgfx::TypedText(T_SINGLEUSEID802));
+    textArea13.setTypedText(touchgfx::TypedText(T_SINGLEUSEID829));
 
-    textArea14.setXY(139, 342);
-    textArea14.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea14.setPosition(523, 209, 44, 31);
+    textArea14.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea14.setLinespacing(0);
-    textArea14.setTypedText(touchgfx::TypedText(T_SINGLEUSEID803));
+    Unicode::snprintf(textArea14Buffer, TEXTAREA14_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID831).getText());
+    textArea14.setWildcard(textArea14Buffer);
+    textArea14.setTypedText(touchgfx::TypedText(T_SINGLEUSEID830));
 
-    textArea15.setXY(3, 404);
-    textArea15.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea15.setLinespacing(0);
-    textArea15.setTypedText(touchgfx::TypedText(T_SINGLEUSEID804));
-
-    textArea16.setXY(140, 404);
-    textArea16.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea16.setLinespacing(0);
-    textArea16.setTypedText(touchgfx::TypedText(T_SINGLEUSEID805));
+    percent_2.setXY(567, 207);
+    percent_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    percent_2.setLinespacing(0);
+    percent_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID832));
 
     add(__background);
     add(box1);
@@ -216,14 +364,34 @@ Screen8ViewBase::Screen8ViewBase()
     add(lv_temp);
     add(textArea7);
     add(container1);
+    add(circle_cell1_1);
+    add(voltage_2);
+    add(temp2);
+    add(voltage_3);
+    add(voltage_4);
+    add(temp_3);
+    add(temp_4);
+    add(circle_cell1_1_1);
+    add(circle_cell1_1_2);
+    add(circle_cell1_1_3);
+    add(fan1);
+    add(fan2);
+    add(pump1);
+    add(pump2);
     add(textArea9);
+    add(textArea9_1);
+    add(textArea9_2);
+    add(textArea9_3);
+    add(textArea9_4);
+    add(textArea9_5);
+    add(textArea9_6);
+    add(textArea9_7);
     add(textArea10);
-    add(textArea11);
+    add(percent_1);
     add(textArea12);
     add(textArea13);
     add(textArea14);
-    add(textArea15);
-    add(textArea16);
+    add(percent_2);
 }
 
 void Screen8ViewBase::setupScreen()
