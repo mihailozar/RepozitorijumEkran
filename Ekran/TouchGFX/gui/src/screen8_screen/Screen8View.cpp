@@ -27,6 +27,13 @@ void Screen8View::tearDownScreen()
 
 }
 
+void Screen8View::handleTickEvent(){
+
+	if (screen == 8) {
+			application().gotoScreen1ScreenNoTransition();
+		}
+
+}
 void Screen8View::updateLV(){
 
 	//VOLTAGE + TEMP

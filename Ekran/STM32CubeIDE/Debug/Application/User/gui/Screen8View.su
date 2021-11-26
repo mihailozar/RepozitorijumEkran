@@ -1,9 +1,9 @@
 Screen.hpp:103:18:virtual void touchgfx::Screen::afterTransition()	0	static
-Screen.hpp:143:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen8View.hpp:11:13:Screen8View::~Screen8View()	0	static
 Screen8View.cpp:24:6:virtual void Screen8View::tearDownScreen()	0	static
 Screen8View.cpp:19:6:virtual void Screen8View::setupScreen()	0	static
 Screen8View.hpp:11:13:virtual Screen8View::~Screen8View()	8	static
+Screen8View.cpp:30:6:virtual void Screen8View::handleTickEvent()	8	static
 Unicode.hpp:404:25:static touchgfx::Unicode::UnicodeChar* touchgfx::Unicode::snprintfFloat(touchgfx::Unicode::UnicodeChar*, uint16_t, const char*, float)	16	static
-Screen8View.cpp:30:6:virtual void Screen8View::updateLV()	24	static
+Screen8View.cpp:37:6:virtual void Screen8View::updateLV()	24	static
 Screen8View.cpp:14:1:Screen8View::Screen8View()	8	static

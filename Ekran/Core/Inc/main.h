@@ -58,10 +58,17 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BUZZER_Pin GPIO_PIN_10
+#define BUZZER_GPIO_Port GPIOG
 #define RENDER_TIME_Pin GPIO_PIN_4
 #define RENDER_TIME_GPIO_Port GPIOD
+#define DISPLAY_CHANGE_Pin GPIO_PIN_7
+#define DISPLAY_CHANGE_GPIO_Port GPIOC
 #define VSYNC_FREQ_Pin GPIO_PIN_6
 #define VSYNC_FREQ_GPIO_Port GPIOG
+#define START_Pin GPIO_PIN_5
+#define START_GPIO_Port GPIOA
+#define START_EXTI_IRQn EXTI9_5_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

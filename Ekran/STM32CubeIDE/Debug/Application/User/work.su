@@ -1,3 +1,4 @@
-work.c:20:13:workTask	0	static
-work.c:47:13:canTask	0	static
-work.c:60:6:workInit	24	static
+work.c:95:13:buttonTask	32	static
+work.c:58:13:workTask	16	static
+work.c:19:6:HAL_TIM_PeriodElapsedCallback	8	static
+work.c:176:6:workInit	24	static

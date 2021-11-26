@@ -15,6 +15,44 @@
 #include "semphr.h"
 
 
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM6) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  if(htim->Instance == TIM3){
+
+		 if (ecu_comm) {
+		 	  ecu_comm_fault=0;
+		 	  ecu_comm=0;
+		   }
+		   else {
+		 	  ecu_comm_fault=1;
+		   }
+		   if (lv_comm) {
+		 	  lv_comm_fault=0;
+		 	  lv_comm=0;
+		   }
+		   else {
+		 	  lv_comm_fault=1;
+		   }
+		   if (hv_comm) {
+		 	  hv_comm_fault=0;
+		 	  hv_comm=0;
+		   }
+		   else {
+		 	  hv_comm_fault=1;
+		   }
+
+  }
+  /* USER CODE END Callback 1 */
+}
 QueueHandle_t CAN_Rx_Queue;
 SemaphoreHandle_t CANMutex;
 static void workTask(void *parameters) {
@@ -24,43 +62,121 @@ static void workTask(void *parameters) {
 
 	while (1) {
 
-//		if (stateEcu == IDLE || stateEcu == ACC_ACTIVE) {
-//			if (startButton) {
-//				sendStartMessage(data);
-//				vTaskDelay(1000 / portTICK_PERIOD_MS);
-//				startButton = 0;
-//			}
-//		}
+		if (stateEcu == IDLE || stateEcu == ACC_ACTIVE) {
+			if (startButton) {
+				sendStartMessage(data);
+				vTaskDelay(1000 / portTICK_PERIOD_MS);
+			}
+		}
 
-//		if (stateEcu == READY_TO_DRIVE_SIGNAL) {
-//			HAL_GPIO_WritePin(GPIOG, GPIO_PIN_9, GPIO_PIN_RESET);
-//			HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_RESET);
-//			HAL_Delay(3000);
-//			HAL_GPIO_WritePin(GPIOG, GPIO_PIN_9, GPIO_PIN_SET);
-//			HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_SET);
-//			startButton = 0;
-//		}
+		if (stateEcu == READY_TO_DRIVE_SIGNAL) {
+			HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+			HAL_Delay(3000);
+			HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+			startButton = 0;
+		}
 
 	}
 }
 
 static void canTask(void *parameters) {
-		while (1) {
-			/*if (HAL_CAN_GetRxFifoFillLevel(&hcan2, 0) > 0) {
-				//xSemaphoreTake(CANMutex, portMAX_DELAY);
-				getCANMessage();
-				//xSemaphoreGive(CANMutex);
-			}*/
-			uint8_t data1[8];
-			data1[0]=3;
-			//sendStartMessage(data1);
-		}
+	while (1) {
+		/*if (HAL_CAN_GetRxFifoFillLevel(&hcan2, 0) > 0) {
+		 //xSemaphoreTake(CANMutex, portMAX_DELAY);
+		 getCANMessage();
+		 //xSemaphoreGive(CANMutex);
+		 }*/
+		uint8_t data1[8];
+		data1[0] = 3;
+		//sendStartMessage(data1);
+	}
 }
+
+static void buttonTask(void *parameters) {
+	int cnt = 0;
+	int cntStart = 0;
+	screen = 0;
+	uint32_t oldMili = 0;
+	uint32_t oldMili2 = 0;
+	int changeFlag=0;
+	int flag2=0;
+	while (1) {
+
+//		if (HAL_GPIO_ReadPin(DISPLAY_CHANGE_GPIO_Port, DISPLAY_CHANGE_Pin)) {
+//			startButton = 0;
+//			cntStart++;
+//		}else {
+//			if (cntStart > 1400
+//					&& (stateEcu == IDLE || stateEcu == ACC_ACTIVE)) {
+//				startButton = 1;
+//			}
+//			cntStart = 0;
+//		}
+		if (HAL_GPIO_ReadPin(DISPLAY_CHANGE_GPIO_Port, DISPLAY_CHANGE_Pin)
+				== GPIO_PIN_RESET) {
+			if (oldMili == 0) {
+				oldMili = HAL_GetTick();
+				changeFlag=1;
+			}
+		}
+		if (HAL_GPIO_ReadPin(DISPLAY_CHANGE_GPIO_Port, DISPLAY_CHANGE_Pin) && changeFlag==1) {
+			uint32_t currMili = HAL_GetTick();
+
+			if (currMili - oldMili > 350) {
+				if (screen == 0)
+					screen = 1;
+				else if (screen == 1)
+					screen = 2;
+				else if (screen == 2)
+					screen = 3;
+				else if (screen == 3)
+					screen = 4;
+				else if (screen == 4)
+					screen = 5;
+				else if (screen == 5)
+					screen = 6;
+				else if (screen == 6)
+					screen = 7;
+				else if (screen == 7)
+					screen = 8;
+				else if (screen == 8)
+					screen = 1;
+				oldMili = 0;
+				changeFlag=0;
+			}
+		}
+
+
+		if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin)== GPIO_PIN_RESET) {
+					if (oldMili2 == 0) {
+						oldMili2 = HAL_GetTick();
+						flag2=1;
+
+					}
+				}
+				if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin) && flag2==1) {
+					uint32_t currMili = HAL_GetTick();
+
+					if (currMili - oldMili2 > 250) {
+						startButton = 1;
+//						uint8_t data[1] = { VEHICLE_START };
+//						sendStartMessage(data);
+//						HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+//						HAL_Delay(3000);
+//						HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+						oldMili2 = 0;
+						flag2=0;
+					}
+				}
+	}
+}
+
+
 
 void workInit() {
 	CAN_Rx_Queue = xQueueCreate(10, sizeof(struct CANMessage));
 	CANMutex = xSemaphoreCreateMutex();
 	xTaskCreate(workTask, "workTask", 128, NULL, 5, NULL);
-	xTaskCreate(canTask, "canTask", 128, NULL, 5, NULL);
-//	xTaskCreate(buttonTask, "buttonTask", 128, NULL, 5, NULL);
+//	xTaskCreate(canTask, "canTask", 128, NULL, 5, NULL);
+		xTaskCreate(buttonTask, "buttonTask", 128, NULL, 5, NULL);
 }

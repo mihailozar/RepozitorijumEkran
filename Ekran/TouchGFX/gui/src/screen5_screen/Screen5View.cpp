@@ -1,10 +1,19 @@
 #include <gui/screen5_screen/Screen5View.hpp>
 #include <touchgfx/Color.hpp>
 
+extern int screen;
 extern float bms_hv_voltage[10][14];
 extern float bms_hv_volt[10];
 extern uint16_t bms_hv_board_fault;
 
+
+void Screen5View::handleTickEvent(){
+
+	if (screen == 5) {
+			application().gotoScreen6ScreenNoTransition();
+		}
+
+}
 Screen5View::Screen5View()
 {
 

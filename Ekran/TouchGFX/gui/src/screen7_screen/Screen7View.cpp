@@ -1,7 +1,7 @@
 #include <gui/screen7_screen/Screen7View.hpp>
 #include <touchgfx/Color.hpp>
 
-
+extern int screen;
 extern uint16_t bms_hv_board_fault;
 extern uint8_t bms_hv_fault[10][16];
 
@@ -19,7 +19,13 @@ void Screen7View::tearDownScreen()
 {
     Screen7ViewBase::tearDownScreen();
 }
+void Screen7View::handleTickEvent(){
 
+	if (screen == 7) {
+			application().gotoScreen8ScreenNoTransition();
+		}
+
+}
 void Screen7View::updateHVFaults(){
 	//SEGMENT1
 		if (bms_hv_board_fault & 0x001) {

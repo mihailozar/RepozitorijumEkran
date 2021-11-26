@@ -2,6 +2,7 @@
 
 #include <touchgfx/Color.hpp>
 
+extern int screen;
 extern float bms_hv_volt[10];
 extern float bms_hv_temperature[10][7];
 extern float bms_hv_max_temperature[10];
@@ -14,6 +15,13 @@ Screen3View::Screen3View()
 
 }
 
+void Screen3View::handleTickEvent(){
+
+	if (screen == 3) {
+			application().gotoScreen4ScreenNoTransition();
+		}
+
+}
 void Screen3View::setupScreen()
 {
     Screen3ViewBase::setupScreen();

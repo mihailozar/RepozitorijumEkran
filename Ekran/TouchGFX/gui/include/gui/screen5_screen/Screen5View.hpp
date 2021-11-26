@@ -14,6 +14,7 @@ public:
 
     virtual void updateHV();
     virtual void updateHVFaults();
+    virtual void handleTickEvent();
 protected:
 };
 

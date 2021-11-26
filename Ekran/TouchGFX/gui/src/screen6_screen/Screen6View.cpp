@@ -1,6 +1,7 @@
 #include <gui/screen6_screen/Screen6View.hpp>
 #include <touchgfx/Color.hpp>
 
+extern int screen;
 extern float bms_hv_voltage[10][14];
 extern float bms_hv_volt[10];
 extern uint16_t bms_hv_board_fault;
@@ -19,6 +20,14 @@ void Screen6View::setupScreen()
 void Screen6View::tearDownScreen()
 {
     Screen6ViewBase::tearDownScreen();
+}
+
+void Screen6View::handleTickEvent(){
+
+	if (screen == 6) {
+			application().gotoScreen7ScreenNoTransition();
+		}
+
 }
 
 void Screen6View::updateHV(){

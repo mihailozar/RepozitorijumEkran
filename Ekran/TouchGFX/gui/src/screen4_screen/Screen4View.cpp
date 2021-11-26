@@ -1,5 +1,7 @@
 #include <gui/screen4_screen/Screen4View.hpp>
 #include <touchgfx/Color.hpp>
+
+extern int screen;
 extern float bms_hv_voltage[10][14];
 extern float bms_hv_volt[10];
 extern uint16_t bms_hv_board_fault;
@@ -9,6 +11,13 @@ Screen4View::Screen4View()
 
 }
 
+void Screen4View::handleTickEvent(){
+
+	if (screen == 4) {
+			application().gotoScreen5ScreenNoTransition();
+		}
+
+}
 void Screen4View::setupScreen()
 {
     Screen4ViewBase::setupScreen();
