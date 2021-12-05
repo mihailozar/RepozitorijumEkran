@@ -13,7 +13,6 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/canvas/Line.hpp>
 
 class Screen7ViewBase : public touchgfx::View<Screen7Presenter>
 {
@@ -131,14 +130,6 @@ protected:
     touchgfx::TextArea under_bms10;
     touchgfx::TextArea over_bms10;
     touchgfx::TextArea comm_bms10;
-    touchgfx::Line line1_3;
-    touchgfx::PainterRGB565 line1_3Painter;
-    touchgfx::Line line1_3_1;
-    touchgfx::PainterRGB565 line1_3_1Painter;
-    touchgfx::Line line1_3_2;
-    touchgfx::PainterRGB565 line1_3_2Painter;
-    touchgfx::Line line1_3_3;
-    touchgfx::PainterRGB565 line1_3_3Painter;
 
 private:
 

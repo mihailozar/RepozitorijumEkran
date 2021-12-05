@@ -22,7 +22,7 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         // ROCK_TTF_300_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[2]);
     case Typography::TYPOGRAPHY_01:
-        // ROCK_TTF_30_4bpp
+        // ROCK_TTF_31_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
     case Typography::TYPOGRAPHY_02:
         // ROCK_TTF_25_4bpp
@@ -33,6 +33,12 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
     case Typography::TYPOGRAPHY_04:
         // ROCK_TTF_15_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
+    case Typography::TYPOGRAPHY_05:
+        // ROCK_TTF_45_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
+    case Typography::TYPOGRAPHY_06:
+        // ROCK_TTF_35_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[8]);
     default:
         return 0;
     }

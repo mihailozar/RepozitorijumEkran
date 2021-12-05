@@ -38,10 +38,8 @@ protected:
     touchgfx::BoxWithBorder boxWithBorder2;
     touchgfx::TextArea textArea2;
     touchgfx::TextAreaWithOneWildcard lv_voltage;
-    touchgfx::TextArea textArea4;
     touchgfx::TextArea textArea5;
-    touchgfx::TextAreaWithOneWildcard lv_temp;
-    touchgfx::TextArea textArea7;
+    touchgfx::TextAreaWithOneWildcard lv_current;
     touchgfx::Container container1;
     touchgfx::Container cell1;
     touchgfx::BoxWithBorder boxWithBorder3;
@@ -83,28 +81,17 @@ protected:
     touchgfx::TextArea fan2;
     touchgfx::TextArea pump1;
     touchgfx::TextArea pump2;
-    touchgfx::TextArea textArea9;
-    touchgfx::TextArea textArea9_1;
-    touchgfx::TextArea textArea9_2;
-    touchgfx::TextArea textArea9_3;
-    touchgfx::TextArea textArea9_4;
-    touchgfx::TextArea textArea9_5;
-    touchgfx::TextArea textArea9_6;
-    touchgfx::TextArea textArea9_7;
-    touchgfx::TextArea textArea10;
     touchgfx::TextAreaWithOneWildcard percent_1;
-    touchgfx::TextArea textArea12;
-    touchgfx::TextArea textArea13;
     touchgfx::TextAreaWithOneWildcard textArea14;
-    touchgfx::TextArea percent_2;
+    touchgfx::TextArea textArea2_1;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t LV_VOLTAGE_SIZE = 10;
+    static const uint16_t LV_VOLTAGE_SIZE = 20;
     touchgfx::Unicode::UnicodeChar lv_voltageBuffer[LV_VOLTAGE_SIZE];
-    static const uint16_t LV_TEMP_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar lv_tempBuffer[LV_TEMP_SIZE];
+    static const uint16_t LV_CURRENT_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar lv_currentBuffer[LV_CURRENT_SIZE];
     static const uint16_t VOLTAGE_1_SIZE = 10;
     touchgfx::Unicode::UnicodeChar voltage_1Buffer[VOLTAGE_1_SIZE];
     static const uint16_t TEMP_1_SIZE = 10;

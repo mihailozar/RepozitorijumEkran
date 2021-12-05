@@ -18,12 +18,12 @@ Screen.hpp:153:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	stati
 Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:36:7:touchgfx::View<Screen7Presenter>::~View()	0	static
-Screen7ViewBase.hpp:22:13:Screen7ViewBase::~Screen7ViewBase()	0	static
-Screen7ViewBase.cpp:534:6:virtual void Screen7ViewBase::setupScreen()	0	static
+Screen7ViewBase.hpp:21:13:Screen7ViewBase::~Screen7ViewBase()	0	static
+Screen7ViewBase.cpp:528:6:virtual void Screen7ViewBase::setupScreen()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen7Presenter>::~View()	8	static
-Screen7ViewBase.hpp:22:13:virtual Screen7ViewBase::~Screen7ViewBase()	8	static
-Screen7ViewBase.cpp:540:6:virtual void Screen7ViewBase::handleKeyEvent(uint8_t)	8	static
+Screen7ViewBase.hpp:21:13:virtual Screen7ViewBase::~Screen7ViewBase()	8	static
+Screen7ViewBase.cpp:534:6:virtual void Screen7ViewBase::handleKeyEvent(uint8_t)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
@@ -32,5 +32,4 @@ Box.hpp:33:5:touchgfx::Box::Box()	8	static
 BoxWithBorder.hpp:34:5:touchgfx::BoxWithBorder::BoxWithBorder()	8	static
 TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
 AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-Line.hpp:248:10:void touchgfx::Line::setLineWidth(T) [with T = int]	4	static
-Screen7ViewBase.cpp:8:1:Screen7ViewBase::Screen7ViewBase()	480	static
+Screen7ViewBase.cpp:8:1:Screen7ViewBase::Screen7ViewBase()	448	static

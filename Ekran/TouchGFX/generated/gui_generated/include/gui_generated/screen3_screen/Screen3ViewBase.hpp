@@ -14,7 +14,6 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/canvas/Line.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -40,9 +39,7 @@ protected:
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;
     touchgfx::TextAreaWithOneWildcard total_voltage;
-    touchgfx::TextArea textArea3;
     touchgfx::TextAreaWithOneWildcard currnet;
-    touchgfx::TextArea textArea4;
     touchgfx::Container BMS;
     touchgfx::BoxWithBorder box1_2;
     touchgfx::BoxWithBorder box3_4;
@@ -55,9 +52,7 @@ protected:
     touchgfx::Circle circle_bms1;
     touchgfx::PainterRGB565 circle_bms1Painter;
     touchgfx::TextAreaWithOneWildcard voltage_bms1;
-    touchgfx::TextArea textArea7;
     touchgfx::TextAreaWithOneWildcard temp_bms1;
-    touchgfx::TextArea textArea6_1;
     touchgfx::Container bms2;
     touchgfx::Box boxbms2;
     touchgfx::Circle circle_bms6;
@@ -65,8 +60,6 @@ protected:
     touchgfx::TextArea textArea5_1;
     touchgfx::TextAreaWithOneWildcard voltage_bms6;
     touchgfx::TextAreaWithOneWildcard temp_bms6;
-    touchgfx::TextArea textArea7_1;
-    touchgfx::TextArea textArea6;
     touchgfx::Container bms4;
     touchgfx::Box boxbms2_1;
     touchgfx::TextArea textArea5_1_1;
@@ -74,15 +67,11 @@ protected:
     touchgfx::PainterRGB565 circle_bms7Painter;
     touchgfx::TextAreaWithOneWildcard voltage_bms7;
     touchgfx::TextAreaWithOneWildcard temp_bms7;
-    touchgfx::TextArea textArea7_1_1_1;
-    touchgfx::TextArea textArea6_2_1;
     touchgfx::Container bms3;
     touchgfx::Box boxbms2_2;
     touchgfx::TextArea textArea5_1_2;
     touchgfx::Circle circle_bms2;
     touchgfx::PainterRGB565 circle_bms2Painter;
-    touchgfx::TextArea textArea7_1_1;
-    touchgfx::TextArea textArea6_2;
     touchgfx::TextAreaWithOneWildcard temp_bms2;
     touchgfx::TextAreaWithOneWildcard voltage_bms2;
     touchgfx::Container bms5;
@@ -90,8 +79,6 @@ protected:
     touchgfx::TextArea textArea5_1_2_1;
     touchgfx::Circle circle_bms3;
     touchgfx::PainterRGB565 circle_bms3Painter;
-    touchgfx::TextArea textArea7_1_1_2;
-    touchgfx::TextArea textArea6_2_2;
     touchgfx::TextAreaWithOneWildcard temp_bms3;
     touchgfx::TextAreaWithOneWildcard voltage_bms3;
     touchgfx::Container bms6;
@@ -100,8 +87,6 @@ protected:
     touchgfx::Circle circle_bms8;
     touchgfx::PainterRGB565 circle_bms8Painter;
     touchgfx::TextAreaWithOneWildcard temp_bms8;
-    touchgfx::TextArea textArea6_2_2_1;
-    touchgfx::TextArea textArea7_1_1_2_1;
     touchgfx::TextAreaWithOneWildcard voltage_bms8;
     touchgfx::Container bms7;
     touchgfx::Box boxbms2_2_3;
@@ -109,8 +94,6 @@ protected:
     touchgfx::Circle circle_bms4;
     touchgfx::PainterRGB565 circle_bms4Painter;
     touchgfx::TextAreaWithOneWildcard voltage_bms4;
-    touchgfx::TextArea textArea7_1_1_2_1_1;
-    touchgfx::TextArea textArea6_2_2_1_1;
     touchgfx::TextAreaWithOneWildcard temp_bms4;
     touchgfx::Container bms8;
     touchgfx::Box boxbms2_2_4;
@@ -118,17 +101,13 @@ protected:
     touchgfx::Circle circle_bms9;
     touchgfx::PainterRGB565 circle_bms9Painter;
     touchgfx::TextAreaWithOneWildcard temp_bms9;
-    touchgfx::TextArea textArea6_2_2_1_1_1;
-    touchgfx::TextArea textArea7_1_1_2_1_1_1;
     touchgfx::TextAreaWithOneWildcard voltage_bms9;
     touchgfx::Container bms9;
     touchgfx::Box boxbms2_2_5;
     touchgfx::TextArea textArea5_1_2_5;
     touchgfx::Circle circle_bms5;
     touchgfx::PainterRGB565 circle_bms5Painter;
-    touchgfx::TextArea textArea7_1_1_2_1_1_1_1;
     touchgfx::TextAreaWithOneWildcard voltage_bms5;
-    touchgfx::TextArea textArea6_2_2_1_1_1_1;
     touchgfx::TextAreaWithOneWildcard temp_bms5;
     touchgfx::Container bms10;
     touchgfx::Box boxbms2_2_6;
@@ -136,17 +115,7 @@ protected:
     touchgfx::Circle circle_bms10;
     touchgfx::PainterRGB565 circle_bms10Painter;
     touchgfx::TextAreaWithOneWildcard temp_bms10;
-    touchgfx::TextArea textArea6_2_2_1_1_1_1_1;
     touchgfx::TextAreaWithOneWildcard voltage_bms10;
-    touchgfx::TextArea textArea7_1_1_2_1_1_1_1_1;
-    touchgfx::Line line1;
-    touchgfx::PainterRGB565 line1Painter;
-    touchgfx::Line line1_1;
-    touchgfx::PainterRGB565 line1_1Painter;
-    touchgfx::Line line1_2;
-    touchgfx::PainterRGB565 line1_2Painter;
-    touchgfx::Line line1_3;
-    touchgfx::PainterRGB565 line1_3Painter;
 
     /*
      * Wildcard Buffers

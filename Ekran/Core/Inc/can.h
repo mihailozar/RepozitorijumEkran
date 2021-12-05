@@ -47,7 +47,7 @@ int hv_comm;
 
 //LOW VOLTAGE
 float bms_lv_voltage_total;
-float bms_lv_current;
+float bms_lv_curr;
 float bms_lv_voltage[4];
 float bms_lv_temperature[4];
 uint8_t bms_lv_soc;

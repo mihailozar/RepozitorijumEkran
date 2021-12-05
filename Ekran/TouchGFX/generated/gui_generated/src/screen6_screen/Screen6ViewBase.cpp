@@ -16,23 +16,25 @@ Screen6ViewBase::Screen6ViewBase()
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
 
-    textArea1.setXY(262, 0);
+    air_plus.setPosition(525, 213, 42, 40);
+    air_plus.setCenter(20, 20);
+    air_plus.setRadius(20);
+    air_plus.setLineWidth(0);
+    air_plus.setArc(0, 360);
+    air_plusPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    air_plus.setPainter(air_plusPainter);
+
+    textArea1.setXY(271, 0);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID561));
 
-    textArea2.setXY(633, 11);
+    textArea2.setXY(720, 5);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID562));
 
     levi.setPosition(0, 47, 400, 433);
-
-    boxWithBorder1.setPosition(0, 0, 400, 433);
-    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
-    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
-    boxWithBorder1.setBorderSize(5);
-    levi.add(boxWithBorder1);
 
     cells.setPosition(6, 38, 387, 388);
 
@@ -883,7 +885,7 @@ Screen6ViewBase::Screen6ViewBase()
     cells.add(bms2);
     levi.add(cells);
 
-    textArea6.setXY(18, 8);
+    textArea6.setXY(31, 8);
     textArea6.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea6.setLinespacing(0);
     textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID675));
@@ -895,43 +897,35 @@ Screen6ViewBase::Screen6ViewBase()
     textArea6_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID676));
     levi.add(textArea6_1);
 
-    bms9_circle.setPosition(108, 9, 34, 31);
+    bms9_circle.setPosition(122, 8, 34, 31);
     bms9_circle.setCenter(15, 15);
     bms9_circle.setRadius(15);
     bms9_circle.setLineWidth(0);
     bms9_circle.setArc(0, 360);
-    bms9_circlePainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    bms9_circlePainter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     bms9_circle.setPainter(bms9_circlePainter);
     levi.add(bms9_circle);
 
-    bms10_circle.setPosition(306, 9, 35, 33);
+    bms10_circle.setPosition(314, 8, 35, 33);
     bms10_circle.setCenter(15, 15);
     bms10_circle.setRadius(15);
     bms10_circle.setLineWidth(0);
     bms10_circle.setArc(0, 360);
-    bms10_circlePainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    bms10_circlePainter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     bms10_circle.setPainter(bms10_circlePainter);
     levi.add(bms10_circle);
 
     boxWithBorder4.setPosition(428, 103, 326, 79);
     boxWithBorder4.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
     boxWithBorder4.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    boxWithBorder4.setBorderSize(5);
+    boxWithBorder4.setBorderSize(4);
 
-    textArea7.setXY(442, 127);
+    textArea7.setXY(446, 124);
     textArea7.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea7.setLinespacing(0);
     textArea7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID677));
 
-    air_plus.setPosition(491, 233, 42, 40);
-    air_plus.setCenter(20, 20);
-    air_plus.setRadius(20);
-    air_plus.setLineWidth(0);
-    air_plus.setArc(0, 360);
-    air_plusPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    air_plus.setPainter(air_plusPainter);
-
-    circle1_1.setPosition(491, 342, 42, 40);
+    circle1_1.setPosition(525, 322, 42, 40);
     circle1_1.setCenter(20, 20);
     circle1_1.setRadius(20);
     circle1_1.setLineWidth(0);
@@ -939,7 +933,7 @@ Screen6ViewBase::Screen6ViewBase()
     circle1_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle1_1.setPainter(circle1_1Painter);
 
-    circle1_2.setPosition(491, 285, 42, 40);
+    circle1_2.setPosition(525, 265, 42, 40);
     circle1_2.setCenter(20, 20);
     circle1_2.setRadius(20);
     circle1_2.setLineWidth(0);
@@ -947,7 +941,7 @@ Screen6ViewBase::Screen6ViewBase()
     circle1_2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle1_2.setPainter(circle1_2Painter);
 
-    circle1_3.setPosition(491, 399, 42, 40);
+    circle1_3.setPosition(525, 379, 42, 40);
     circle1_3.setCenter(20, 20);
     circle1_3.setRadius(20);
     circle1_3.setLineWidth(0);
@@ -955,34 +949,34 @@ Screen6ViewBase::Screen6ViewBase()
     circle1_3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle1_3.setPainter(circle1_3Painter);
 
-    textArea8.setXY(553, 233);
+    textArea8.setXY(587, 213);
     textArea8.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea8.setLinespacing(0);
     textArea8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID678));
 
-    air_minus.setXY(553, 290);
+    air_minus.setXY(587, 270);
     air_minus.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     air_minus.setLinespacing(0);
     air_minus.setTypedText(touchgfx::TypedText(T_SINGLEUSEID679));
 
-    tsal.setXY(553, 346);
+    tsal.setXY(587, 326);
     tsal.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     tsal.setLinespacing(0);
     tsal.setTypedText(touchgfx::TypedText(T_SINGLEUSEID680));
 
-    imd.setXY(553, 403);
+    imd.setXY(587, 383);
     imd.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     imd.setLinespacing(0);
     imd.setTypedText(touchgfx::TypedText(T_SINGLEUSEID681));
 
     add(__background);
     add(box1);
+    add(air_plus);
     add(textArea1);
     add(textArea2);
     add(levi);
     add(boxWithBorder4);
     add(textArea7);
-    add(air_plus);
     add(circle1_1);
     add(circle1_2);
     add(circle1_3);

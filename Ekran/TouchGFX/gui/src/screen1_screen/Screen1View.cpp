@@ -3,7 +3,7 @@
 #include "can.h"
 
 extern int lv_comm_fault, hv_comm_fault, ecu_comm_fault;
-const char *states[9] = { "INIT", "VEHICLE CHECK", "IDLE", "FAULT", "PRECHARGE",
+char *states[9] = { "INIT", "VEHICLE CHECK", "IDLE", "FAULT", "PRECHARGE",
 		"ACC ACTIVE", "INVERTER ACTIVE", "READY TO DRIVE SIGNAL",
 		"READY TO DRIVE" };
 
@@ -24,18 +24,24 @@ void Screen1View::tearDownScreen()
 
 int counter=0;
 int i=0;
+char* oldState = "INIT";
+
 void Screen1View::handleTickEvent(){
 
 	if (screen == 1) {
 			application().gotoScreen2ScreenNoTransition();
 		}
 
+
 }
 
 void Screen1View::updateState() {
+	//if(states[stateEcu] != oldState) {
+		Unicode::strncpy(vehicle_stateBuffer, states[stateEcu], 20);
+		vehicle_state.invalidate();
+		oldState = states[stateEcu];
+	////}
 
-	Unicode::strncpy(vehicle_stateBuffer, states[stateEcu], 20);
-	vehicle_state.invalidate();
 
 }
 

@@ -132,7 +132,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	if (messageID == GENERAL_STATE_HV_ID) {
 		hv_comm=1;
 		periphery_state = rxData[0];
-		bms_hv_voltage_total = ((rxData[1] << 8) + rxData[2]) / 65535 * 5;
+		bms_hv_voltage_total = ((rxData[1] << 8) + rxData[2]) / 100;
 		bms_hv_current = (rxData[3] << 8) + rxData[4];
 		bms_hv_soc = rxData[5];
 		bms_hv_board_fault = (rxData[6] << 8) + rxData[7];
@@ -140,9 +140,9 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	//BMS LV GENERAL STATE
 	if (messageID == GENERAL_STATE_LV_ID) {
 		lv_comm=1;
-		bms_lv_voltage_total = rxData[1];
-		bms_lv_current = (rxData[2] << 8) + rxData[3];
-		bms_lv_soc = rxData[4];
+		bms_lv_voltage_total = (float)rxData[2] / 10;
+		bms_lv_curr = rxData[3]  * 0.0001907349 * 256;
+		//bms_lv_soc = rxData[4];
 		bms_lv_maxtemp = rxData[5];
 		fans_pumps = rxData[6];
 		fans_pumps_fault = rxData[7];
@@ -197,8 +197,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		}
 	} else
 	//FANS + PUMPS
-	if (messageID == 0x0192) {
-		lv_comm=1;
+	if (messageID == 0x96) {
+		ecu_comm=1;
 		//fans_pumps = rxData[0];
 		pump1_pwm = rxData[1];
 		pump2_pwm = rxData[2];
@@ -270,12 +270,12 @@ void getCANMessage() {
 //BMS LV GENERAL STATE
 	if (messageID == GENERAL_STATE_LV_ID) {
 		lv_comm=1;
-		bms_lv_voltage_total = rxData[1];
-		bms_lv_current = (rxData[2] << 8) + rxData[3];
-		bms_lv_soc = rxData[4];
-		bms_lv_maxtemp = rxData[5];
-		fans_pumps = rxData[6];
-		fans_pumps_fault = rxData[7];
+//		bms_lv_voltage_total = rxData[2];
+//		bms_lv_curr = (rxData[3] << 8) + rxData[4];
+//		//bms_lv_soc = rxData[4];
+//		bms_lv_maxtemp = rxData[5];
+//		fans_pumps = rxData[6];
+//		fans_pumps_fault = rxData[7];
 	} else
 //BMS HV VOLTAGES
 	if (messageID >= BMS0L_HV_V_ID && messageID <= BMS9H_HV_V_ID) {
@@ -328,8 +328,8 @@ void getCANMessage() {
 		}
 	} else
 //FANS + PUMPS
-	if (messageID == 0x0192) {
-		lv_comm=1;
+	if (messageID == 0x096) {
+		ecu_comm=1;
 		//fans_pumps = rxData[0];
 		pump1_pwm = rxData[1];
 		pump2_pwm = rxData[2];

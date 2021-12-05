@@ -19,18 +19,18 @@ Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, t
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:36:7:touchgfx::View<Screen6Presenter>::~View()	0	static
 Screen6ViewBase.hpp:22:13:Screen6ViewBase::~Screen6ViewBase()	0	static
-Screen6ViewBase.cpp:995:6:virtual void Screen6ViewBase::setupScreen()	0	static
+Screen6ViewBase.cpp:989:6:virtual void Screen6ViewBase::setupScreen()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen6Presenter>::~View()	8	static
 Screen6ViewBase.hpp:22:13:virtual Screen6ViewBase::~Screen6ViewBase()	8	static
-Screen6ViewBase.cpp:1001:6:virtual void Screen6ViewBase::handleKeyEvent(uint8_t)	8	static
+Screen6ViewBase.cpp:995:6:virtual void Screen6ViewBase::handleKeyEvent(uint8_t)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 Container.hpp:43:5:touchgfx::Container::Container()	8	static
 Box.hpp:33:5:touchgfx::Box::Box()	8	static
+AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
 TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
 BoxWithBorder.hpp:34:5:touchgfx::BoxWithBorder::BoxWithBorder()	8	static
 TextAreaWithWildcard.hpp:37:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	8	static
-AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-Screen6ViewBase.cpp:8:1:Screen6ViewBase::Screen6ViewBase()	720	static
+Screen6ViewBase.cpp:8:1:Screen6ViewBase::Screen6ViewBase()	712	static

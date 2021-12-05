@@ -77,10 +77,10 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp \
@@ -295,13 +295,13 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
-
 ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:
 
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 
 ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:
 

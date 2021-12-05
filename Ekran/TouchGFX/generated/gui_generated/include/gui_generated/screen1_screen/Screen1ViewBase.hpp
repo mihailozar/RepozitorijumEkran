@@ -50,7 +50,6 @@ protected:
     touchgfx::TextArea textArea5;
     touchgfx::Container VEHICLE_STATE;
     touchgfx::Box box5;
-    touchgfx::TextArea textArea6;
     touchgfx::TextAreaWithOneWildcard vehicle_state;
     touchgfx::Container HV;
     touchgfx::Box box4;
@@ -61,16 +60,13 @@ protected:
     touchgfx::TextAreaWithOneWildcard voltage;
     touchgfx::TextAreaWithOneWildcard temp;
     touchgfx::TextAreaWithOneWildcard soc;
-    touchgfx::TextArea textArea10;
-    touchgfx::TextArea textArea10_1;
-    touchgfx::TextArea textArea10_2;
 
     /*
      * Wildcard Buffers
      */
     static const uint16_t SPEED_TXT_SIZE = 10;
     touchgfx::Unicode::UnicodeChar speed_txtBuffer[SPEED_TXT_SIZE];
-    static const uint16_t VEHICLE_STATE_SIZE = 10;
+    static const uint16_t VEHICLE_STATE_SIZE = 20;
     touchgfx::Unicode::UnicodeChar vehicle_stateBuffer[VEHICLE_STATE_SIZE];
     static const uint16_t VOLTAGE_SIZE = 10;
     touchgfx::Unicode::UnicodeChar voltageBuffer[VOLTAGE_SIZE];

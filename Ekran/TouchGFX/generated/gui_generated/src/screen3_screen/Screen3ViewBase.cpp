@@ -16,54 +16,44 @@ Screen3ViewBase::Screen3ViewBase()
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
 
-    boxWithBorder1.setPosition(0, 0, 239, 84);
+    boxWithBorder1.setPosition(0, 0, 223, 79);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
     boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    boxWithBorder1.setBorderSize(5);
+    boxWithBorder1.setBorderSize(4);
 
-    textArea1.setXY(46, 19);
+    textArea1.setXY(28, 13);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID22));
 
-    boxWithBorder2.setPosition(283, 66, 517, 96);
+    boxWithBorder2.setPosition(240, 66, 560, 96);
     boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
     boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    boxWithBorder2.setBorderSize(5);
+    boxWithBorder2.setBorderSize(4);
 
-    textArea2.setXY(298, 91);
+    textArea2.setXY(249, 91);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(250, 242, 242));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID23));
 
-    textArea2_1.setXY(541, 91);
+    textArea2_1.setXY(524, 91);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(250, 242, 242));
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID24));
 
-    total_voltage.setPosition(460, 91, 35, 47);
+    total_voltage.setPosition(405, 91, 104, 47);
     total_voltage.setColor(touchgfx::Color::getColorFromRGB(252, 250, 250));
     total_voltage.setLinespacing(0);
     Unicode::snprintf(total_voltageBuffer, TOTAL_VOLTAGE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID26).getText());
     total_voltage.setWildcard(total_voltageBuffer);
     total_voltage.setTypedText(touchgfx::TypedText(T_SINGLEUSEID25));
 
-    textArea3.setXY(495, 91);
-    textArea3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea3.setLinespacing(0);
-    textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID27));
-
-    currnet.setPosition(697, 91, 36, 47);
+    currnet.setPosition(680, 91, 95, 47);
     currnet.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     currnet.setLinespacing(0);
     Unicode::snprintf(currnetBuffer, CURRNET_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID29).getText());
     currnet.setWildcard(currnetBuffer);
     currnet.setTypedText(touchgfx::TypedText(T_SINGLEUSEID28));
-
-    textArea4.setXY(733, 91);
-    textArea4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea4.setLinespacing(0);
-    textArea4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID30));
 
     BMS.setPosition(0, 178, 800, 302);
 
@@ -114,38 +104,25 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms1.setRadius(15);
     circle_bms1.setLineWidth(0);
     circle_bms1.setArc(0, 360);
-    circle_bms1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms1.setPainter(circle_bms1Painter);
     bms1.add(circle_bms1);
 
-    voltage_bms1.setXY(33, 44);
+    voltage_bms1.setPosition(14, 44, 133, 47);
     voltage_bms1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms1.setLinespacing(0);
     Unicode::snprintf(voltage_bms1Buffer, VOLTAGE_BMS1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID42).getText());
     voltage_bms1.setWildcard(voltage_bms1Buffer);
-    voltage_bms1.resizeToCurrentText();
     voltage_bms1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
     bms1.add(voltage_bms1);
 
-    textArea7.setXY(92, 97);
-    textArea7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7.setLinespacing(0);
-    textArea7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID46));
-    bms1.add(textArea7);
-
-    temp_bms1.setPosition(38, 97, 44, 47);
+    temp_bms1.setPosition(36, 97, 81, 47);
     temp_bms1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms1.setLinespacing(0);
     Unicode::snprintf(temp_bms1Buffer, TEMP_BMS1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID44).getText());
     temp_bms1.setWildcard(temp_bms1Buffer);
     temp_bms1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID43));
     bms1.add(temp_bms1);
-
-    textArea6_1.setXY(96, 44);
-    textArea6_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_1.setLinespacing(0);
-    textArea6_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID52));
-    bms1.add(textArea6_1);
     BMS.add(bms1);
 
     bms2.setPosition(0, 151, 160, 151);
@@ -159,7 +136,7 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms6.setRadius(15);
     circle_bms6.setLineWidth(0);
     circle_bms6.setArc(0, 360);
-    circle_bms6Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms6Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms6.setPainter(circle_bms6Painter);
     bms2.add(circle_bms6);
 
@@ -169,34 +146,21 @@ Screen3ViewBase::Screen3ViewBase()
     textArea5_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID32));
     bms2.add(textArea5_1);
 
-    voltage_bms6.setXY(33, 36);
+    voltage_bms6.setPosition(14, 36, 133, 47);
     voltage_bms6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms6.setLinespacing(0);
     Unicode::snprintf(voltage_bms6Buffer, VOLTAGE_BMS6_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID48).getText());
     voltage_bms6.setWildcard(voltage_bms6Buffer);
-    voltage_bms6.resizeToCurrentText();
     voltage_bms6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID47));
     bms2.add(voltage_bms6);
 
-    temp_bms6.setPosition(38, 90, 44, 47);
+    temp_bms6.setPosition(14, 90, 133, 47);
     temp_bms6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms6.setLinespacing(0);
     Unicode::snprintf(temp_bms6Buffer, TEMP_BMS6_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID50).getText());
     temp_bms6.setWildcard(temp_bms6Buffer);
     temp_bms6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID49));
     bms2.add(temp_bms6);
-
-    textArea7_1.setXY(92, 90);
-    textArea7_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1.setLinespacing(0);
-    textArea7_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID51));
-    bms2.add(textArea7_1);
-
-    textArea6.setXY(96, 36);
-    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6.setLinespacing(0);
-    textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID45));
-    bms2.add(textArea6);
     BMS.add(bms2);
 
     bms4.setPosition(160, 151, 160, 151);
@@ -216,38 +180,25 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms7.setRadius(15);
     circle_bms7.setLineWidth(0);
     circle_bms7.setArc(0, 360);
-    circle_bms7Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms7Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms7.setPainter(circle_bms7Painter);
     bms4.add(circle_bms7);
 
-    voltage_bms7.setXY(41, 36);
+    voltage_bms7.setPosition(12, 36, 136, 47);
     voltage_bms7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms7.setLinespacing(0);
     Unicode::snprintf(voltage_bms7Buffer, VOLTAGE_BMS7_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID62).getText());
     voltage_bms7.setWildcard(voltage_bms7Buffer);
-    voltage_bms7.resizeToCurrentText();
     voltage_bms7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID61));
     bms4.add(voltage_bms7);
 
-    temp_bms7.setPosition(46, 90, 44, 47);
+    temp_bms7.setPosition(21, 90, 117, 47);
     temp_bms7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms7.setLinespacing(0);
     Unicode::snprintf(temp_bms7Buffer, TEMP_BMS7_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID60).getText());
     temp_bms7.setWildcard(temp_bms7Buffer);
     temp_bms7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID59));
     bms4.add(temp_bms7);
-
-    textArea7_1_1_1.setXY(96, 90);
-    textArea7_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_1.setLinespacing(0);
-    textArea7_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID64));
-    bms4.add(textArea7_1_1_1);
-
-    textArea6_2_1.setXY(105, 36);
-    textArea6_2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_1.setLinespacing(0);
-    textArea6_2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID63));
-    bms4.add(textArea6_2_1);
     BMS.add(bms4);
 
     bms3.setPosition(159, 7, 160, 151);
@@ -267,23 +218,11 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms2.setRadius(15);
     circle_bms2.setLineWidth(0);
     circle_bms2.setArc(0, 360);
-    circle_bms2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms2.setPainter(circle_bms2Painter);
     bms3.add(circle_bms2);
 
-    textArea7_1_1.setXY(97, 90);
-    textArea7_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1.setLinespacing(0);
-    textArea7_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID58));
-    bms3.add(textArea7_1_1);
-
-    textArea6_2.setXY(106, 37);
-    textArea6_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2.setLinespacing(0);
-    textArea6_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID57));
-    bms3.add(textArea6_2);
-
-    temp_bms2.setPosition(42, 90, 44, 47);
+    temp_bms2.setPosition(41, 90, 78, 47);
     temp_bms2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms2.setLinespacing(0);
     Unicode::snprintf(temp_bms2Buffer, TEMP_BMS2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID56).getText());
@@ -291,12 +230,11 @@ Screen3ViewBase::Screen3ViewBase()
     temp_bms2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID55));
     bms3.add(temp_bms2);
 
-    voltage_bms2.setXY(42, 37);
+    voltage_bms2.setPosition(13, 37, 136, 47);
     voltage_bms2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms2.setLinespacing(0);
     Unicode::snprintf(voltage_bms2Buffer, VOLTAGE_BMS2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID54).getText());
     voltage_bms2.setWildcard(voltage_bms2Buffer);
-    voltage_bms2.resizeToCurrentText();
     voltage_bms2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID53));
     bms3.add(voltage_bms2);
     BMS.add(bms3);
@@ -318,23 +256,11 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms3.setRadius(15);
     circle_bms3.setLineWidth(0);
     circle_bms3.setArc(0, 360);
-    circle_bms3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms3.setPainter(circle_bms3Painter);
     bms5.add(circle_bms3);
 
-    textArea7_1_1_2.setXY(90, 90);
-    textArea7_1_1_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2.setLinespacing(0);
-    textArea7_1_1_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID70));
-    bms5.add(textArea7_1_1_2);
-
-    textArea6_2_2.setXY(106, 36);
-    textArea6_2_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2.setLinespacing(0);
-    textArea6_2_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID69));
-    bms5.add(textArea6_2_2);
-
-    temp_bms3.setPosition(44, 90, 44, 47);
+    temp_bms3.setPosition(23, 90, 114, 47);
     temp_bms3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms3.setLinespacing(0);
     Unicode::snprintf(temp_bms3Buffer, TEMP_BMS3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID68).getText());
@@ -342,12 +268,11 @@ Screen3ViewBase::Screen3ViewBase()
     temp_bms3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID67));
     bms5.add(temp_bms3);
 
-    voltage_bms3.setXY(39, 36);
+    voltage_bms3.setPosition(7, 36, 142, 47);
     voltage_bms3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms3.setLinespacing(0);
     Unicode::snprintf(voltage_bms3Buffer, VOLTAGE_BMS3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID66).getText());
     voltage_bms3.setWildcard(voltage_bms3Buffer);
-    voltage_bms3.resizeToCurrentText();
     voltage_bms3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID65));
     bms5.add(voltage_bms3);
     BMS.add(bms5);
@@ -369,11 +294,11 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms8.setRadius(15);
     circle_bms8.setLineWidth(0);
     circle_bms8.setArc(0, 360);
-    circle_bms8Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms8Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms8.setPainter(circle_bms8Painter);
     bms6.add(circle_bms8);
 
-    temp_bms8.setPosition(43, 90, 44, 47);
+    temp_bms8.setPosition(15, 90, 133, 47);
     temp_bms8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms8.setLinespacing(0);
     Unicode::snprintf(temp_bms8Buffer, TEMP_BMS8_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID76).getText());
@@ -381,24 +306,11 @@ Screen3ViewBase::Screen3ViewBase()
     temp_bms8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID75));
     bms6.add(temp_bms8);
 
-    textArea6_2_2_1.setXY(105, 36);
-    textArea6_2_2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2_1.setLinespacing(0);
-    textArea6_2_2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID74));
-    bms6.add(textArea6_2_2_1);
-
-    textArea7_1_1_2_1.setXY(91, 90);
-    textArea7_1_1_2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2_1.setLinespacing(0);
-    textArea7_1_1_2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID73));
-    bms6.add(textArea7_1_1_2_1);
-
-    voltage_bms8.setXY(38, 36);
+    voltage_bms8.setPosition(15, 36, 133, 47);
     voltage_bms8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms8.setLinespacing(0);
     Unicode::snprintf(voltage_bms8Buffer, VOLTAGE_BMS8_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID72).getText());
     voltage_bms8.setWildcard(voltage_bms8Buffer);
-    voltage_bms8.resizeToCurrentText();
     voltage_bms8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID71));
     bms6.add(voltage_bms8);
     BMS.add(bms6);
@@ -420,32 +332,19 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms4.setRadius(15);
     circle_bms4.setLineWidth(0);
     circle_bms4.setArc(0, 360);
-    circle_bms4Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms4Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms4.setPainter(circle_bms4Painter);
     bms7.add(circle_bms4);
 
-    voltage_bms4.setXY(42, 36);
+    voltage_bms4.setPosition(10, 36, 144, 47);
     voltage_bms4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms4.setLinespacing(0);
     Unicode::snprintf(voltage_bms4Buffer, VOLTAGE_BMS4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID82).getText());
     voltage_bms4.setWildcard(voltage_bms4Buffer);
-    voltage_bms4.resizeToCurrentText();
     voltage_bms4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID81));
     bms7.add(voltage_bms4);
 
-    textArea7_1_1_2_1_1.setXY(97, 90);
-    textArea7_1_1_2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2_1_1.setLinespacing(0);
-    textArea7_1_1_2_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID80));
-    bms7.add(textArea7_1_1_2_1_1);
-
-    textArea6_2_2_1_1.setXY(107, 37);
-    textArea6_2_2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2_1_1.setLinespacing(0);
-    textArea6_2_2_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID79));
-    bms7.add(textArea6_2_2_1_1);
-
-    temp_bms4.setPosition(47, 90, 44, 47);
+    temp_bms4.setPosition(28, 90, 105, 47);
     temp_bms4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms4.setLinespacing(0);
     Unicode::snprintf(temp_bms4Buffer, TEMP_BMS4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID78).getText());
@@ -471,11 +370,11 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms9.setRadius(15);
     circle_bms9.setLineWidth(0);
     circle_bms9.setArc(0, 360);
-    circle_bms9Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms9Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms9.setPainter(circle_bms9Painter);
     bms8.add(circle_bms9);
 
-    temp_bms9.setPosition(48, 90, 44, 47);
+    temp_bms9.setPosition(20, 90, 127, 47);
     temp_bms9.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms9.setLinespacing(0);
     Unicode::snprintf(temp_bms9Buffer, TEMP_BMS9_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID88).getText());
@@ -483,24 +382,11 @@ Screen3ViewBase::Screen3ViewBase()
     temp_bms9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID87));
     bms8.add(temp_bms9);
 
-    textArea6_2_2_1_1_1.setXY(108, 36);
-    textArea6_2_2_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2_1_1_1.setLinespacing(0);
-    textArea6_2_2_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID86));
-    bms8.add(textArea6_2_2_1_1_1);
-
-    textArea7_1_1_2_1_1_1.setXY(98, 90);
-    textArea7_1_1_2_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2_1_1_1.setLinespacing(0);
-    textArea7_1_1_2_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID85));
-    bms8.add(textArea7_1_1_2_1_1_1);
-
-    voltage_bms9.setXY(43, 36);
+    voltage_bms9.setPosition(11, 36, 136, 47);
     voltage_bms9.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms9.setLinespacing(0);
     Unicode::snprintf(voltage_bms9Buffer, VOLTAGE_BMS9_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID84).getText());
     voltage_bms9.setWildcard(voltage_bms9Buffer);
-    voltage_bms9.resizeToCurrentText();
     voltage_bms9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID83));
     bms8.add(voltage_bms9);
     BMS.add(bms8);
@@ -522,32 +408,19 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms5.setRadius(15);
     circle_bms5.setLineWidth(0);
     circle_bms5.setArc(0, 360);
-    circle_bms5Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms5Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms5.setPainter(circle_bms5Painter);
     bms9.add(circle_bms5);
 
-    textArea7_1_1_2_1_1_1_1.setXY(102, 90);
-    textArea7_1_1_2_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2_1_1_1_1.setLinespacing(0);
-    textArea7_1_1_2_1_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID92));
-    bms9.add(textArea7_1_1_2_1_1_1_1);
-
-    voltage_bms5.setXY(47, 36);
+    voltage_bms5.setPosition(14, 36, 135, 47);
     voltage_bms5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms5.setLinespacing(0);
     Unicode::snprintf(voltage_bms5Buffer, VOLTAGE_BMS5_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID94).getText());
     voltage_bms5.setWildcard(voltage_bms5Buffer);
-    voltage_bms5.resizeToCurrentText();
     voltage_bms5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID93));
     bms9.add(voltage_bms5);
 
-    textArea6_2_2_1_1_1_1.setXY(107, 37);
-    textArea6_2_2_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2_1_1_1_1.setLinespacing(0);
-    textArea6_2_2_1_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID91));
-    bms9.add(textArea6_2_2_1_1_1_1);
-
-    temp_bms5.setPosition(52, 90, 44, 47);
+    temp_bms5.setPosition(39, 90, 92, 47);
     temp_bms5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms5.setLinespacing(0);
     Unicode::snprintf(temp_bms5Buffer, TEMP_BMS5_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID90).getText());
@@ -573,11 +446,11 @@ Screen3ViewBase::Screen3ViewBase()
     circle_bms10.setRadius(15);
     circle_bms10.setLineWidth(0);
     circle_bms10.setArc(0, 360);
-    circle_bms10Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_bms10Painter.setColor(touchgfx::Color::getColorFromRGB(255, 221, 0));
     circle_bms10.setPainter(circle_bms10Painter);
     bms10.add(circle_bms10);
 
-    temp_bms10.setPosition(53, 90, 44, 47);
+    temp_bms10.setPosition(40, 90, 84, 47);
     temp_bms10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp_bms10.setLinespacing(0);
     Unicode::snprintf(temp_bms10Buffer, TEMP_BMS10_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID100).getText());
@@ -585,59 +458,14 @@ Screen3ViewBase::Screen3ViewBase()
     temp_bms10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID99));
     bms10.add(temp_bms10);
 
-    textArea6_2_2_1_1_1_1_1.setXY(108, 36);
-    textArea6_2_2_1_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6_2_2_1_1_1_1_1.setLinespacing(0);
-    textArea6_2_2_1_1_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID98));
-    bms10.add(textArea6_2_2_1_1_1_1_1);
-
-    voltage_bms10.setXY(48, 36);
+    voltage_bms10.setPosition(15, 36, 135, 47);
     voltage_bms10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage_bms10.setLinespacing(0);
     Unicode::snprintf(voltage_bms10Buffer, VOLTAGE_BMS10_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID97).getText());
     voltage_bms10.setWildcard(voltage_bms10Buffer);
-    voltage_bms10.resizeToCurrentText();
     voltage_bms10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID96));
     bms10.add(voltage_bms10);
-
-    textArea7_1_1_2_1_1_1_1_1.setXY(103, 90);
-    textArea7_1_1_2_1_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7_1_1_2_1_1_1_1_1.setLinespacing(0);
-    textArea7_1_1_2_1_1_1_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID95));
-    bms10.add(textArea7_1_1_2_1_1_1_1_1);
     BMS.add(bms10);
-
-    line1.setPosition(155, 162, 33, 314);
-    line1Painter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
-    line1.setPainter(line1Painter);
-    line1.setStart(0, 68);
-    line1.setEnd(0, 302);
-    line1.setLineWidth(20);
-    line1.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
-
-    line1_1.setPosition(315, 162, 33, 314);
-    line1_1Painter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
-    line1_1.setPainter(line1_1Painter);
-    line1_1.setStart(0, 68);
-    line1_1.setEnd(0, 302);
-    line1_1.setLineWidth(20);
-    line1_1.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
-
-    line1_2.setPosition(475, 162, 33, 314);
-    line1_2Painter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
-    line1_2.setPainter(line1_2Painter);
-    line1_2.setStart(0, 68);
-    line1_2.setEnd(0, 302);
-    line1_2.setLineWidth(20);
-    line1_2.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
-
-    line1_3.setPosition(635, 162, 33, 314);
-    line1_3Painter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
-    line1_3.setPainter(line1_3Painter);
-    line1_3.setStart(0, 68);
-    line1_3.setEnd(0, 302);
-    line1_3.setLineWidth(20);
-    line1_3.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
 
     add(__background);
     add(box1);
@@ -647,14 +475,8 @@ Screen3ViewBase::Screen3ViewBase()
     add(textArea2);
     add(textArea2_1);
     add(total_voltage);
-    add(textArea3);
     add(currnet);
-    add(textArea4);
     add(BMS);
-    add(line1);
-    add(line1_1);
-    add(line1_2);
-    add(line1_3);
 }
 
 void Screen3ViewBase::setupScreen()

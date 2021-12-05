@@ -14,6 +14,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
 
 class Screen5ViewBase : public touchgfx::View<Screen5Presenter>
 {
@@ -36,7 +37,6 @@ protected:
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
     touchgfx::Container levi;
-    touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::Container cells;
     touchgfx::Container bms1;
     touchgfx::Container cell1;
@@ -187,7 +187,6 @@ protected:
     touchgfx::Circle bms6_circle;
     touchgfx::PainterRGB565 bms6_circlePainter;
     touchgfx::Container desni;
-    touchgfx::BoxWithBorder boxWithBorder2;
     touchgfx::Container cells_1;
     touchgfx::Container bms3;
     touchgfx::Container cell1_2;
@@ -337,6 +336,8 @@ protected:
     touchgfx::PainterRGB565 bms7_circlePainter;
     touchgfx::Circle bms8_circle;
     touchgfx::PainterRGB565 bms8_circlePainter;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB565 line1Painter;
 
     /*
      * Wildcard Buffers

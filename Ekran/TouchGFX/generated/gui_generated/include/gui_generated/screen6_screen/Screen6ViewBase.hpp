@@ -8,12 +8,12 @@
 #include <mvp/View.hpp>
 #include <gui/screen6_screen/Screen6Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen6ViewBase : public touchgfx::View<Screen6Presenter>
 {
@@ -33,10 +33,11 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::Circle air_plus;
+    touchgfx::PainterRGB565 air_plusPainter;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
     touchgfx::Container levi;
-    touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::Container cells;
     touchgfx::Container bms1;
     touchgfx::Container cell1;
@@ -188,8 +189,6 @@ protected:
     touchgfx::PainterRGB565 bms10_circlePainter;
     touchgfx::BoxWithBorder boxWithBorder4;
     touchgfx::TextArea textArea7;
-    touchgfx::Circle air_plus;
-    touchgfx::PainterRGB565 air_plusPainter;
     touchgfx::Circle circle1_1;
     touchgfx::PainterRGB565 circle1_1Painter;
     touchgfx::Circle circle1_2;

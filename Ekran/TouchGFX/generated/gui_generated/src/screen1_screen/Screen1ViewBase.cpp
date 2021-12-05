@@ -44,7 +44,7 @@ Screen1ViewBase::Screen1ViewBase()
     box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     CAN_STATUS.add(box3);
 
-    ecu.setPosition(15, 36, 58, 51);
+    ecu.setPosition(16, 36, 58, 51);
     ecu.setCenter(25, 25);
     ecu.setRadius(25);
     ecu.setLineWidth(0);
@@ -53,7 +53,7 @@ Screen1ViewBase::Screen1ViewBase()
     ecu.setPainter(ecuPainter);
     CAN_STATUS.add(ecu);
 
-    bms.setPosition(121, 36, 58, 51);
+    bms.setPosition(132, 36, 58, 51);
     bms.setCenter(25, 25);
     bms.setRadius(25);
     bms.setLineWidth(0);
@@ -62,7 +62,7 @@ Screen1ViewBase::Screen1ViewBase()
     bms.setPainter(bmsPainter);
     CAN_STATUS.add(bms);
 
-    lvpb.setPosition(246, 36, 58, 51);
+    lvpb.setPosition(243, 36, 58, 51);
     lvpb.setCenter(25, 25);
     lvpb.setRadius(25);
     lvpb.setLineWidth(0);
@@ -71,13 +71,13 @@ Screen1ViewBase::Screen1ViewBase()
     lvpb.setPainter(lvpbPainter);
     CAN_STATUS.add(lvpb);
 
-    textArea4.setXY(95, 0);
+    textArea4.setXY(101, 0);
     textArea4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea4.setLinespacing(0);
     textArea4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
     CAN_STATUS.add(textArea4);
 
-    textArea3.setXY(0, 0);
+    textArea3.setXY(11, 0);
     textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea3.setLinespacing(0);
     textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID5));
@@ -96,13 +96,7 @@ Screen1ViewBase::Screen1ViewBase()
     box5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     VEHICLE_STATE.add(box5);
 
-    textArea6.setXY(0, 11);
-    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6.setLinespacing(0);
-    textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID8));
-    VEHICLE_STATE.add(textArea6);
-
-    vehicle_state.setPosition(103, 11, 201, 36);
+    vehicle_state.setPosition(8, 11, 296, 45);
     vehicle_state.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     vehicle_state.setLinespacing(0);
     vehicle_stateBuffer[0] = 0;
@@ -141,7 +135,7 @@ Screen1ViewBase::Screen1ViewBase()
     textArea9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID12));
     HV.add(textArea9);
 
-    voltage.setPosition(205, 62, 43, 47);
+    voltage.setPosition(190, 62, 104, 47);
     voltage.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     voltage.setLinespacing(0);
     Unicode::snprintf(voltageBuffer, VOLTAGE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID14).getText());
@@ -149,7 +143,7 @@ Screen1ViewBase::Screen1ViewBase()
     voltage.setTypedText(touchgfx::TypedText(T_SINGLEUSEID13));
     HV.add(voltage);
 
-    temp.setPosition(205, 124, 43, 47);
+    temp.setPosition(190, 124, 104, 47);
     temp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     temp.setLinespacing(0);
     Unicode::snprintf(tempBuffer, TEMP_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID16).getText());
@@ -157,31 +151,13 @@ Screen1ViewBase::Screen1ViewBase()
     temp.setTypedText(touchgfx::TypedText(T_SINGLEUSEID15));
     HV.add(temp);
 
-    soc.setPosition(205, 187, 43, 47);
+    soc.setPosition(190, 187, 104, 47);
     soc.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     soc.setLinespacing(0);
     Unicode::snprintf(socBuffer, SOC_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID18).getText());
     soc.setWildcard(socBuffer);
     soc.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
     HV.add(soc);
-
-    textArea10.setPosition(268, 62, 28, 47);
-    textArea10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea10.setLinespacing(0);
-    textArea10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID19));
-    HV.add(textArea10);
-
-    textArea10_1.setPosition(268, 124, 28, 47);
-    textArea10_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea10_1.setLinespacing(0);
-    textArea10_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID20));
-    HV.add(textArea10_1);
-
-    textArea10_2.setPosition(261, 187, 35, 47);
-    textArea10_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea10_2.setLinespacing(0);
-    textArea10_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
-    HV.add(textArea10_2);
     desni.add(HV);
 
     add(__background);
