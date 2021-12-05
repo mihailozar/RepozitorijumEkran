@@ -3,7 +3,7 @@ Screen1View.hpp:11:13:Screen1View::~Screen1View()	0	static
 Screen1View.cpp:20:6:virtual void Screen1View::tearDownScreen()	0	static
 Screen1View.cpp:15:6:virtual void Screen1View::setupScreen()	0	static
 Screen1View.cpp:38:6:virtual void Screen1View::updateState()	16	static
-Screen1View.cpp:75:6:virtual void Screen1View::updateLV()	16	static
+Screen1View.cpp:79:6:virtual void Screen1View::updateLV()	16	static
 Screen1View.cpp:48:6:virtual void Screen1View::updateHV()	8	static
 Screen1View.hpp:11:13:virtual Screen1View::~Screen1View()	8	static
 Screen1View.cpp:29:6:virtual void Screen1View::handleTickEvent()	8	static

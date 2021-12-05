@@ -230,6 +230,24 @@ void canInit() {
 	CanFilter.FilterActivation = CAN_FILTER_ENABLE;
 	HAL_CAN_ConfigFilter(&hcan2, &CanFilter);
 	HAL_CAN_Start(&hcan2);
+
+
+
+		for(int i=0;i<10;i++){
+			for(int j=0;j<14;j++){
+
+				int value=rand();
+				if((float)(value%10)/10>=0.5){
+				bms_hv_voltage[i][j]=3.8+(float)(value%4)/10;
+				}else bms_hv_voltage[i][j]=3.8-(float)(value%4)/10;
+
+				bms_hv_volt[i]+=bms_hv_voltage[i][j];
+
+			}
+			bms_hv_max_temperature[i]=27;
+		}
+
+
 }
 
 void getCANMessage() {

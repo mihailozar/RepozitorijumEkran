@@ -69,6 +69,10 @@ void Screen1View::updateHV() {
 	bms_hv_soc=28;
 	Unicode::snprintf(socBuffer, SOC_SIZE,"%d", bms_hv_soc);
 	soc.invalidate();
+
+	int tmp=27;
+	Unicode::snprintf(tempBuffer, SOC_SIZE,"%d", tmp);
+		temp.invalidate();
 }
 
 

@@ -18,9 +18,6 @@ public:
     // Screen1
     void gotoScreen1ScreenNoTransition();
 
-    // Screen2
-    void gotoScreen2ScreenNoTransition();
-
     // Screen3
     void gotoScreen3ScreenNoTransition();
 
@@ -46,9 +43,6 @@ protected:
 
     // Screen1
     void gotoScreen1ScreenNoTransitionImpl();
-
-    // Screen2
-    void gotoScreen2ScreenNoTransitionImpl();
 
     // Screen3
     void gotoScreen3ScreenNoTransitionImpl();

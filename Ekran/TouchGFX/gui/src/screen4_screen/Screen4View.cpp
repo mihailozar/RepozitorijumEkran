@@ -1,6 +1,6 @@
 #include <gui/screen4_screen/Screen4View.hpp>
 #include <touchgfx/Color.hpp>
-#include <stdlib.h>
+
 
 extern int screen;
 extern float bms_hv_voltage[10][14];
@@ -32,11 +32,6 @@ void Screen4View::tearDownScreen()
 void Screen4View::updateHV(){
 
 
-	for(int i=0;i<10;i++){
-		for(int j=0;j<14;j++){
-			bms_hv_voltage[i][j]=3+rand()/(double)RAND_MAX;
-		}
-	}
 
 	// SEGMENT1
 	Unicode::snprintfFloat(bms1_cell1Buffer, BMS1_CELL1_SIZE, "%.1f",bms_hv_voltage[0][0]);

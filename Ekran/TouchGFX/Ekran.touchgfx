@@ -236,8 +236,8 @@
                     "Name": "textArea4",
                     "X": 101,
                     "Y": 0,
-                    "Width": 110,
-                    "Height": 36,
+                    "Width": 114,
+                    "Height": 37,
                     "Visible": true,
                     "LockPosition": false,
                     "Draggable": false,
@@ -260,8 +260,8 @@
                     "Name": "textArea3",
                     "X": 11,
                     "Y": 0,
-                    "Width": 62,
-                    "Height": 36,
+                    "Width": 64,
+                    "Height": 37,
                     "Visible": true,
                     "LockPosition": false,
                     "Draggable": false,
@@ -284,8 +284,8 @@
                     "Name": "textArea5",
                     "X": 232,
                     "Y": 0,
-                    "Width": 72,
-                    "Height": 36,
+                    "Width": 74,
+                    "Height": 37,
                     "Visible": true,
                     "LockPosition": false,
                     "Draggable": false,
@@ -620,7 +620,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
+              "ActionComponent": "Screen3"
             }
           }
         ],
