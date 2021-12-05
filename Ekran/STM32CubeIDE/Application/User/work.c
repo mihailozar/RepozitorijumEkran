@@ -68,7 +68,7 @@ static void workTask(void *parameters) {
 				vTaskDelay(1000 / portTICK_PERIOD_MS);
 			}
 		}
-
+		startButton = 0;
 		if (stateEcu == READY_TO_DRIVE_SIGNAL) {
 			HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
 			HAL_Delay(3000);
