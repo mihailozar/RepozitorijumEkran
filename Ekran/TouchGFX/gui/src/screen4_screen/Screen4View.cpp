@@ -1,5 +1,6 @@
 #include <gui/screen4_screen/Screen4View.hpp>
 #include <touchgfx/Color.hpp>
+#include <stdlib.h>
 
 extern int screen;
 extern float bms_hv_voltage[10][14];
@@ -33,7 +34,7 @@ void Screen4View::updateHV(){
 
 	for(int i=0;i<10;i++){
 		for(int j=0;j<14;j++){
-			bms_hv_voltage[i][j]=3.5;
+			bms_hv_voltage[i][j]=3+rand()/(double)RAND_MAX;
 		}
 	}
 
