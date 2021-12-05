@@ -22,9 +22,6 @@
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
 
-
-
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "../Components/otm8009a/otm8009a.h"
@@ -269,10 +266,10 @@ static void MX_CAN2_Init(void)
 
   /* USER CODE END CAN2_Init 1 */
   hcan2.Instance = CAN2;
-  hcan2.Init.Prescaler = 5;
+  hcan2.Init.Prescaler = 3;
   hcan2.Init.Mode = CAN_MODE_NORMAL;
   hcan2.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan2.Init.TimeSeg1 = CAN_BS1_15TQ;
+  hcan2.Init.TimeSeg1 = CAN_BS1_12TQ;
   hcan2.Init.TimeSeg2 = CAN_BS2_2TQ;
   hcan2.Init.TimeTriggeredMode = DISABLE;
   hcan2.Init.AutoBusOff = DISABLE;
@@ -844,7 +841,18 @@ void StartDefaultTask(void *argument)
   * @param  htim : TIM handle
   * @retval None
   */
-
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//  /* USER CODE BEGIN Callback 0 */
+//
+//  /* USER CODE END Callback 0 */
+//  if (htim->Instance == TIM6) {
+//    HAL_IncTick();
+//  }
+//  /* USER CODE BEGIN Callback 1 */
+//
+//  /* USER CODE END Callback 1 */
+//}
 
 /**
   * @brief  This function is executed in case of error occurrence.
