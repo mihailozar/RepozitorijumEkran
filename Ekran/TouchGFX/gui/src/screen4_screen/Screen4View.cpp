@@ -30,6 +30,13 @@ void Screen4View::tearDownScreen()
 
 void Screen4View::updateHV(){
 
+
+	for(int i=0;i<10;i++){
+		for(int j=0;j<14;j++){
+			bms_hv_voltage[i][j]=3.5;
+		}
+	}
+
 	// SEGMENT1
 	Unicode::snprintfFloat(bms1_cell1Buffer, BMS1_CELL1_SIZE, "%.1f",bms_hv_voltage[0][0]);
 	bms1_cell1.invalidate();

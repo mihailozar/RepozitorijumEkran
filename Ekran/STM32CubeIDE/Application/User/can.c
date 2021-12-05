@@ -105,6 +105,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	 message->rxData[i] = rxData[i];
 	 xQueueSend(CAN_Rx_Queue, message, ((TickType_t) 10) == pdPASS);*/
 
+
+
 	uint32_t messageID = pHeader.StdId;
 	//VEHICLE GENERAL STATE
 	if (messageID == 0x0282) {

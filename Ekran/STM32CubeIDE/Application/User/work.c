@@ -126,7 +126,7 @@ static void buttonTask(void *parameters) {
 				if (screen == 0)
 					screen = 1;
 				else if (screen == 1)
-					screen = 2;
+					screen = 3;
 				else if (screen == 2)
 					screen = 3;
 				else if (screen == 3)

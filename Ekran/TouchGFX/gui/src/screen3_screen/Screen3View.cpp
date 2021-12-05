@@ -32,7 +32,8 @@ void Screen3View::tearDownScreen() {
 }
 
 void Screen3View::updateHV() {
-
+	bms_hv_voltage_total=550;
+	bms_hv_current=20;
 	// TOTAL VOLTAGE + CURRENT
 	Unicode::snprintf(total_voltageBuffer, TOTAL_VOLTAGE_SIZE, "%d",
 			bms_hv_voltage_total);
@@ -123,9 +124,12 @@ void Screen3View::updateHV() {
 }
 
 void Screen3View::updateHVFaults() {
-
+	hv_comm_fault=0;
 	if (!hv_comm_fault) {
 		//SEGMENT1
+
+		bms_hv_board_fault=0;
+
 		if (bms_hv_board_fault & 0x001) {
 			circle_bms1Painter.setColor(
 					touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -136,6 +140,8 @@ void Screen3View::updateHVFaults() {
 		circle_bms1.invalidate();
 
 		//SEGMENT2
+
+
 		if (bms_hv_board_fault & 0x002) {
 			circle_bms2Painter.setColor(
 					touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -146,6 +152,8 @@ void Screen3View::updateHVFaults() {
 		circle_bms2.invalidate();
 
 		//SEGMENT3
+
+
 		if (bms_hv_board_fault & 0x004) {
 			circle_bms3Painter.setColor(
 					touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -156,6 +164,7 @@ void Screen3View::updateHVFaults() {
 		circle_bms3.invalidate();
 
 		//SEGMENT4
+
 		if (bms_hv_board_fault & 0x008) {
 			circle_bms4Painter.setColor(
 					touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));

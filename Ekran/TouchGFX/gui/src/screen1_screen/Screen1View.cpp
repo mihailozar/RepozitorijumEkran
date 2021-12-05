@@ -25,11 +25,11 @@ void Screen1View::tearDownScreen()
 int counter=0;
 int i=0;
 char* oldState = "INIT";
-
+int speedPredstavljanje=0;
 void Screen1View::handleTickEvent(){
 
 	if (screen == 1) {
-			application().gotoScreen2ScreenNoTransition();
+			application().gotoScreen3ScreenNoTransition();
 		}
 
 
@@ -46,7 +46,7 @@ void Screen1View::updateState() {
 }
 
 void Screen1View::updateHV() {
-
+	hv_comm_fault=0;
 	if (hv_comm_fault) {
 		bmsPainter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -62,17 +62,18 @@ void Screen1View::updateHV() {
 	speed_txt.invalidate();
 
 
+	bms_hv_voltage_total=550;
 	Unicode::snprintf(voltageBuffer, VOLTAGE_SIZE,"%d", bms_hv_voltage_total);
 	voltage.invalidate();
 
-
+	bms_hv_soc=28;
 	Unicode::snprintf(socBuffer, SOC_SIZE,"%d", bms_hv_soc);
 	soc.invalidate();
 }
 
 
 void Screen1View::updateLV() {
-
+	lv_comm_fault=0;
 	if (lv_comm_fault) {
 		lvpbPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
 		lvpb.invalidate();
@@ -80,7 +81,7 @@ void Screen1View::updateLV() {
 		lvpbPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 		lvpb.invalidate();
 	}
-
+	ecu_comm_fault=0;
 	if (ecu_comm_fault) {
 		ecuPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
 		ecu.invalidate();
