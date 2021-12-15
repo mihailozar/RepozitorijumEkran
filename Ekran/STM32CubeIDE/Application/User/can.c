@@ -241,11 +241,25 @@ void canInit() {
 				bms_hv_voltage[i][j]=3.8+(float)(value%4)/10;
 				}else bms_hv_voltage[i][j]=3.8-(float)(value%4)/10;
 
+
+
 				bms_hv_volt[i]+=bms_hv_voltage[i][j];
 
 			}
 			bms_hv_max_temperature[i]=27;
 		}
+
+		for(int i=0;i<4;i++){
+
+			int value=rand();
+			if((float)(value%10)/10>=0.5){
+			bms_lv_voltage[i]=3.8+(float)(value%4)/10;
+			}else bms_lv_voltage[i]=3.8-(float)(value%4)/10;
+
+			bms_lv_voltage_total+=bms_lv_voltage[i];
+			bms_lv_temperature[i]=27;
+		}
+		bms_lv_curr=1.5;
 
 
 }
