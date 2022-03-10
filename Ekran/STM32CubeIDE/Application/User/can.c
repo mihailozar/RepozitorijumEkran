@@ -199,7 +199,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	//FANS + PUMPS
 	if (messageID == 0x96) {
 		ecu_comm=1;
-		//fans_pumps = rxData[0];
+		fans_pumps = rxData[0];
 		pump1_pwm = rxData[1];
 		pump2_pwm = rxData[2];
 	} else
@@ -330,7 +330,7 @@ void getCANMessage() {
 //FANS + PUMPS
 	if (messageID == 0x096) {
 		ecu_comm=1;
-		//fans_pumps = rxData[0];
+		fans_pumps = rxData[0];
 		pump1_pwm = rxData[1];
 		pump2_pwm = rxData[2];
 	} else
