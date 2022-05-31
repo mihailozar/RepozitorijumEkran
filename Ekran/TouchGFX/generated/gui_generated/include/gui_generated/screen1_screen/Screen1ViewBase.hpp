@@ -9,10 +9,11 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/Shape.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -33,9 +34,10 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::Container Levi;
-    touchgfx::Box box2;
-    touchgfx::TextAreaWithOneWildcard speed_txt;
+    touchgfx::Shape<4> shape_speed;
+    touchgfx::PainterRGB565 shape_speedPainter;
     touchgfx::TextArea textArea1;
+    touchgfx::TextAreaWithOneWildcard speed_txt;
     touchgfx::Container desni;
     touchgfx::Container CAN_STATUS;
     touchgfx::Box box3;

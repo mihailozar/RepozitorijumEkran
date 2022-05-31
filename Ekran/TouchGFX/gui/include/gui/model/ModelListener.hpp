@@ -20,6 +20,9 @@ public:
     virtual void notifyLV(){};
     virtual void notifyHVFaults(){};
     virtual void notifyLVFaults(){};
+    virtual void notifyECUinfo(){};
+    virtual void notifyPrechagrRelay(){};
+
 protected:
     Model* model;
 };

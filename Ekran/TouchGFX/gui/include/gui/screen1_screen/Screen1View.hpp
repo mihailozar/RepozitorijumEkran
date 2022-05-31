@@ -15,6 +15,7 @@ public:
     virtual void updateHV();
     virtual void updateLV();
     virtual void updateState();
+
 protected:
 };
 

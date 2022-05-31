@@ -17,4 +17,6 @@ void Model::tick()
 
 		modelListener->notifyHVFaults();
 		modelListener->notifyLVFaults();
+		modelListener->notifyECUinfo();
+		modelListener->notifyPrechagrRelay();
 }

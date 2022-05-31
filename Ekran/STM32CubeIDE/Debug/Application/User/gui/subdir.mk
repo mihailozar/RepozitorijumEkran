@@ -22,7 +22,9 @@ C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen6_sc
 C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp \
 C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen7_screen/Screen7View.cpp \
 C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp \
-C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen8_screen/Screen8View.cpp 
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen8_screen/Screen8View.cpp \
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp \
+C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen9_screen/Screen9View.cpp 
 
 OBJS += \
 ./Application/User/gui/FrontendApplication.o \
@@ -42,7 +44,9 @@ OBJS += \
 ./Application/User/gui/Screen7Presenter.o \
 ./Application/User/gui/Screen7View.o \
 ./Application/User/gui/Screen8Presenter.o \
-./Application/User/gui/Screen8View.o 
+./Application/User/gui/Screen8View.o \
+./Application/User/gui/Screen9Presenter.o \
+./Application/User/gui/Screen9View.o 
 
 CPP_DEPS += \
 ./Application/User/gui/FrontendApplication.d \
@@ -62,7 +66,9 @@ CPP_DEPS += \
 ./Application/User/gui/Screen7Presenter.d \
 ./Application/User/gui/Screen7View.d \
 ./Application/User/gui/Screen8Presenter.d \
-./Application/User/gui/Screen8View.d 
+./Application/User/gui/Screen8View.d \
+./Application/User/gui/Screen9Presenter.d \
+./Application/User/gui/Screen9View.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -101,5 +107,9 @@ Application/User/gui/Screen7View.o: C:/Users/mihailozar/Desktop/RepozitorijumEkr
 Application/User/gui/Screen8Presenter.o: C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp Application/User/gui/subdir.mk
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F469xx -DDEBUG -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Drivers/BSP/Components/Common -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/BSP/STM32469I-Discovery -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Application/User/gui/Screen8View.o: C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen8_screen/Screen8View.cpp Application/User/gui/subdir.mk
+	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F469xx -DDEBUG -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Drivers/BSP/Components/Common -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/BSP/STM32469I-Discovery -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Application/User/gui/Screen9Presenter.o: C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp Application/User/gui/subdir.mk
+	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F469xx -DDEBUG -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Drivers/BSP/Components/Common -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/BSP/STM32469I-Discovery -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Application/User/gui/Screen9View.o: C:/Users/mihailozar/Desktop/RepozitorijumEkran/Ekran/TouchGFX/gui/src/screen9_screen/Screen9View.cpp Application/User/gui/subdir.mk
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F469xx -DDEBUG -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Drivers/BSP/Components/Common -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/BSP/STM32469I-Discovery -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 

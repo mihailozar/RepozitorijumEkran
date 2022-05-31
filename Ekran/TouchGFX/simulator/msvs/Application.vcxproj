@@ -44,6 +44,9 @@
     <ClCompile Include="..\..\gui\src\screen8_screen\Screen8Presenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen8_screen\Screen8View.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen8_screen\Screen8ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen9_screen\Screen9ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx"/>
@@ -215,6 +218,9 @@
     <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8Presenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8View.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen8_screen\Screen8ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen9_screen\Screen9ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

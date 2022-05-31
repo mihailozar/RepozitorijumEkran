@@ -2,7 +2,7 @@
 #include <touchgfx/Color.hpp>
 extern int screen;
 extern float bms_lv_voltage[4];
-extern float bms_lv_temperature[4];
+extern float bms_lv_temperature[6];
 extern uint8_t fans_pumps;
 extern uint8_t pump1_pwm;
 extern uint8_t pump2_pwm;
@@ -10,6 +10,7 @@ extern uint8_t bms_lv_maxtemp;
 extern uint8_t fans_pumps_fault;
 extern uint8_t bms_lv_fault[3];
 extern float bms_lv_curr;
+extern int LVopenCircuit;
 
 
 extern float bms_lv_voltage_total;
@@ -30,7 +31,7 @@ void Screen8View::tearDownScreen() {
 void Screen8View::handleTickEvent() {
 
 	if (screen == 8) {
-		application().gotoScreen1ScreenNoTransition();
+		application().gotoScreen9ScreenNoTransition();
 	}
 
 }
@@ -77,6 +78,14 @@ void Screen8View::updateLV() {
 	voltage_4.invalidate();
 	temp_4.invalidate();
 
+	Unicode::snprintfFloat(temp_5Buffer, VOLTAGE_1_SIZE, "%.1f",
+				bms_lv_temperature[4]);
+	temp_5.invalidate();
+
+	Unicode::snprintfFloat(temp_6Buffer, VOLTAGE_1_SIZE, "%.1f",
+					bms_lv_temperature[5]);
+	temp_6.invalidate();
+
 	Unicode::snprintf(percent_1Buffer, PERCENT_1_SIZE, "%d", pump1_pwm);
 	percent_1.invalidate();
 
@@ -84,41 +93,58 @@ void Screen8View::updateLV() {
 	textArea14.invalidate();
 
 	//CIRCLE
-	if (bms_lv_fault[0] & 0x0001) {
+	if ((bms_lv_fault[0] & 0x0001) || (bms_lv_fault[0] & 0x10)) {
 		circle_cell1Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-	} else {
+	}else if((LVopenCircuit & 0x1) ){
+
+	}
+	else {
 		circle_cell1Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 	}
 	circle_cell1.invalidate();
 
-	if (bms_lv_fault[0] & 0x0010) {
+	if ((bms_lv_fault[0] & 0x2) || (bms_lv_fault[0] & 0x20)) {
 		circle_cell2Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-	} else {
+	} else if((LVopenCircuit & 0x2)){
+
+	}else {
 		circle_cell2Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 	}
 	circle_cell2.invalidate();
 
-	if (bms_lv_fault[0] & 0x0100) {
+	if ((bms_lv_fault[0] & 0x4) || (bms_lv_fault[0] & 0x40)) {
 		circle_cell3Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-	} else {
+	} else if((LVopenCircuit & 0x4)){
+
+	}else {
 		circle_cell3Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 	}
 	circle_cell3.invalidate();
 
-	if (bms_lv_fault[0] & 0x1000) {
+	if ((bms_lv_fault[0] & 0x8) || (bms_lv_fault[0] & 0x80)) {
 		circle_cell4Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-	} else {
+	} else if((LVopenCircuit & 0x8)){
+
+	}else{
 		circle_cell4Painter.setColor(
 				touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 	}
 	circle_cell4.invalidate();
+
+	circle_cell5Painter.setColor(
+					touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
+	circle_cell5.invalidate();
+
+	circle_cell6Painter.setColor(
+						touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
+		circle_cell6.invalidate();
 
 	//Pump1
 	if (fans_pumps & 0x1) {

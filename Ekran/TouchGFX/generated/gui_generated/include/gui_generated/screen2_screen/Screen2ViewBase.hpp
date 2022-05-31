@@ -8,6 +8,11 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -27,9 +32,57 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::Container currentStatus;
+    touchgfx::TextArea textArea3_1;
+    touchgfx::TextArea textArea3_2;
+    touchgfx::TextArea textArea3_3;
+    touchgfx::TextArea textArea3_4;
+    touchgfx::Circle bms_hv_state_circle;
+    touchgfx::PainterRGB565 bms_hv_state_circlePainter;
+    touchgfx::Circle bms_lv_state;
+    touchgfx::PainterRGB565 bms_lv_statePainter;
+    touchgfx::Circle apps_state;
+    touchgfx::PainterRGB565 apps_statePainter;
+    touchgfx::Circle inverter_state;
+    touchgfx::PainterRGB565 inverter_statePainter;
+    touchgfx::TextArea textArea4;
+    touchgfx::TextArea textArea4_1;
+    touchgfx::TextArea textArea4_2;
+    touchgfx::TextArea textArea4_3;
+    touchgfx::Circle dof_state;
+    touchgfx::PainterRGB565 dof_statePainter;
+    touchgfx::Circle gps_state;
+    touchgfx::PainterRGB565 gps_statePainter;
+    touchgfx::Circle sd_state;
+    touchgfx::PainterRGB565 sd_statePainter;
+    touchgfx::Circle xbee_state;
+    touchgfx::PainterRGB565 xbee_statePainter;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::TextArea textArea1;
+    touchgfx::Container container1;
+    touchgfx::Circle circle1;
+    touchgfx::PainterRGB565 circle1Painter;
+    touchgfx::Circle circle1_1;
+    touchgfx::PainterRGB565 circle1_1Painter;
+    touchgfx::Circle circle1_1_1;
+    touchgfx::PainterRGB565 circle1_1_1Painter;
+    touchgfx::Circle circle1_1_2;
+    touchgfx::PainterRGB565 circle1_1_2Painter;
+    touchgfx::Circle circle1_1_3;
+    touchgfx::PainterRGB565 circle1_1_3Painter;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea2_1;
+    touchgfx::TextArea textArea2_2;
+    touchgfx::TextArea textArea2_3;
+    touchgfx::TextArea textArea3;
 
 private:
 
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint16_t CANVAS_BUFFER_SIZE = 12000;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 };
 
 #endif // SCREEN2VIEWBASE_HPP

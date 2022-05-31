@@ -5,3 +5,4 @@ FrontendApplication.hpp:14:13:virtual FrontendApplication::~FrontendApplication(
 FrontendApplication.hpp:16:18:virtual void FrontendApplication::handleTickEvent()	8	static
 MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	8	static
 FrontendApplication.cpp:3:1:FrontendApplication::FrontendApplication(Model&, FrontendHeap&)	8	static
+FrontendApplication.cpp:8:5:int getColor(int)	0	static

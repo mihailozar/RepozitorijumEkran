@@ -18,23 +18,29 @@ Screen1ViewBase::Screen1ViewBase()
 
     Levi.setPosition(0, 0, 450, 480);
 
-    box2.setPosition(13, 20, 437, 441);
-    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Levi.add(box2);
-
-    speed_txt.setPosition(20, 31, 418, 353);
-    speed_txt.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    speed_txt.setLinespacing(0);
-    Unicode::snprintf(speed_txtBuffer, SPEED_TXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
-    speed_txt.setWildcard(speed_txtBuffer);
-    speed_txt.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
-    Levi.add(speed_txt);
+    shape_speed.setPosition(13, 20, 437, 441);
+    shape_speed.setOrigin(0.000f, 0.000f);
+    shape_speed.setScale(1.000f, 1.000f);
+    shape_speed.setAngle(0.000f);
+    shape_speedPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    shape_speed.setPainter(shape_speedPainter);
+    const touchgfx::AbstractShape::ShapePoint<float> shape_speedPoints[4] = { { 0.000f, 0.000f }, { 450.000f, 0.000f }, { 450.000f, 450.000f }, { 0.000f, 450.000f } };
+    shape_speed.setShape(shape_speedPoints);
+    Levi.add(shape_speed);
 
     textArea1.setXY(176, 337);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
     Levi.add(textArea1);
+
+    speed_txt.setPosition(22, 31, 418, 353);
+    speed_txt.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    speed_txt.setLinespacing(0);
+    Unicode::snprintf(speed_txtBuffer, SPEED_TXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
+    speed_txt.setWildcard(speed_txtBuffer);
+    speed_txt.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
+    Levi.add(speed_txt);
 
     desni.setPosition(450, 0, 350, 480);
 
@@ -53,7 +59,7 @@ Screen1ViewBase::Screen1ViewBase()
     ecu.setPainter(ecuPainter);
     CAN_STATUS.add(ecu);
 
-    bms.setPosition(132, 36, 58, 51);
+    bms.setPosition(135, 36, 58, 51);
     bms.setCenter(25, 25);
     bms.setRadius(25);
     bms.setLineWidth(0);

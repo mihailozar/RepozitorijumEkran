@@ -16,18 +16,29 @@ Screen.hpp:114:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
 Screen.hpp:143:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:153:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+CanvasWidget.hpp:60:18:virtual void touchgfx::CanvasWidget::setAlpha(uint8_t)	0	static
+CanvasWidget.hpp:66:21:virtual uint8_t touchgfx::CanvasWidget::getAlpha() const	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	0	static
-Screen1ViewBase.hpp:21:13:Screen1ViewBase::~Screen1ViewBase()	0	static
-Screen1ViewBase.cpp:169:6:virtual void Screen1ViewBase::setupScreen()	0	static
+Screen1ViewBase.hpp:22:13:Screen1ViewBase::~Screen1ViewBase()	0	static
+Screen1ViewBase.cpp:175:6:virtual void Screen1ViewBase::setupScreen()	0	static
+Shape.hpp:35:7:touchgfx::Shape<4>::~Shape()	0	static
+Shape.hpp:38:17:int touchgfx::Shape<POINTS>::getNumPoints() const [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:43:18:void touchgfx::Shape<POINTS>::setCorner(int, touchgfx::CWRUtil::Q5, touchgfx::CWRUtil::Q5) [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:51:25:touchgfx::CWRUtil::Q5 touchgfx::Shape<POINTS>::getCornerX(int) const [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:60:25:touchgfx::CWRUtil::Q5 touchgfx::Shape<POINTS>::getCornerY(int) const [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:70:18:void touchgfx::Shape<POINTS>::setCache(int, touchgfx::CWRUtil::Q5, touchgfx::CWRUtil::Q5) [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:78:25:touchgfx::CWRUtil::Q5 touchgfx::Shape<POINTS>::getCacheX(int) const [with short unsigned int POINTS = 4]	0	static
+Shape.hpp:87:25:touchgfx::CWRUtil::Q5 touchgfx::Shape<POINTS>::getCacheY(int) const [with short unsigned int POINTS = 4]	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+Shape.hpp:35:7:virtual touchgfx::Shape<4>::~Shape()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	8	static
-Screen1ViewBase.hpp:21:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
-Screen1ViewBase.cpp:175:6:virtual void Screen1ViewBase::handleKeyEvent(uint8_t)	8	static
+Screen1ViewBase.hpp:22:13:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+Screen1ViewBase.cpp:181:6:virtual void Screen1ViewBase::handleKeyEvent(uint8_t)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	8	static
-TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
 AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	160	static
+TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
+Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	192	static

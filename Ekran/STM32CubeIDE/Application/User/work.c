@@ -34,6 +34,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		   }
 		   else {
 		 	  ecu_comm_fault=1;
+
+		 	 BMS_HV_state=(int) 5;
+		 	 BMS_LV_state=(int) 5;
+		 	 APPS_state=(int)5;
+		 	 Inverter_state=(int)5;
+		 	 Telemetry_state=0x3;
 		   }
 		   if (lv_comm) {
 		 	  lv_comm_fault=0;
@@ -45,10 +51,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		   if (hv_comm) {
 		 	  hv_comm_fault=0;
 		 	  hv_comm=0;
+		 	  ;
 		   }
 		   else {
 		 	  hv_comm_fault=1;
 		   }
+
 
   }
   /* USER CODE END Callback 1 */
@@ -58,18 +66,54 @@ SemaphoreHandle_t CANMutex;
 static void workTask(void *parameters) {
 	myState = INIT;
 	screen = 1;
-	uint8_t data[1] = { VEHICLE_START };
+	uint8_t data[8]={0};
+	int lastButtonState = 0;
+	unsigned long lastDebounceTime = 0;
+	int buttonState=0;
 
 	while (1) {
-
+//////////////////////////////////
+		///TEST
+		data[0] =  VEHICLE_START ;
+		sendStartMessage(data);
+		HAL_Delay(30);
+////////////////////////
 		if (stateEcu == IDLE || stateEcu == ACC_ACTIVE) {
-			if (startButton) {
-				sendStartMessage(data);
-				vTaskDelay(1000 / portTICK_PERIOD_MS);
-			}
+
+			 int reading = HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin);
+					  if (reading != lastButtonState) {
+					    // reset the debouncing timer
+					    lastDebounceTime = HAL_GetTick();;
+					  }
+					  if ((HAL_GetTick() - lastDebounceTime) > 50) {
+					    if (reading != buttonState) {
+					      buttonState = reading;
+					      if (buttonState == 1) {
+
+					    	  for(int i=0;i<10;i++){
+					    		  //ECO SPORT
+					    		if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6)){
+					    			data[1]=0xff;
+					    		}
+					    		//TORQUE ON OFF
+					    		if(HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_11)){
+					    			data[2]=0xff;
+					    		}
+					    	  data[0] =  VEHICLE_START ;
+
+					    	  sendStartMessage(data);
+					    	  HAL_Delay(30);
+					    	  }
+					      }
+					    }
+					  }
+					  lastButtonState=reading;
+
 		}
-		startButton = 0;
+
+//		startButton = 0;
 		if (stateEcu == READY_TO_DRIVE_SIGNAL) {
+
 			HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
 			HAL_Delay(3000);
 			HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
@@ -100,6 +144,10 @@ static void buttonTask(void *parameters) {
 	uint32_t oldMili2 = 0;
 	int changeFlag=0;
 	int flag2=0;
+	int lastButtonState = 0;
+	unsigned long lastDebounceTime = 0;
+	int buttonState=0;
+
 	while (1) {
 
 //		if (HAL_GPIO_ReadPin(DISPLAY_CHANGE_GPIO_Port, DISPLAY_CHANGE_Pin)) {
@@ -140,34 +188,60 @@ static void buttonTask(void *parameters) {
 				else if (screen == 7)
 					screen = 8;
 				else if (screen == 8)
-					screen = 1;
+					screen = 9;
+				else if (screen ==9)
+					screen =1;
 				oldMili = 0;
 				changeFlag=0;
 			}
 		}
 
 
-		if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin)== GPIO_PIN_RESET) {
-					if (oldMili2 == 0) {
-						oldMili2 = HAL_GetTick();
-						flag2=1;
 
-					}
-				}
-				if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin) && flag2==1) {
-					uint32_t currMili = HAL_GetTick();
+//		 int reading = HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin);
+//		  if (reading != lastButtonState) {
+//		    // reset the debouncing timer
+//		    lastDebounceTime = HAL_GetTick();;
+//		  }
+//		  if ((HAL_GetTick() - lastDebounceTime) > 50) {
+//		    if (reading != buttonState) {
+//		      buttonState = reading;
+//		      if (buttonState == 1) {
+//
+//		    	  uint8_t data[1] = { VEHICLE_START };
+//		    	  sendStartMessage(data);
+//		    	  HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+//		    	  HAL_Delay(3000);
+//		    	  HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+//
+//
+//		      }
+//		    }
+//		  }
+//		  lastButtonState=reading;
 
-					if (currMili - oldMili2 > 250) {
-						startButton = 1;
+
+//		if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin)== GPIO_PIN_RESET) {
+//					if (oldMili2 == 0) {
+//						oldMili2 = HAL_GetTick();
+//						flag2=1;
+//
+//					}
+//				}
+//				if (HAL_GPIO_ReadPin(START_GPIO_Port, START_Pin) && flag2==1) {
+//					uint32_t currMili = HAL_GetTick();
+//
+//					if (currMili - oldMili2 > 250) {
+//						startButton = 1;
 //						uint8_t data[1] = { VEHICLE_START };
 //						sendStartMessage(data);
 //						HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
 //						HAL_Delay(3000);
 //						HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
-						oldMili2 = 0;
-						flag2=0;
-					}
-				}
+//						oldMili2 = 0;
+//						flag2=0;
+//					}
+//				}
 	}
 }
 
@@ -180,3 +254,5 @@ void workInit() {
 //	xTaskCreate(canTask, "canTask", 128, NULL, 5, NULL);
 		xTaskCreate(buttonTask, "buttonTask", 128, NULL, 5, NULL);
 }
+
+

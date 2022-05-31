@@ -58,6 +58,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TORQUE_Pin GPIO_PIN_11
+#define TORQUE_GPIO_Port GPIOG
 #define BUZZER_Pin GPIO_PIN_10
 #define BUZZER_GPIO_Port GPIOG
 #define RENDER_TIME_Pin GPIO_PIN_4
@@ -66,9 +68,10 @@ void Error_Handler(void);
 #define DISPLAY_CHANGE_GPIO_Port GPIOC
 #define VSYNC_FREQ_Pin GPIO_PIN_6
 #define VSYNC_FREQ_GPIO_Port GPIOG
-#define START_Pin GPIO_PIN_5
+#define ECO_SPORT_Pin GPIO_PIN_6
+#define ECO_SPORT_GPIO_Port GPIOA
+#define START_Pin GPIO_PIN_7
 #define START_GPIO_Port GPIOA
-#define START_EXTI_IRQn EXTI9_5_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

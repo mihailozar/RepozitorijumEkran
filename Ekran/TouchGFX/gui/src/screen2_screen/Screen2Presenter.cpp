@@ -17,3 +17,7 @@ void Screen2Presenter::deactivate()
 
 }
 
+void Screen2Presenter::notifyECUinfo()
+{
+	view.updateECUinfo();
+}

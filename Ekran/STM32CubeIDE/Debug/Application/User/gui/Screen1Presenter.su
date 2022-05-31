@@ -1,5 +1,7 @@
 ModelListener.hpp:21:18:virtual void ModelListener::notifyHVFaults()	0	static
 ModelListener.hpp:22:18:virtual void ModelListener::notifyLVFaults()	0	static
+ModelListener.hpp:23:18:virtual void ModelListener::notifyECUinfo()	0	static
+ModelListener.hpp:24:18:virtual void ModelListener::notifyPrechagrRelay()	0	static
 Screen1Presenter.hpp:28:13:Screen1Presenter::~Screen1Presenter()	0	static
 Screen1Presenter.cpp:10:6:virtual void Screen1Presenter::activate()	0	static
 Screen1Presenter.cpp:21:6:virtual void Screen1Presenter::notifyHV()	0	static

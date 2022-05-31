@@ -26,6 +26,8 @@ void sendStartMessage(uint8_t data[]) {
 	//while (HAL_CAN_IsTxMessagePending(&hcan2, TxMailbox));
 }
 
+
+
 uint8_t getSlave(uint32_t id) {
 	switch (id) {
 	case BMS0L_FAULT_ID:
@@ -96,6 +98,7 @@ struct CANMessage *msg;
 extern QueueHandle_t CAN_Rx_Queue;
 int new[10];
 int newFault[10];
+
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	CAN_RxHeaderTypeDef pHeader;
 	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &pHeader, rxData);
@@ -112,6 +115,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	} else if (messageID == GENERAL_STATE_VEHICLE_ID) {
 		ecu_comm=1;
 		stateEcu = (int) rxData[0];
+		BMS_HV_state=(int) rxData[1]>>4;
+		BMS_LV_state=(int) rxData[1]&0xf;
+		APPS_state=(int)rxData[2]>>4;
+		Inverter_state=(int)rxData[2]&0xf;
+		Telemetry_state=(int)rxData[3]&0x3;
+
+
 	} else
 	//BMS HV FAULTS (Obrnuti su ID-evi u odnosu na dokument CAN Popis poruka)
 	if (messageID >= BMS0L_FAULT_ID && messageID <= BMS9H_FAULT_ID) {
@@ -142,10 +152,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		lv_comm=1;
 		bms_lv_voltage_total = (float)rxData[2] / 10;
 		bms_lv_curr = rxData[3]  * 0.0001907349 * 256;
-		//bms_lv_soc = rxData[4];
+
 		bms_lv_maxtemp = rxData[5];
 		fans_pumps = rxData[6];
-		fans_pumps_fault = rxData[7];
+//		fans_pumps_fault = rxData[7];
+		bms_lv_soc = rxData[7];
 	} else
 	//BMS HV VOLTAGES
 	if (messageID >= BMS0L_HV_V_ID && messageID <= BMS9H_HV_V_ID) {
@@ -186,29 +197,54 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 			bms_hv_temperature[slave][i] = rxData[i];
 			if (bms_hv_max_temperature[slave] < bms_hv_temperature[slave][i])
 				bms_hv_max_temperature[slave] = bms_hv_temperature[slave][i];
+			///////////////////////////////////////////////////
+			//warning on first screen
+			if(bms_hv_max_temperature[slave]>=60){
+				warningTemperatureFlag=1;
+			}
+			///////////////////////////////////////////////////
 		}
 	} else
-	//BMS LV VOLTAGES + TEMPERATURES
-	if (messageID == BMS_LV_V_TEMP_ID) {
-		lv_comm=1;
-		for (int i = 0; i < 4; i++) {
-			bms_lv_voltage[i] = rxData[i] * 0.0001907349 * 256;
-			bms_lv_temperature[i] = rxData[i + 4];
-		}
-	} else
-	//FANS + PUMPS
-	if (messageID == 0x96) {
-		ecu_comm=1;
-		fans_pumps = rxData[0];
-		pump1_pwm = rxData[1];
-		pump2_pwm = rxData[2];
-	} else
-	//BMS LV FAULTS
-	if (messageID == 0x0191) {
-		lv_comm=1;
-		for (int i = 0; i < 3; i++)
-			bms_lv_fault[i] = rxData[i];
-	}
+		//BMS LV VOLTAGES + FAULTS
+			if (messageID == BMS_LV_V_FAULT_ID) {
+				lv_comm=1;
+				for (int i = 0; i < 4; i++) {
+					bms_lv_voltage[i] = rxData[i] * 0.0001907349 * 256;
+
+				}
+				bms_lv_fault[0]=rxData[4];
+
+
+			} else
+		//FANS + PUMPS
+			if (messageID == 0x096) {
+				ecu_comm=1;
+				fans_pumps = rxData[0];
+				pump1_pwm = rxData[1];
+				pump2_pwm = rxData[2];
+			} else
+		//BMS LV FAULTS
+			if (messageID == BMS_LV_TEMP_FAULT_ID) {
+				lv_comm=1;
+//				for (int i = 0; i < 3; i++)
+//					bms_lv_fault[i] = rxData[i];
+				for(int i=0; i<6;i++){
+					bms_lv_temperature[i]=rxData[i];
+
+				}
+				if((rxData[6]&0xff) || (rxData[7]& 0xff )){
+					warningTemperatureFlag=1;
+				}
+
+			}else
+			if(messageID==BMS_LV_OPEN_CIRCUIT){
+				LVopenCircuit=rxData[7];
+			}
+			else if(messageID== HV_FAULTS){
+				relayFaults=rxData[0];
+				prechargFaultState=rxData[1];
+			}
+
 }
 
 void canInit() {
@@ -319,13 +355,16 @@ void getCANMessage() {
 				bms_hv_max_temperature[slave] = bms_hv_temperature[slave][i];
 		}
 	} else
-//BMS LV VOLTAGES + TEMPERATURES
-	if (messageID == BMS_LV_V_TEMP_ID) {
+//BMS LV VOLTAGES + FAULTS
+	if (messageID == BMS_LV_V_FAULT_ID) {
 		lv_comm=1;
 		for (int i = 0; i < 4; i++) {
 			bms_lv_voltage[i] = rxData[i] * 0.0001907349 * 256;
-			bms_lv_temperature[i] = rxData[i + 4];
+
 		}
+		bms_lv_fault[0]=rxData[4];
+
+
 	} else
 //FANS + PUMPS
 	if (messageID == 0x096) {
@@ -335,9 +374,10 @@ void getCANMessage() {
 		pump2_pwm = rxData[2];
 	} else
 //BMS LV FAULTS
-	if (messageID == 0x0191) {
+	if (messageID == BMS_LV_TEMP_FAULT_ID) {
 		lv_comm=1;
 		for (int i = 0; i < 3; i++)
 			bms_lv_fault[i] = rxData[i];
+		uint8_t isFaultSet=rxData[4];
 	}
 }

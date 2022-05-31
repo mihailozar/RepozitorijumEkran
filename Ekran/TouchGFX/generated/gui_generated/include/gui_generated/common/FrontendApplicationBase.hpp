@@ -39,6 +39,9 @@ public:
     // Screen8
     void gotoScreen8ScreenNoTransition();
 
+    // Screen9
+    void gotoScreen9ScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -67,6 +70,9 @@ protected:
 
     // Screen8
     void gotoScreen8ScreenNoTransitionImpl();
+
+    // Screen9
+    void gotoScreen9ScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

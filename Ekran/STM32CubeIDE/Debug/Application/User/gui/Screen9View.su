@@ -1,0 +1,8 @@
+Screen.hpp:103:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:143:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+Screen9View.hpp:11:13:Screen9View::~Screen9View()	0	static
+Screen9View.cpp:15:6:virtual void Screen9View::tearDownScreen()	0	static
+Screen9View.cpp:19:6:virtual void Screen9View::updatePrechargRelay()	0	static
+Screen9View.cpp:10:6:virtual void Screen9View::setupScreen()	0	static
+Screen9View.hpp:11:13:virtual Screen9View::~Screen9View()	8	static
+Screen9View.cpp:5:1:Screen9View::Screen9View()	8	static

@@ -18,6 +18,9 @@
 #define		VEHICLE_START_ID	0x0064
 #define		VEHICLE_START		0x01
 
+#define ECU_PRECHARGE_REQ       0x97
+#define HV_FAULTS       		0x98
+
 /*
  *
  * GENERAL_STATE_<DEVICE> -> Total voltage, current and SOC info. HV Peripherals info. (HV, LV)
@@ -143,8 +146,9 @@
  *
  */
 
-#define 	BMS_LV_V_TEMP_ID  	0x0190
-
+#define 	BMS_LV_V_FAULT_ID  	0x0190
+#define 	BMS_LV_TEMP_FAULT_ID  	0x0191
+#define 	BMS_LV_OPEN_CIRCUIT 	0x0193
 /*
  *
  * BMS_LV_CELL* -> Position of voltage value in CAN message

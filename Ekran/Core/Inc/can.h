@@ -22,13 +22,30 @@ enum State {
 	READY_TO_DRIVE
 };
 
-int lv_comm_fault, hv_comm_fault, ecu_comm_fault;
+enum StateBoard{
+	OK,
+	ACTIVATING,
+	CHARGING,
+	UNKNOWN,
+	FATAL
+};
+
+int lv_comm_fault;
+int hv_comm_fault;
+int ecu_comm_fault;
 
 
 typedef enum State state_type;
 
 volatile enum State stateEcu;
 volatile enum State myState;
+volatile enum StateBoard BMS_HV_state;
+volatile enum StateBoard BMS_LV_state;
+volatile enum StateBoard APPS_state;
+volatile enum StateBoard Inverter_state;
+volatile int Telemetry_state;
+
+
 
 int speed;
 
@@ -49,7 +66,8 @@ int hv_comm;
 float bms_lv_voltage_total;
 float bms_lv_curr;
 float bms_lv_voltage[4];
-float bms_lv_temperature[4];
+float bms_lv_temperature[6];
+
 uint8_t bms_lv_soc;
 uint8_t bms_lv_maxtemp;
 uint8_t fans_pumps;
@@ -60,6 +78,11 @@ uint8_t fans_pumps_fault;
 int lv_comm;
 
 int ecu_comm;
+
+volatile int warningTemperatureFlag;
+volatile int LVopenCircuit;
+volatile int relayFaults;
+volatile int prechargFaultState;
 
 extern CAN_HandleTypeDef hcan2;
 uint8_t rxData[8];

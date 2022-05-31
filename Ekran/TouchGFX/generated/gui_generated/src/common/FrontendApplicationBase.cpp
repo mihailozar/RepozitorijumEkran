@@ -25,6 +25,8 @@
 #include <gui/screen7_screen/Screen7Presenter.hpp>
 #include <gui/screen8_screen/Screen8View.hpp>
 #include <gui/screen8_screen/Screen8Presenter.hpp>
+#include <gui/screen9_screen/Screen9View.hpp>
+#include <gui/screen9_screen/Screen9Presenter.hpp>
 
 using namespace touchgfx;
 
@@ -145,4 +147,17 @@ void FrontendApplicationBase::gotoScreen8ScreenNoTransition()
 void FrontendApplicationBase::gotoScreen8ScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen8View, Screen8Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Screen9
+
+void FrontendApplicationBase::gotoScreen9ScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen9ScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreen9ScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen9View, Screen9Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

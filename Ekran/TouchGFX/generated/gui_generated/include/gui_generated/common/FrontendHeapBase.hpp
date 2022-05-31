@@ -28,6 +28,8 @@
 #include <gui/screen7_screen/Screen7Presenter.hpp>
 #include <gui/screen8_screen/Screen8View.hpp>
 #include <gui/screen8_screen/Screen8Presenter.hpp>
+#include <gui/screen9_screen/Screen9View.hpp>
+#include <gui/screen9_screen/Screen9Presenter.hpp>
 
 
 /**
@@ -58,7 +60,8 @@ public:
             touchgfx::meta::TypeList< Screen6View,
             touchgfx::meta::TypeList< Screen7View,
             touchgfx::meta::TypeList< Screen8View,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< Screen9View,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -78,7 +81,8 @@ public:
             touchgfx::meta::TypeList< Screen6Presenter,
             touchgfx::meta::TypeList< Screen7Presenter,
             touchgfx::meta::TypeList< Screen8Presenter,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< Screen9Presenter,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

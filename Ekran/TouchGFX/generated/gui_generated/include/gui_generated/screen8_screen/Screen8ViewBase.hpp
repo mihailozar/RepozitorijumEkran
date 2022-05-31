@@ -63,6 +63,16 @@ protected:
     touchgfx::TextArea textArea8_3;
     touchgfx::Circle circle_cell4;
     touchgfx::PainterRGB565 circle_cell4Painter;
+    touchgfx::Container cell5;
+    touchgfx::TextArea textArea8_3_1;
+    touchgfx::Circle circle_cell5;
+    touchgfx::PainterRGB565 circle_cell5Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_1;
+    touchgfx::Container cell6;
+    touchgfx::TextArea textArea8_3_2;
+    touchgfx::Circle circle_cell6;
+    touchgfx::PainterRGB565 circle_cell6Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_2;
     touchgfx::Circle circle_cell1_1;
     touchgfx::PainterRGB565 circle_cell1_1Painter;
     touchgfx::TextAreaWithOneWildcard voltage_2;
@@ -84,6 +94,8 @@ protected:
     touchgfx::TextAreaWithOneWildcard percent_1;
     touchgfx::TextAreaWithOneWildcard textArea14;
     touchgfx::TextArea textArea2_1;
+    touchgfx::TextAreaWithOneWildcard temp_5;
+    touchgfx::TextAreaWithOneWildcard temp_6;
 
     /*
      * Wildcard Buffers
@@ -112,6 +124,10 @@ protected:
     touchgfx::Unicode::UnicodeChar percent_1Buffer[PERCENT_1_SIZE];
     static const uint16_t TEXTAREA14_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea14Buffer[TEXTAREA14_SIZE];
+    static const uint16_t TEMP_5_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar temp_5Buffer[TEMP_5_SIZE];
+    static const uint16_t TEMP_6_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar temp_6Buffer[TEMP_6_SIZE];
 
 private:
 

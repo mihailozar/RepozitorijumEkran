@@ -3,6 +3,7 @@
 #include "can.h"
 
 extern int lv_comm_fault, hv_comm_fault, ecu_comm_fault;
+extern volatile int warningTemperatureFlag;
 char *states[9] = { "INIT", "VEHICLE CHECK", "IDLE", "FAULT", "PRECHARGE",
 		"ACC ACTIVE", "INVERTER ACTIVE", "READY TO DRIVE SIGNAL",
 		"READY TO DRIVE" };
@@ -73,7 +74,18 @@ void Screen1View::updateHV() {
 
 void Screen1View::updateLV() {
 
+	if(warningTemperatureFlag){
+
+		shape_speedPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(0xfc, 0x69, 0));
+		shape_speed.invalidate();
+	}else{
+		shape_speedPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(0xff, 0xff, 0xff));
+		shape_speed.invalidate();
+	}
+
 	if (lv_comm_fault) {
+
+
 		lvpbPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
 		lvpb.invalidate();
 	} else {

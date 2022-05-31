@@ -2,6 +2,8 @@ ModelListener.hpp:18:18:virtual void ModelListener::notifyState()	0	static
 ModelListener.hpp:19:18:virtual void ModelListener::notifyHV()	0	static
 ModelListener.hpp:20:18:virtual void ModelListener::notifyLV()	0	static
 ModelListener.hpp:22:18:virtual void ModelListener::notifyLVFaults()	0	static
+ModelListener.hpp:23:18:virtual void ModelListener::notifyECUinfo()	0	static
+ModelListener.hpp:24:18:virtual void ModelListener::notifyPrechagrRelay()	0	static
 Screen7Presenter.hpp:30:13:Screen7Presenter::~Screen7Presenter()	0	static
 Screen7Presenter.cpp:10:6:virtual void Screen7Presenter::activate()	0	static
 Screen7Presenter.cpp:20:6:virtual void Screen7Presenter::notifyHVFaults()	0	static
