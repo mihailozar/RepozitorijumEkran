@@ -67,15 +67,16 @@ static void workTask(void *parameters) {
 	myState = INIT;
 	screen = 1;
 	uint8_t data[8]={0};
+	uint8_t dataAlive[8]={0};
 	int lastButtonState = 0;
 	unsigned long lastDebounceTime = 0;
 	int buttonState=0;
 
 	while (1) {
 //////////////////////////////////
-		///TEST
-		data[0] =  VEHICLE_START ;
-		sendStartMessage(data);
+		///ALIVE MESSAGE
+		dataAlive[0] =  1 ;
+		sendStartMessage(dataAlive);
 		HAL_Delay(30);
 ////////////////////////
 		if (stateEcu == IDLE || stateEcu == ACC_ACTIVE) {

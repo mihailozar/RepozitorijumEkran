@@ -41,15 +41,12 @@ KEEP extern const touchgfx::GlyphNode glyphs_ROCK_TTF_31_4bpp[] FONT_TABLE_LOCAT
     {  6222, 0x0058,  21,  21,  21,   0,  20,  65,   1, 0x00 },
     {  6453, 0x0059,  22,  21,  21,  -1,  20,  66,   6, 0x00 },
     {  6684, 0x005A,  17,  21,  21,   0,  17,   0,   0, 0x00 },
-    {  6873, 0x0061,  16,  15,  15,   1,  16,  72,   8, 0x00 },
-    {  6993, 0x0065,  16,  15,  15,   1,  18,  80,  10, 0x00 },
-    {  7113, 0x0067,  18,  21,  15,   1,  19,  90,   1, 0x00 },
-    {  7302, 0x006C,   9,  21,  21,   0,   9,  91,   1, 0x00 },
-    {  7407, 0x006E,  18,  15,  15,   0,  18,  92,   1, 0x00 },
-    {  7542, 0x006F,  16,  15,  15,   1,  18,  93,  10, 0x00 },
-    {  7662, 0x0072,  13,  15,  15,   0,  13,   0,   0, 0x00 },
-    {  7767, 0x0074,   9,  20,  20,   0,   9,   0,   0, 0x00 },
-    {  7867, 0x0075,  18,  15,  15,   0,  17, 103,   4, 0x00 }
+    {  6873, 0x0065,  16,  15,  15,   1,  18,  72,  10, 0x00 },
+    {  6993, 0x0067,  18,  21,  15,   1,  19,  82,   1, 0x00 },
+    {  7182, 0x006C,   9,  21,  21,   0,   9,  83,   1, 0x00 },
+    {  7287, 0x006F,  16,  15,  15,   1,  18,  84,  10, 0x00 },
+    {  7407, 0x0072,  13,  15,  15,   0,  13,   0,   0, 0x00 },
+    {  7512, 0x0075,  18,  15,  15,   0,  17,  94,   4, 0x00 }
 };
 
 // ROCK_TTF_31_4bpp
@@ -64,6 +61,6 @@ touchgfx::GeneratedFont& getFont_ROCK_TTF_31_4bpp();
 
 touchgfx::GeneratedFont& getFont_ROCK_TTF_31_4bpp()
 {
-    static touchgfx::GeneratedFont ROCK_TTF_31_4bpp(glyphs_ROCK_TTF_31_4bpp, 46, 31, 6, 4, 1, 2, 1, unicodes_ROCK_TTF_31_4bpp, kerning_ROCK_TTF_31_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ROCK_TTF_31_4bpp(glyphs_ROCK_TTF_31_4bpp, 43, 31, 6, 4, 1, 2, 1, unicodes_ROCK_TTF_31_4bpp, kerning_ROCK_TTF_31_4bpp, 63, 0, 0, 0);
     return ROCK_TTF_31_4bpp;
 }

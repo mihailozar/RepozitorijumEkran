@@ -47,7 +47,6 @@ protected:
     touchgfx::Circle circle_cell1;
     touchgfx::PainterRGB565 circle_cell1Painter;
     touchgfx::TextAreaWithOneWildcard voltage_1;
-    touchgfx::TextAreaWithOneWildcard temp_1;
     touchgfx::Container cell2;
     touchgfx::BoxWithBorder boxWithBorder3_1;
     touchgfx::TextArea textArea8_1;
@@ -63,16 +62,37 @@ protected:
     touchgfx::TextArea textArea8_3;
     touchgfx::Circle circle_cell4;
     touchgfx::PainterRGB565 circle_cell4Painter;
-    touchgfx::Container cell5;
+    touchgfx::Container temp1cont;
     touchgfx::TextArea textArea8_3_1;
-    touchgfx::Circle circle_cell5;
-    touchgfx::PainterRGB565 circle_cell5Painter;
+    touchgfx::Circle circle_temp1;
+    touchgfx::PainterRGB565 circle_temp1Painter;
     touchgfx::BoxWithBorder boxWithBorder3_2_1;
-    touchgfx::Container cell6;
+    touchgfx::TextAreaWithOneWildcard temp_1;
+    touchgfx::Container temp2cont;
     touchgfx::TextArea textArea8_3_2;
-    touchgfx::Circle circle_cell6;
-    touchgfx::PainterRGB565 circle_cell6Painter;
+    touchgfx::Circle circle_temp2;
+    touchgfx::PainterRGB565 circle_temp2Painter;
     touchgfx::BoxWithBorder boxWithBorder3_2_2;
+    touchgfx::Container temp3cont;
+    touchgfx::TextArea textArea8_3_2_1;
+    touchgfx::Circle circle_temp3;
+    touchgfx::PainterRGB565 circle_temp3Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_2_1;
+    touchgfx::Container temp4;
+    touchgfx::TextArea textArea8_3_2_2;
+    touchgfx::Circle circle_temp4;
+    touchgfx::PainterRGB565 circle_temp4Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_2_2;
+    touchgfx::Container temp5;
+    touchgfx::TextArea textArea8_3_2_3;
+    touchgfx::Circle circle_temp5;
+    touchgfx::PainterRGB565 circle_temp5Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_2_3;
+    touchgfx::Container temp6;
+    touchgfx::TextArea textArea8_3_2_3_1;
+    touchgfx::Circle circle_temp6;
+    touchgfx::PainterRGB565 circle_temp6Painter;
+    touchgfx::BoxWithBorder boxWithBorder3_2_2_3_1;
     touchgfx::Circle circle_cell1_1;
     touchgfx::PainterRGB565 circle_cell1_1Painter;
     touchgfx::TextAreaWithOneWildcard voltage_2;
@@ -96,6 +116,10 @@ protected:
     touchgfx::TextArea textArea2_1;
     touchgfx::TextAreaWithOneWildcard temp_5;
     touchgfx::TextAreaWithOneWildcard temp_6;
+    touchgfx::TextArea textArea2_2;
+    touchgfx::TextAreaWithOneWildcard soc;
+    touchgfx::TextArea actuator_fault_code;
+    touchgfx::TextAreaWithOneWildcard fault_code_num;
 
     /*
      * Wildcard Buffers
@@ -128,6 +152,10 @@ protected:
     touchgfx::Unicode::UnicodeChar temp_5Buffer[TEMP_5_SIZE];
     static const uint16_t TEMP_6_SIZE = 10;
     touchgfx::Unicode::UnicodeChar temp_6Buffer[TEMP_6_SIZE];
+    static const uint16_t SOC_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar socBuffer[SOC_SIZE];
+    static const uint16_t FAULT_CODE_NUM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar fault_code_numBuffer[FAULT_CODE_NUM_SIZE];
 
 private:
 

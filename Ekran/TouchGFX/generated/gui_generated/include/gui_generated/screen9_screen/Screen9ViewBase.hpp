@@ -64,6 +64,9 @@ protected:
     touchgfx::PainterRGB565 circle_voltagePainter;
     touchgfx::Circle circle_current;
     touchgfx::PainterRGB565 circle_currentPainter;
+    touchgfx::TextArea fatal_error;
+    touchgfx::Circle circle_fatal_error;
+    touchgfx::PainterRGB565 circle_fatal_errorPainter;
 
 private:
 

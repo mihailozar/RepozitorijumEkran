@@ -13,7 +13,7 @@ Screen9ViewBase::Screen9ViewBase()
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    box1.setPosition(0, 0, 800, 480);
+    box1.setPosition(0, -1, 800, 480);
     box1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
 
     boxWithBorder1.setPosition(0, 0, 418, 66);
@@ -44,12 +44,12 @@ Screen9ViewBase::Screen9ViewBase()
     box3.setPosition(10, 382, 398, 87);
     box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
-    textArea5.setXY(477, 123);
+    textArea5.setXY(449, 64);
     textArea5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea5.setLinespacing(0);
     textArea5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID872));
 
-    textArea6.setXY(477, 66);
+    textArea6.setXY(449, 7);
     textArea6.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea6.setLinespacing(0);
     textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID873));
@@ -70,22 +70,22 @@ Screen9ViewBase::Screen9ViewBase()
     sd_open.setLinespacing(0);
     sd_open.setTypedText(touchgfx::TypedText(T_SINGLEUSEID875));
 
-    textArea8.setXY(477, 182);
+    textArea8.setXY(449, 123);
     textArea8.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea8.setLinespacing(0);
     textArea8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID876));
 
-    textArea9.setXY(477, 240);
+    textArea9.setXY(449, 181);
     textArea9.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea9.setLinespacing(0);
     textArea9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID877));
 
-    textArea10.setXY(477, 298);
+    textArea10.setXY(449, 239);
     textArea10.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea10.setLinespacing(0);
     textArea10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID878));
 
-    textArea11.setXY(477, 411);
+    textArea11.setXY(449, 348);
     textArea11.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea11.setLinespacing(0);
     textArea11.setTypedText(touchgfx::TypedText(T_SINGLEUSEID879));
@@ -96,7 +96,7 @@ Screen9ViewBase::Screen9ViewBase()
     precharg_plus.setLinespacing(0);
     precharg_plus.setTypedText(touchgfx::TypedText(T_SINGLEUSEID880));
 
-    textArea11_1.setXY(477, 355);
+    textArea11_1.setXY(449, 296);
     textArea11_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea11_1.setLinespacing(0);
     textArea11_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID881));
@@ -113,7 +113,7 @@ Screen9ViewBase::Screen9ViewBase()
     sd_closed.setLinespacing(0);
     sd_closed.setTypedText(touchgfx::TypedText(T_SINGLEUSEID883));
 
-    circle_air_plus.setPosition(685, 66, 40, 40);
+    circle_air_plus.setPosition(687, 7, 40, 40);
     circle_air_plus.setCenter(20, 20);
     circle_air_plus.setRadius(20);
     circle_air_plus.setLineWidth(0);
@@ -121,7 +121,7 @@ Screen9ViewBase::Screen9ViewBase()
     circle_air_plusPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_air_plus.setPainter(circle_air_plusPainter);
 
-    circle_air_minus.setPosition(685, 123, 40, 40);
+    circle_air_minus.setPosition(687, 64, 40, 40);
     circle_air_minus.setCenter(20, 20);
     circle_air_minus.setRadius(20);
     circle_air_minus.setLineWidth(0);
@@ -129,7 +129,7 @@ Screen9ViewBase::Screen9ViewBase()
     circle_air_minusPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_air_minus.setPainter(circle_air_minusPainter);
 
-    circle_relay.setPosition(685, 185, 40, 40);
+    circle_relay.setPosition(687, 126, 40, 40);
     circle_relay.setCenter(20, 20);
     circle_relay.setRadius(20);
     circle_relay.setLineWidth(0);
@@ -137,7 +137,7 @@ Screen9ViewBase::Screen9ViewBase()
     circle_relayPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_relay.setPainter(circle_relayPainter);
 
-    circle_shd_cmd.setPosition(685, 243, 40, 40);
+    circle_shd_cmd.setPosition(687, 184, 40, 40);
     circle_shd_cmd.setCenter(20, 20);
     circle_shd_cmd.setRadius(20);
     circle_shd_cmd.setLineWidth(0);
@@ -145,7 +145,7 @@ Screen9ViewBase::Screen9ViewBase()
     circle_shd_cmdPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_shd_cmd.setPainter(circle_shd_cmdPainter);
 
-    circle_imd.setPosition(685, 298, 40, 40);
+    circle_imd.setPosition(687, 239, 40, 40);
     circle_imd.setCenter(20, 20);
     circle_imd.setRadius(20);
     circle_imd.setLineWidth(0);
@@ -153,7 +153,7 @@ Screen9ViewBase::Screen9ViewBase()
     circle_imdPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_imd.setPainter(circle_imdPainter);
 
-    circle_voltage.setPosition(685, 358, 40, 40);
+    circle_voltage.setPosition(687, 299, 40, 40);
     circle_voltage.setCenter(20, 20);
     circle_voltage.setRadius(20);
     circle_voltage.setLineWidth(0);
@@ -161,13 +161,26 @@ Screen9ViewBase::Screen9ViewBase()
     circle_voltagePainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_voltage.setPainter(circle_voltagePainter);
 
-    circle_current.setPosition(685, 414, 40, 40);
+    circle_current.setPosition(687, 355, 40, 40);
     circle_current.setCenter(20, 20);
     circle_current.setRadius(20);
     circle_current.setLineWidth(0);
     circle_current.setArc(0, 360);
     circle_currentPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle_current.setPainter(circle_currentPainter);
+
+    fatal_error.setXY(449, 406);
+    fatal_error.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    fatal_error.setLinespacing(0);
+    fatal_error.setTypedText(touchgfx::TypedText(T_SINGLEUSEID887));
+
+    circle_fatal_error.setPosition(687, 412, 40, 40);
+    circle_fatal_error.setCenter(20, 20);
+    circle_fatal_error.setRadius(20);
+    circle_fatal_error.setLineWidth(0);
+    circle_fatal_error.setArc(0, 360);
+    circle_fatal_errorPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle_fatal_error.setPainter(circle_fatal_errorPainter);
 
     add(__background);
     add(box1);
@@ -197,6 +210,8 @@ Screen9ViewBase::Screen9ViewBase()
     add(circle_imd);
     add(circle_voltage);
     add(circle_current);
+    add(fatal_error);
+    add(circle_fatal_error);
 }
 
 void Screen9ViewBase::setupScreen()

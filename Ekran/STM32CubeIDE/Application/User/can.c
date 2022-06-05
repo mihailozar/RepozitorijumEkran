@@ -98,7 +98,10 @@ struct CANMessage *msg;
 extern QueueHandle_t CAN_Rx_Queue;
 int new[10];
 int newFault[10];
-
+int bms_lv_actuator;
+int bms_lv_shutdown;
+int bms_lv_ntcFault;
+int bml_lv_tempFault;
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	CAN_RxHeaderTypeDef pHeader;
 	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &pHeader, rxData);
@@ -150,6 +153,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	//BMS LV GENERAL STATE
 	if (messageID == GENERAL_STATE_LV_ID) {
 		lv_comm=1;
+		//dodati na ekrane
+		bms_lv_actuator=rxData[1];
+		bms_lv_shutdown=rxData[4];
+		///
 		bms_lv_voltage_total = (float)rxData[2] / 10;
 		bms_lv_curr = rxData[3]  * 0.0001907349 * 256;
 
@@ -232,17 +239,22 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 					bms_lv_temperature[i]=rxData[i];
 
 				}
-				if((rxData[6]&0xff) || (rxData[7]& 0xff )){
+				bml_lv_tempFault=rxData[6]|rxData[7];
+				if((rxData[6]&0xff)  ){
 					warningTemperatureFlag=1;
 				}
 
 			}else
 			if(messageID==BMS_LV_OPEN_CIRCUIT){
-				LVopenCircuit=rxData[7];
+				//dodati or ove dve vrednosti i prikazati na koliko nema greske
+				LVopenCircuit=rxData[6];
+				bms_lv_ntcFault=rxData[7];
 			}
 			else if(messageID== HV_FAULTS){
-				relayFaults=rxData[0];
-				prechargFaultState=rxData[1];
+				relayFaults=rxData[0];//bit 0 jedinica je air+ a prvi je air-
+				//2 precharg 3 shutdown
+				prechargFaultState=rxData[1];//pogledati u can popis poruka
+
 			}
 
 }
@@ -266,118 +278,123 @@ void canInit() {
 	HAL_CAN_Start(&hcan2);
 }
 
-void getCANMessage() {
-	xQueueReceive(CAN_Rx_Queue, &(msg), 0);
-
-	uint32_t messageID = msg->pHeader.StdId;
-	uint8_t *rxData = msg->rxData;
-
-//VEHICLE GENERAL STATE
-	if (messageID == 0x0282) {
-		speed = (int) (((rxData[2] << 8) + rxData[3]) * 0.0754);
-	} else if (messageID == GENERAL_STATE_VEHICLE_ID) {
-		ecu_comm=1;
-		stateEcu = (int) rxData[0];
-	} else
-//BMS HV FAULTS (Obrnuti su ID-evi u odnosu na dokument CAN Popis poruka)
-	if (messageID >= BMS0L_FAULT_ID && messageID <= BMS9H_FAULT_ID) {
-		hv_comm=1;
-		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
-		if (newFault[slave]++ % 2 == 0) {
-			for (int i = 0; i < 16; i++)
-				bms_hv_fault[slave][i] = 0;
-		}
-		if (messageID % 2 == 0)
-			for (int i = 0; i < 8; i++)
-				bms_hv_fault[slave][i] = rxData[i];
-		else
-			for (int i = 0; i < 8; i++)
-				bms_hv_fault[slave][i + 8] = rxData[i];
-	} else
-//BMS HV GENERAL STATE
-	if (messageID == GENERAL_STATE_HV_ID) {
-		hv_comm=1;
-		periphery_state = rxData[0];
-		bms_hv_voltage_total = ((rxData[1] << 8) + rxData[2]) / 65535 * 5;
-		bms_hv_current = (rxData[3] << 8) + rxData[4];
-		bms_hv_soc = rxData[5];
-		bms_hv_board_fault = (rxData[6] << 8) + rxData[7];
-	} else
-//BMS LV GENERAL STATE
-	if (messageID == GENERAL_STATE_LV_ID) {
-		lv_comm=1;
-//		bms_lv_voltage_total = rxData[2];
-//		bms_lv_curr = (rxData[3] << 8) + rxData[4];
-//		//bms_lv_soc = rxData[4];
-//		bms_lv_maxtemp = rxData[5];
-//		fans_pumps = rxData[6];
-//		fans_pumps_fault = rxData[7];
-	} else
-//BMS HV VOLTAGES
-	if (messageID >= BMS0L_HV_V_ID && messageID <= BMS9H_HV_V_ID) {
-		hv_comm=1;
-		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
-
-		if (new[slave]++ % 2 == 0) //if (new data has arrived)
-				{
-			bms_hv_volt[slave] = 0; //erase old data
-			for (int i = 0; i < 14; i++)
-				bms_hv_voltage[slave][i] = 0;
-		}
-
-		if (messageID % 2 == 0) {
-			//CELL0 - CELL7
-			for (int i = 0; i < 8; i++) {
-				bms_hv_voltage[slave][i] = (float) (rxData[i] * 5) / 256;
-				bms_hv_volt[slave] += bms_hv_voltage[slave][i];
-			}
-
-		} else {
-			//CELL8 - CELL14
-			for (int i = 0; i < 6; i++) {
-				bms_hv_voltage[slave][i + 8] = (float) (rxData[i] * 5) / 256;
-				bms_hv_volt[slave] += bms_hv_voltage[slave][i + 8];
-			}
-
-			//bms_hv_volt[slave] = (bms_hv_volt[slave] * 5 / 256);
-
-		}
-
-	} else
-//BMS HV TEMPERATURES
-	if (messageID >= BMS0_HV_TEMP_ID && messageID <= BMS9_HV_TEMP_ID) {
-		hv_comm=1;
-		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
-		bms_hv_max_temperature[slave] = 0;
-		for (int i = 0; i < 7; i++) { //7 temperatures for one slave
-			bms_hv_temperature[slave][i] = rxData[i];
-			if (bms_hv_max_temperature[slave] < bms_hv_temperature[slave][i])
-				bms_hv_max_temperature[slave] = bms_hv_temperature[slave][i];
-		}
-	} else
-//BMS LV VOLTAGES + FAULTS
-	if (messageID == BMS_LV_V_FAULT_ID) {
-		lv_comm=1;
-		for (int i = 0; i < 4; i++) {
-			bms_lv_voltage[i] = rxData[i] * 0.0001907349 * 256;
-
-		}
-		bms_lv_fault[0]=rxData[4];
-
-
-	} else
-//FANS + PUMPS
-	if (messageID == 0x096) {
-		ecu_comm=1;
-		fans_pumps = rxData[0];
-		pump1_pwm = rxData[1];
-		pump2_pwm = rxData[2];
-	} else
-//BMS LV FAULTS
-	if (messageID == BMS_LV_TEMP_FAULT_ID) {
-		lv_comm=1;
-		for (int i = 0; i < 3; i++)
-			bms_lv_fault[i] = rxData[i];
-		uint8_t isFaultSet=rxData[4];
-	}
-}
+//void getCANMessage() {
+//	xQueueReceive(CAN_Rx_Queue, &(msg), 0);
+//
+//	uint32_t messageID = msg->pHeader.StdId;
+//	uint8_t *rxData = msg->rxData;
+//
+////VEHICLE GENERAL STATE
+//	if (messageID == 0x0282) {
+//		speed = (int) (((rxData[2] << 8) + rxData[3]) * 0.0754);
+//	} else if (messageID == GENERAL_STATE_VEHICLE_ID) {
+//		ecu_comm=1;
+//		stateEcu = (int) rxData[0];
+//	} else
+////BMS HV FAULTS (Obrnuti su ID-evi u odnosu na dokument CAN Popis poruka)
+//	if (messageID >= BMS0L_FAULT_ID && messageID <= BMS9H_FAULT_ID) {
+//		hv_comm=1;
+//		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
+//		if (newFault[slave]++ % 2 == 0) {
+//			for (int i = 0; i < 16; i++)
+//				bms_hv_fault[slave][i] = 0;
+//		}
+//		if (messageID % 2 == 0)
+//			for (int i = 0; i < 8; i++)
+//				bms_hv_fault[slave][i] = rxData[i];
+//		else
+//			for (int i = 0; i < 8; i++)
+//				bms_hv_fault[slave][i + 8] = rxData[i];
+//	} else
+////BMS HV GENERAL STATE
+//	if (messageID == GENERAL_STATE_HV_ID) {
+//		hv_comm=1;
+//		periphery_state = rxData[0];
+//		bms_hv_voltage_total = ((rxData[1] << 8) + rxData[2]) / 65535 * 5;
+//		bms_hv_current = (rxData[3] << 8) + rxData[4];
+//		bms_hv_soc = rxData[5];
+//		bms_hv_board_fault = (rxData[6] << 8) + rxData[7];
+//	} else
+////BMS LV GENERAL STATE
+//	if (messageID ==
+//
+//
+//
+//
+//	) {
+//		lv_comm=1;
+////		bms_lv_voltage_total = rxData[2];
+////		bms_lv_curr = (rxData[3] << 8) + rxData[4];
+////		//bms_lv_soc = rxData[4];
+////		bms_lv_maxtemp = rxData[5];
+////		fans_pumps = rxData[6];
+////		fans_pumps_fault = rxData[7];
+//	} else
+////BMS HV VOLTAGES
+//	if (messageID >= BMS0L_HV_V_ID && messageID <= BMS9H_HV_V_ID) {
+//		hv_comm=1;
+//		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
+//
+//		if (new[slave]++ % 2 == 0) //if (new data has arrived)
+//				{
+//			bms_hv_volt[slave] = 0; //erase old data
+//			for (int i = 0; i < 14; i++)
+//				bms_hv_voltage[slave][i] = 0;
+//		}
+//
+//		if (messageID % 2 == 0) {
+//			//CELL0 - CELL7
+//			for (int i = 0; i < 8; i++) {
+//				bms_hv_voltage[slave][i] = (float) (rxData[i] * 5) / 256;
+//				bms_hv_volt[slave] += bms_hv_voltage[slave][i];
+//			}
+//
+//		} else {
+//			//CELL8 - CELL14
+//			for (int i = 0; i < 6; i++) {
+//				bms_hv_voltage[slave][i + 8] = (float) (rxData[i] * 5) / 256;
+//				bms_hv_volt[slave] += bms_hv_voltage[slave][i + 8];
+//			}
+//
+//			//bms_hv_volt[slave] = (bms_hv_volt[slave] * 5 / 256);
+//
+//		}
+//
+//	} else
+////BMS HV TEMPERATURES
+//	if (messageID >= BMS0_HV_TEMP_ID && messageID <= BMS9_HV_TEMP_ID) {
+//		hv_comm=1;
+//		uint8_t slave = getSlave(messageID); //BMS SLAVE NO
+//		bms_hv_max_temperature[slave] = 0;
+//		for (int i = 0; i < 7; i++) { //7 temperatures for one slave
+//			bms_hv_temperature[slave][i] = rxData[i];
+//			if (bms_hv_max_temperature[slave] < bms_hv_temperature[slave][i])
+//				bms_hv_max_temperature[slave] = bms_hv_temperature[slave][i];
+//		}
+//	} else
+////BMS LV VOLTAGES + FAULTS
+//	if (messageID == BMS_LV_V_FAULT_ID) {
+//		lv_comm=1;
+//		for (int i = 0; i < 4; i++) {
+//			bms_lv_voltage[i] = rxData[i] * 0.0001907349 * 256;
+//
+//		}
+//		bms_lv_fault[0]=rxData[4];
+//
+//
+//	} else
+////FANS + PUMPS
+//	if (messageID == 0x096) {
+//		ecu_comm=1;
+//		fans_pumps = rxData[0];
+//		pump1_pwm = rxData[1];
+//		pump2_pwm = rxData[2];
+//	} else
+////BMS LV FAULTS
+//	if (messageID == BMS_LV_TEMP_FAULT_ID) {
+//		lv_comm=1;
+//		for (int i = 0; i < 3; i++)
+//			bms_lv_fault[i] = rxData[i];
+//		uint8_t isFaultSet=rxData[4];
+//	}
+//}

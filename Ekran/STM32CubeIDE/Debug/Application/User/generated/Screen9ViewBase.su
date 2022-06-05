@@ -19,14 +19,14 @@ Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, t
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:36:7:touchgfx::View<Screen9Presenter>::~View()	0	static
 Screen9ViewBase.hpp:20:13:Screen9ViewBase::~Screen9ViewBase()	0	static
-Screen9ViewBase.cpp:202:6:virtual void Screen9ViewBase::setupScreen()	0	static
+Screen9ViewBase.cpp:217:6:virtual void Screen9ViewBase::setupScreen()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<Screen9Presenter>::~View()	8	static
 Screen9ViewBase.hpp:20:13:virtual Screen9ViewBase::~Screen9ViewBase()	8	static
-Screen9ViewBase.cpp:208:6:virtual void Screen9ViewBase::handleKeyEvent(uint8_t)	8	static
+Screen9ViewBase.cpp:223:6:virtual void Screen9ViewBase::handleKeyEvent(uint8_t)	8	static
 Drawable.hpp:297:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	0	static
 TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	0	static
 AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-Screen9ViewBase.cpp:8:1:Screen9ViewBase::Screen9ViewBase()	184	static
+Screen9ViewBase.cpp:8:1:Screen9ViewBase::Screen9ViewBase()	200	static
