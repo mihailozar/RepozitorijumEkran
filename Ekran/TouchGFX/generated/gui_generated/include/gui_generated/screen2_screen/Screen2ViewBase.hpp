@@ -57,6 +57,9 @@ protected:
     touchgfx::PainterRGB565 sd_statePainter;
     touchgfx::Circle xbee_state;
     touchgfx::PainterRGB565 xbee_statePainter;
+    touchgfx::Circle display_circle;
+    touchgfx::PainterRGB565 display_circlePainter;
+    touchgfx::TextArea textArea4_3_1;
     touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::TextArea textArea1;
     touchgfx::Container container1;
@@ -75,6 +78,16 @@ protected:
     touchgfx::TextArea textArea2_2;
     touchgfx::TextArea textArea2_3;
     touchgfx::TextArea textArea3;
+    touchgfx::BoxWithBorder boxWithBorder2;
+    touchgfx::TextArea textArea4_2_1;
+    touchgfx::Circle wheel_01;
+    touchgfx::PainterRGB565 wheel_01Painter;
+    touchgfx::Circle wheel_00;
+    touchgfx::PainterRGB565 wheel_00Painter;
+    touchgfx::Circle wheel_10;
+    touchgfx::PainterRGB565 wheel_10Painter;
+    touchgfx::Circle wheel_11;
+    touchgfx::PainterRGB565 wheel_11Painter;
 
 private:
 

@@ -1,7 +1,7 @@
 #include <gui/screen9_screen/Screen9View.hpp>
 #include <touchgfx/Color.hpp>
 
-extern uint8_t periphery_state;
+extern volatile uint8_t periphery_state;
 extern int relayFaults;
 extern int prechargFaultState;
 Screen9View::Screen9View()
@@ -28,11 +28,11 @@ void Screen9View::updatePrechargRelay(){
 	}
 
 	if(periphery_state & 0x01){
-		sd_open.setVisible(false);
-		sd_closed.setVisible(true);
-	}else{
 		sd_open.setVisible(true);
 		sd_closed.setVisible(false);
+	}else{
+		sd_open.setVisible(false);
+		sd_closed.setVisible(true);
 	}
 	if(periphery_state & 0x02){
 		circle_fatal_errorPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));

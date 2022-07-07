@@ -57,6 +57,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		 	  hv_comm_fault=1;
 		   }
 
+		   for(int i=0;i<10;i++){
+			   if(bms_hv_fault[i][12] != 0 || bms_hv_fault[i][13] != 0){
+				   bms_hv_volt[i]=0;
+				   bms_hv_max_temperature[i]=0;
+				   for(int j=0;j<14;j++){
+				   		 bms_hv_voltage[i][j]=0;
+				   }
+			   }
+		   }
+
 
   }
   /* USER CODE END Callback 1 */
@@ -76,8 +86,8 @@ static void workTask(void *parameters) {
 //////////////////////////////////
 		///ALIVE MESSAGE
 		dataAlive[0] =  1 ;
-		sendStartMessage(dataAlive);
-		HAL_Delay(30);
+		sendStartMessage(dataAlive,ALIVE);
+
 ////////////////////////
 		if (stateEcu == IDLE || stateEcu == ACC_ACTIVE) {
 
@@ -102,7 +112,7 @@ static void workTask(void *parameters) {
 					    		}
 					    	  data[0] =  VEHICLE_START ;
 
-					    	  sendStartMessage(data);
+					    	  sendStartMessage(data,VEHICLE_START_ID);
 					    	  HAL_Delay(30);
 					    	  }
 					      }

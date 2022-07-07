@@ -15,13 +15,13 @@
 
 uint32_t TxMailbox;
 
-void sendStartMessage(uint8_t data[]) {
+void sendStartMessage(uint8_t data[],int id) {
 
 	CAN_TxHeaderTypeDef pHeader;
 	pHeader.DLC = 1;
 	pHeader.RTR = CAN_RTR_DATA;
 	pHeader.IDE = CAN_ID_STD;
-	pHeader.StdId = VEHICLE_START_ID;
+	pHeader.StdId = id;
 	HAL_CAN_AddTxMessage(&hcan2, &pHeader, data, &TxMailbox);
 	//while (HAL_CAN_IsTxMessagePending(&hcan2, TxMailbox));
 }
@@ -102,6 +102,8 @@ int bms_lv_actuator;
 int bms_lv_shutdown;
 int bms_lv_ntcFault;
 int bml_lv_tempFault;
+
+uint8_t display;
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 	CAN_RxHeaderTypeDef pHeader;
 	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &pHeader, rxData);
@@ -113,7 +115,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 	uint32_t messageID = pHeader.StdId;
 	//VEHICLE GENERAL STATE
-	if (messageID == 0x0282) {
+	if (messageID == 0x011) {
 		speed = (unsigned int) (((rxData[3] << 8) + rxData[2]) * 0.006854);
 	} else if (messageID == GENERAL_STATE_VEHICLE_ID) {
 		ecu_comm=1;
@@ -122,7 +124,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		BMS_LV_state=(int) rxData[1]&0xf;
 		APPS_state=(int)rxData[2]>>4;
 		Inverter_state=(int)rxData[2]&0xf;
-		Telemetry_state=(int)rxData[3]&0x3;
+//		Telemetry_state=(int)rxData[3]&0x3;
+		wheels[0]=(int)rxData[3]>>4;
+		wheels[1]=(int)rxData[3]&0xf;
+		wheels[2]=(int)rxData[4]>>4;
+		wheels[3]=(int)rxData[4]&0xf;
+		display=rxData[5]>>4;
 
 
 	} else

@@ -16,6 +16,7 @@
  */
 
 #define		VEHICLE_START_ID	0x0064
+#define     ALIVE               0x0067
 #define		VEHICLE_START		0x01
 
 #define ECU_PRECHARGE_REQ       0x97

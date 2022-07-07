@@ -90,13 +90,13 @@ Screen2ViewBase::Screen2ViewBase()
     textArea4_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID847));
     currentStatus.add(textArea4_1);
 
-    textArea4_2.setXY(280, 302);
+    textArea4_2.setXY(181, 304);
     textArea4_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea4_2.setLinespacing(0);
     textArea4_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID848));
     currentStatus.add(textArea4_2);
 
-    textArea4_3.setXY(261, 370);
+    textArea4_3.setXY(163, 370);
     textArea4_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea4_3.setLinespacing(0);
     textArea4_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID849));
@@ -120,7 +120,7 @@ Screen2ViewBase::Screen2ViewBase()
     gps_state.setPainter(gps_statePainter);
     currentStatus.add(gps_state);
 
-    sd_state.setPosition(353, 297, 41, 42);
+    sd_state.setPosition(261, 299, 41, 42);
     sd_state.setCenter(20, 20);
     sd_state.setRadius(20);
     sd_state.setLineWidth(0);
@@ -129,7 +129,7 @@ Screen2ViewBase::Screen2ViewBase()
     sd_state.setPainter(sd_statePainter);
     currentStatus.add(sd_state);
 
-    xbee_state.setPosition(353, 367, 41, 42);
+    xbee_state.setPosition(261, 365, 41, 42);
     xbee_state.setCenter(20, 20);
     xbee_state.setRadius(20);
     xbee_state.setLineWidth(0);
@@ -137,6 +137,21 @@ Screen2ViewBase::Screen2ViewBase()
     xbee_statePainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     xbee_state.setPainter(xbee_statePainter);
     currentStatus.add(xbee_state);
+
+    display_circle.setPosition(481, 349, 41, 42);
+    display_circle.setCenter(20, 20);
+    display_circle.setRadius(20);
+    display_circle.setLineWidth(0);
+    display_circle.setArc(0, 360);
+    display_circlePainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    display_circle.setPainter(display_circlePainter);
+    currentStatus.add(display_circle);
+
+    textArea4_3_1.setXY(354, 352);
+    textArea4_3_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea4_3_1.setLinespacing(0);
+    textArea4_3_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID896));
+    currentStatus.add(textArea4_3_1);
 
     boxWithBorder1.setPosition(0, 0, 418, 66);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
@@ -225,12 +240,60 @@ Screen2ViewBase::Screen2ViewBase()
     textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID841));
     container1.add(textArea3);
 
+    boxWithBorder2.setPosition(281, 77, 241, 208);
+    boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(7, 17, 35));
+    boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    boxWithBorder2.setBorderSize(4);
+
+    textArea4_2_1.setXY(338, 91);
+    textArea4_2_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea4_2_1.setLinespacing(0);
+    textArea4_2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID895));
+
+    wheel_01.setPosition(442, 148, 41, 42);
+    wheel_01.setCenter(20, 20);
+    wheel_01.setRadius(20);
+    wheel_01.setLineWidth(0);
+    wheel_01.setArc(0, 360);
+    wheel_01Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    wheel_01.setPainter(wheel_01Painter);
+
+    wheel_00.setPosition(328, 148, 41, 42);
+    wheel_00.setCenter(20, 20);
+    wheel_00.setRadius(20);
+    wheel_00.setLineWidth(0);
+    wheel_00.setArc(0, 360);
+    wheel_00Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    wheel_00.setPainter(wheel_00Painter);
+
+    wheel_10.setPosition(328, 219, 41, 42);
+    wheel_10.setCenter(20, 20);
+    wheel_10.setRadius(20);
+    wheel_10.setLineWidth(0);
+    wheel_10.setArc(0, 360);
+    wheel_10Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    wheel_10.setPainter(wheel_10Painter);
+
+    wheel_11.setPosition(442, 219, 41, 42);
+    wheel_11.setCenter(20, 20);
+    wheel_11.setRadius(20);
+    wheel_11.setLineWidth(0);
+    wheel_11.setArc(0, 360);
+    wheel_11Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    wheel_11.setPainter(wheel_11Painter);
+
     add(__background);
     add(box1);
     add(currentStatus);
     add(boxWithBorder1);
     add(textArea1);
     add(container1);
+    add(boxWithBorder2);
+    add(textArea4_2_1);
+    add(wheel_01);
+    add(wheel_00);
+    add(wheel_10);
+    add(wheel_11);
 }
 
 void Screen2ViewBase::setupScreen()

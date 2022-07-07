@@ -44,7 +44,7 @@ volatile enum StateBoard BMS_LV_state;
 volatile enum StateBoard APPS_state;
 volatile enum StateBoard Inverter_state;
 volatile int Telemetry_state;
-
+volatile enum StateBoard wheels[4];
 
 
 int speed;
@@ -56,7 +56,7 @@ float bms_hv_temperature[10][7];
 float bms_hv_max_temperature[10];
 uint8_t bms_hv_fault[10][16];
 uint8_t bms_hv_soc;
-uint8_t periphery_state;
+uint8_t volatile periphery_state;
 uint16_t bms_hv_voltage_total;
 uint16_t bms_hv_current;
 uint16_t bms_hv_board_fault;
@@ -88,7 +88,7 @@ extern CAN_HandleTypeDef hcan2;
 uint8_t rxData[8];
 int screen;
 volatile int startButton;
-void sendStartMessage(uint8_t data[]);
+void sendStartMessage(uint8_t data[], int id);
 void canInit();
 void getCANMessage();
 

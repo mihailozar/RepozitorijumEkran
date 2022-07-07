@@ -1,4 +1,4 @@
 can.c:18:6:sendStartMessage	32	static
 can.c:31:9:getSlave	0	static
-can.c:105:6:HAL_CAN_RxFifo0MsgPendingCallback	72	static
-can.c:262:6:canInit	48	static
+can.c:107:6:HAL_CAN_RxFifo0MsgPendingCallback	72	static
+can.c:269:6:canInit	48	static
